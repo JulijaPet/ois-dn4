@@ -5,17 +5,29 @@
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	    <style>
-	  		body {padding: 10px;}
-	  		.btn {margin-top: 10px;}
-	  		.obvestilo {margin-left:10px;}
-	  	</style>
+	 	<link rel="stylesheet" type="text/css" href="css/zacetnaStran.css" />
 	</head>
 	<body>
-		<div id="zacetnaStran">
-			<div class="col-lg-6 col-md-3 col-sm-2">
-				<h1>e-Zdravje</h1>
+		<div id="container">
+			<div class="bb-custom-wrapper">
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item">
+						<div class="bb-custom-firstpage">
+							<h1>E-Zdravje</h1>
+                            <div class="cover-flip">&lt; Flip</div>
+						</div>
+					</div>
+                    <div class="bb-item">
+                        <div class="bb-custom-categories">
+                            <h2>Select one category to get started</h2>
+                            <h3>You can always change your selection later.</h3>
+                            <div id="catList"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrubber"></div>
 			</div>
+
 		</div>
 	</body>
 </html>
