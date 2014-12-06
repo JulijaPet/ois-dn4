@@ -61,11 +61,13 @@ html, body{
 
 
 .firstpage h1 {
-	font-size: 4em;
-	line-height: 1.3;
+    font-family: "Times New Roman", Times, serif;s
+	 font-size: 100%;
+	line-height: 2.3;
 	margin: 0;
-	font-weight: 400;
+	font-weight: bold;
     color: #fff;
+    text-align: center;
 }
 
 .firstpage {
