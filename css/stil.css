@@ -116,7 +116,9 @@ html, body{
 .no-js .wrapper {
 	height: auto;
 }
-
+.presledek {
+    height:300px;
+}
 .vstop {
     position: relative;
     margin: 50px auto;
