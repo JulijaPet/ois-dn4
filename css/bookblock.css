@@ -188,7 +188,7 @@
 	transform: rotateX(165deg);
 }
 
-.bb-item {
+.item {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -205,7 +205,7 @@
 	height: auto;
 }
 
-.no-js .bb-item {
+.no-js .item {
 	display: block;
 	position: relative;
 }
