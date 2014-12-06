@@ -4,49 +4,8 @@ html, body{
     margin: 0;
     height: 100%;
     overflow: hidden;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     cursor: default;
 }
-
-/* Header Style */
-#container > header {
-    margin: 0 auto;
-    padding: 2em;
-}
-
-#container {
-    height: 100%;
-}
-
-#container > header {
-    text-align: center;
-    background: rgba(0,0,0,0.01);
-}
-
-#container > header h1 {
-    font-size: 2.625em;
-    line-height: 1.3;
-    margin: 0;
-    font-weight: 300;
-}
-
-#container > header span {
-    display: block;
-    font-size: 60%;
-    opacity: 0.3;
-    padding: 0 0 0.6em 0.1em;
-}
-
-.bb-nav-first i{
-    font-size: 18px !important;
-}
-
-/* Bookblock */
 .bb-custom-wrapper {
 	width: 100%;
 	height: 100%;
@@ -79,12 +38,6 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-.bb-custom-wrapper h3 {
-	font-size: 1.4em;
-	font-weight: 300;
-	margin: 0.4em 0 1em;
 }
 
 .bb-custom-wrapper > nav {
