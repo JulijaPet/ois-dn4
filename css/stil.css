@@ -117,11 +117,7 @@ html, body{
 	height: auto;
 }
 
-.neki {
-    width:200px;
-    height:200px;
-}
-.neki h2 {
+.vstop {
     position: relative;
     margin: 50px auto;
     background-size: 100%;
@@ -137,7 +133,7 @@ html, body{
     cursor: default;
 }
 
-/*
+
 .page-control:hover > i{
     color: #4FC1E9;
 }
@@ -168,4 +164,4 @@ html, body{
     width: 100%;
     height: auto;
     max-height: 88%;
-}*/
+}
