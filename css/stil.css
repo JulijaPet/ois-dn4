@@ -33,9 +33,6 @@ html, body{
     -o-background-size: cover;
     background-size: cover;
 }
-.presledek {
-    height:300px;
-}
 .vstop {
     position: relative;
     margin: 50px auto;
