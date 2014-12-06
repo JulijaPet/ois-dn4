@@ -20,6 +20,8 @@ html, body{
 	font-weight: bold;
     color: #fff;
     text-align: center;
+    text-align: right;
+    text-align: justify;
     text-shadow: #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px,
              #000 0px 0px 2px,   #000 0px 0px 2px,   #000 0px 0px 2px;
 }
@@ -37,7 +39,7 @@ html, body{
     position: relative;
     margin: 50px auto;
     background-size: 100%;
-    width:100%;
+    width:200px;
     background: #434A54;
     color: #aab2bd;
     right: 0px;
@@ -48,4 +50,5 @@ html, body{
     top: 50%;
     margin-top: -26px;
     cursor: default;
+    text-align: center;
 }
