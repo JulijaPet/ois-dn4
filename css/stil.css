@@ -12,5 +12,5 @@ html, body{
     cursor: default;
 }
 body {
-    background: url('../slike/Health-Hero.png');
+    background-image: url('../slike/Health-Hero.png');
 }
