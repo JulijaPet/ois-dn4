@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -15,6 +15,12 @@
 			<h1>e-Zdravje</h1>
                 <div class="vstop">VSTOP</div>
 			</div>
+		</div>
+		<div class="panel-body">
+			<span class="label label-default">Ime</span><input id="kreirajIme" type="text" class="form-control input-mini" placeholder="">
+			<span class="label label-default">Priimek</span><input id="kreirajPriimek" type="text" class="form-control" placeholder="">
+			<span class="label label-default">Datum rojstva</span><input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="">
+			<button type="button" class="btn btn-primary btn-xs" onclick="kreirajEHRzaBolnika()">Dodaj osnovne podatke o bolniku</button><span id="kreirajSporocilo"></span>
 		</div>
 	</body>
 </html>
