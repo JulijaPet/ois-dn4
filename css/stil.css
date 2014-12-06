@@ -120,6 +120,7 @@ html, body{
 .vstop {
     position: relative;
     margin: 50px auto;
+    background-size: 100%;
     background: #434A54;
     color: #aab2bd;
     right: 0px;
