@@ -11,6 +11,6 @@ html, body{
     user-select: none;
     cursor: default;
 }
-.firstpage {
-    background: url('../slike/Health-Hero.png') no-repeat;
+body {
+    background: url('../slike/Health-Hero.png');
 }
