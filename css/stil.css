@@ -12,36 +12,6 @@ html, body{
     cursor: default;
 }
 
-#container > header {
-    margin: 0 auto;
-    padding: 2em;
-}
-
-#container {
-    height: 100%;
-}
-
-#container > header {
-    text-align: center;
-    background: rgba(0,0,0,0.01);
-}
-
-/* Bookblock */
-.wrapper {
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-.wrapper .bb-bookblock {
-	width: 100%;
-	height: 100%;
-	-webkit-perspective: 2000px;
-	-moz-perspective: 2000px;
-	perspective: 2000px;
-}
-
-
 .firstpage h1 {
     font-family: "Times New Roman", Times, serif;
 	font-size: 150px;
@@ -53,7 +23,6 @@ html, body{
 }
 
 .firstpage {
-	text-align: center;
 	width: 100%;
 	height: 100%;
     background: url('../slike/health.png') no-repeat center center;
@@ -61,43 +30,6 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-.icon:before {
-	font-family: 'arrows';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	font-size: 30px;
-	line-height: 40px;
-	display: block;
-	-webkit-font-smoothing: antialiased;
-}
-
-.icon-first:before,
-.icon-last:before {
-	content: "\e002";
-}
-
-.icon-arrow-left:before,
-.icon-arrow-right:before {
-	content: "\e003";
-}
-
-.icon-arrow-left:before,
-.icon-first:before {
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-
-/* No JS */
-.no-js .wrapper {
-	height: auto;
 }
 .presledek {
     height:300px;
@@ -118,36 +50,3 @@ html, body{
     margin-top: -26px;
     cursor: default;
 }
-
-/*
-.page-control:hover > i{
-    color: #4FC1E9;
-}
-
-.bb-title .bb-nav-prev{
-    margin-left: 70px;
-}
-
-.bb-title .bb-nav-next{
-    margin-left: 5px;
-}
-
-.success{
-    color: #8CC152 !important;
-}
-
-.warning{
-    color: #F6BB42 !important;
-}
-
-.danger{
-    color: #DA4453 !important;
-}
-
-.wrapper{
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 100%;
-    height: auto;
-    max-height: 88%;
-}*/
