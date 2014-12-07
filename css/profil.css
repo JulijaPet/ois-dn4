@@ -34,7 +34,8 @@ html, body{
     background-color:#C8C8C8;
     height:100%;
     width:30%;
-    border-right-color:#606060;
+    border: 2px solid;
+    border-radius: 25px;
 }
 
 .desno {
