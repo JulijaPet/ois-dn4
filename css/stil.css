@@ -24,10 +24,10 @@ html, body{
 }
 .prijava {
     text-align: center;
-   
+    padding:0 0 0 15%;
     position: relative;
     margin: auto;
     background-size: 100%;
-    width: 40%;
+    width: 50%;
     height: 50%;
 }
