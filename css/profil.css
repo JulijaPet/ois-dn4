@@ -56,6 +56,7 @@ html, body{
     height:100%;
 }
 .desnaPor {
+    font-weight:bold;
     float: right;
     width:10%;
     height:100%;
@@ -72,5 +73,15 @@ html, body{
 @media screen and (max-width: 61.75em) {
     .levo {
 	    visibility:hidden;
+	}
+	.mobii {
+	    font-weight:bold;
+	    float: left;
+        background-color:#C8C8C8;
+        height:100%;
+        width:20%;
+        border: 2px solid #808080;
+        border-radius: 25px;
+        box-shadow: 10px 10px 5px #888888;
 	}
 }
