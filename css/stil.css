@@ -38,7 +38,5 @@ html, body{
     color: #aab2bd;
     text-transform: uppercase;
     cursor: default;
-}
-.panel-heading {
-    position:relative;
+    height:100%;
 }
