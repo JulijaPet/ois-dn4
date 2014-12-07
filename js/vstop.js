@@ -17,3 +17,6 @@ function uporabnik() {
     $("#zacetnaStran").hide();
     $("#home").show();
 }
+function uporabnik() {
+    $("#zapri").hide();
+}

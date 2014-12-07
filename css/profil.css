@@ -44,3 +44,21 @@ html, body{
     height:100%;
     width:70%;
 }
+
+.levaPor {
+    float: left;
+    width:10%;
+    height:100%;
+}
+
+.desnaPor {
+    float: right;
+    width:10%;
+    height:100%;
+}
+
+@media screen and (min-width: 62em) {
+	.desnaPor {
+		visibility:hidden;
+	}
+}
