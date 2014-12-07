@@ -13,6 +13,6 @@ function getSessionId() {
     });
     return response.responseJSON.sessionId;
 }
-$( "#clickme" ).click(function() {
-  $( "#zacetnaStran" ).hide();
-});
+function uporabnik() {
+    $("#clickme").hide();
+}
