@@ -14,8 +14,10 @@ function getSessionId() {
     return response.responseJSON.sessionId;
 }
 function uporabnik() {
-    var sessionId = getSessionId();
     $("#home").show();
-    $("#zacetnaStran").hide();
-    console.log("bbbb");
+    $("#container").hide();
+}
+$(document).ready(function() {
+     $("#home").show();
+    $("#container").hide();
 }
