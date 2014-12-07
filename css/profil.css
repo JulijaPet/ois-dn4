@@ -26,9 +26,11 @@ html, body{
 }
 
 .levo {
-    background-color:blue;
+    background-color:#fff;
+    height: 100%;
 }
 
 .desno {
-    background-color:yellow;
+    background-color:#fff;
+    height: 100%;
 }
