@@ -18,6 +18,6 @@ function uporabnik() {
     $("#container").hide();
 }
 $(document).ready(function() {
-     $("#home").show();
+    $("#home").show();
     $("#container").hide();
-}
+});
