@@ -22,7 +22,7 @@ html, body{
     background-size: cover;
     
 }
-.prijava {
+.prijava .row {
     position: relative;
     background-size: 100%;
     width: 50%;
