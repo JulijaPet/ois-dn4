@@ -21,6 +21,7 @@ html, body{
     -o-background-size: cover;
     background-size: cover;
     overflow: auto;
+    visibility:hidden;
 }
 .prijava {
     padding-left:0;
@@ -28,7 +29,6 @@ html, body{
     background-size: 100%;
     width: 50%;
     height: 100%; 
-      visibility:hidden;
 }
 .panel-body input {
     margin:1% 0 1% 0;
