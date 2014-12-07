@@ -43,6 +43,5 @@ html, body{
 @media screen and (max-width: 61.75em) {
 	.prijava {
 		width: 100%;
-		overflow: auto;
 	}
 }
