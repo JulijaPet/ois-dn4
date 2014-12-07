@@ -21,11 +21,13 @@ html, body{
 }
 
 .levo {
-    background-color:#fff;
+    background-color:#FFFF99;
     height: 100%;
+    width:40%;
+    
 }
 
 .desno {
-    background-color:#fff;
+    background-color:#FFFFCC;
     height: 100%;
 }
