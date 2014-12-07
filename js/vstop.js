@@ -13,12 +13,6 @@ function getSessionId() {
     });
     return response.responseJSON.sessionId;
 }
-function uporabnik() {
-    $("#home").show();
-    $("#container").hide();
-}
-  $("#Naprej").click(function(){
-     $("#home").show();
-     $("#container").hide();
-        
-    });
+$('body').on("click touchstart", "#naprej", function(e){
+   $("#zacetnaStran, #home").toggle();
+});
