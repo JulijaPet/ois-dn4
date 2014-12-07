@@ -29,7 +29,9 @@ html, body{
     width: 55%;
     height: 50%;
 }
-
+.panel-body input {
+    margin:5% 0 5% 0;
+}
 .panel-body button {
     margin:10% 0 0 0;
     font-weight:bold;
