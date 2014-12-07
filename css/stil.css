@@ -38,5 +38,6 @@ html, body{
     color: #aab2bd;
     text-transform: uppercase;
     cursor: default;
-    height:100%;
+    border-bottom-color:black;
+    margin:50% auto;
 }
