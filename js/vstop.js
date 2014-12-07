@@ -14,7 +14,5 @@ function getSessionId() {
     return response.responseJSON.sessionId;
 }
 $( "#clickme" ).click(function() {
-  $( "#zacetnaStran" ).hide( "slow", function() {
-    alert( "Animation complete." );
-  });
+  $( "#zacetnaStran" ).hide();
 });
