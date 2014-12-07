@@ -29,9 +29,7 @@ html, body{
     width: 55%;
     height: 50%;
 }
-.panel-body {
-    text-align:center;
-}
+
 .panel-body button {
     margin:10% 0 0 0;
     font-weight:bold;
