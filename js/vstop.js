@@ -18,5 +18,5 @@ function uporabnik() {
     $("#home").show();
 }
 function prikazi() {
-    $("#zapri").hide();
+    $("#slide").hide();
 }

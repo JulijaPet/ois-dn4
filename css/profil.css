@@ -50,7 +50,9 @@ html, body{
     width:10%;
     height:100%;
 }
-
+.profilUporabnika {
+    height:100%;
+}
 .desnaPor {
     float: right;
     width:10%;
