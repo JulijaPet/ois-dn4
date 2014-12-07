@@ -37,10 +37,6 @@ html, body{
     font-weight:bold;
     background: #434A54;
     color: #aab2bd;
-    position: absolute;
-    right: 0px;
-    padding: 5px 30px 5px 20px;
-    font-size: 30px;
     text-transform: uppercase;
     cursor: default;
 }
