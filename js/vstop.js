@@ -13,6 +13,8 @@ function getSessionId() {
     });
     return response.responseJSON.sessionId;
 }
-$('body').on("click touchstart", "#naprej", function(e){
-   $("#zacetnaStran, #home").toggle();
+$( "#clickme" ).click(function() {
+  $( "#zacetnaStran" ).hide( "slow", function() {
+    alert( "Animation complete." );
+  });
 });
