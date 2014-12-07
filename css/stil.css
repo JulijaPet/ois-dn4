@@ -29,3 +29,8 @@ html, body{
     width: 55%;
     height: 50%;
 }
+.prijava .button {
+    text-align:center;
+    font-weight:bold;
+    font-size: 60%;
+}
