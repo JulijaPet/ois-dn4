@@ -14,5 +14,5 @@ function getSessionId() {
     return response.responseJSON.sessionId;
 }
 function uporabnik() {
-    $("#clickme").hide();
+    $("#zacetnaStran").hide();
 }
