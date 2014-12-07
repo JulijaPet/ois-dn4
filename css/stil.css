@@ -13,6 +13,8 @@ html, body{
     cursor: default;
 }
 .zacetnaStran {
+    width:0;
+    height:0;
     background:url('../slike/Health-Hero.png') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -22,7 +24,7 @@ html, body{
 }
 .prijava {
     position: relative;
-    margin: 15% auto;
+    margin: 20% auto;
     background-size: 100%;
     width: 50%;
 }
