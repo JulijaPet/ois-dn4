@@ -28,6 +28,7 @@ html, body{
     width: 60%;
     height: 100%; 
     overflow: auto;
+    visibility:hidden;
 }
 .panel-body input {
     margin:1% 0 1% 0;
@@ -46,3 +47,11 @@ html, body{
 	}
 }
 
+.home {
+    padding-left:0;
+    margin: auto;
+    background-size: 100%;
+    width: 60%;
+    height: 100%; 
+    overflow: auto;
+}
