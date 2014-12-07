@@ -39,3 +39,6 @@ html, body{
     text-transform: uppercase;
     cursor: default;
 }
+.panel-heading {
+    position:relative;
+}
