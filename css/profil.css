@@ -37,7 +37,6 @@ html, body{
 }
 
 .desno {
-    float: right;
-    top:0;
+    height:100%;
     width:70%;
 }
