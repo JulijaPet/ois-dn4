@@ -17,7 +17,8 @@ function uporabnik() {
     $("#home").show();
     $("#container").hide();
 }
-$(document).ready(function() {
-    $("#home").show();
-    $("#container").hide();
-});
+  $("#Naprej").click(function(){
+     $("#home").show();
+     $("#container").hide();
+        
+    });
