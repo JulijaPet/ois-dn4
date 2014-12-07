@@ -59,10 +59,18 @@ html, body{
     float: right;
     width:10%;
     height:100%;
-}
+} 
 
 @media screen and (min-width: 62em) {
+	.mobii {
+	    visibility:hidden;
+	}
 	.desnaPor {
 		visibility:hidden;
+	}
+}
+@media screen and (max-width: 61.75em) {
+    .levo {
+	    visibility:hidden;
 	}
 }

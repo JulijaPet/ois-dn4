@@ -17,7 +17,11 @@ function uporabnik() {
     $("#zacetnaStran").hide();
     $("#home").show();
 }
-function prikazi() {
+function skrij() {
     $("#slide").hide();
-    $("#slide2").show();
+    $("#mobi").show();
+}
+function prikazi() {
+    $("#mobi").hide();
+    $("#slide").show();
 }
