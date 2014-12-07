@@ -29,7 +29,7 @@ html, body{
     width: 55%;
     height: 50%;
 }
-.prijava .btn btn-primary btn-xs {
+.panel-body {
     text-align:center;
     font-weight:bold;
     font-size: 60%;
