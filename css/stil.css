@@ -35,7 +35,6 @@ html, body{
 .panel-body button {
     margin: auto;
     font-weight:bold;
-    background: #434A54;
     color: #aab2bd;
     text-transform: uppercase;
     cursor: default;
