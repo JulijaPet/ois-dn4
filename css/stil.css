@@ -25,7 +25,6 @@ html, body{
     -o-background-size: cover;
     background-size: cover;
     overflow: auto;
-    visibility:hidden;
 }
 .prijava {
     padding-left:0;
