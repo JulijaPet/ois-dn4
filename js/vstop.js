@@ -17,4 +17,5 @@ function uporabnik() {
     var sessionId = getSessionId();
     $("#home").show();
     $("#zacetnaStran").hide();
+    console.log("bbbb");
 }
