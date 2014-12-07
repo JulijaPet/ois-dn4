@@ -33,8 +33,6 @@ html, body{
     text-align:center;
 }
 .panel-body button {
-    height:50%;
-    width:50%;
     margin: auto;
     font-weight:bold;
     background: #434A54;
@@ -44,7 +42,5 @@ html, body{
     padding: 5px 30px 5px 20px;
     font-size: 30px;
     text-transform: uppercase;
-    top: 50%;
-    margin-top: -26px;
     cursor: default;
 }
