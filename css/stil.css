@@ -36,14 +36,14 @@ html, body{
 }
 .vstop {
     position: relative;
-    margin: 50px auto;
+    margin: 15% auto;
     background-size: 100%;
-    width:200px;
+    width:40%;
     background: #434A54;
     color: #aab2bd;
     right: 0px;
     padding: 5px 30px 5px 20px;
-    font-size: 30px;
+    font-size: 40%;
     text-transform: uppercase;
     font-weight: 300;
     top: 15%;
