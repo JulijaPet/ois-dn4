@@ -23,7 +23,7 @@ html, body{
     
 }
 .prijava {
-    position: relative;
+    position:absolute;
     margin: auto;
     background-size: 100%;
     width: 80%;
