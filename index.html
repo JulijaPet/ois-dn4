@@ -11,11 +11,22 @@
 	 	<link rel="stylesheet" type="text/css" href="css/stil.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="stran1">
-				<h1>e-Zdravje</h1>
-                <div class="vstop">VSTOP</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-8"><b>Kreiraj EHR zapis</b> za novega bolnika</div>
+							<div class="col-xs-12 col-sm-6 col-md-8"><select class="form-control input-sm" id="preberiPredlogoBolnika"><option value=""></option><option value=""></option></select></div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<span class="label label-default">Ime</span><input id="kreirajIme" type="text" class="form-control input-mini" placeholder="">
+						<span class="label label-default">Priimek</span><input id="kreirajPriimek" type="text" class="form-control" placeholder="">
+						<span class="label label-default">Datum rojstva</span><input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="">
+						<button type="button" class="btn btn-primary btn-xs" onclick="kreirajEHRzaBolnika()">Dodaj osnovne podatke o bolniku</button><span id="kreirajSporocilo"></spa
+				  	</div>
+				</div>
 			</div>
-		</div>
 	</body>
 </html>
