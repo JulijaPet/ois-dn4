@@ -22,7 +22,7 @@ html, body{
 
 .levo {
     background-color:#FFFF99;
-    height: 100%;
+
     width:40%;
     
 }
@@ -30,6 +30,6 @@ html, body{
 .desno {
     float: right;
     background-color:#FFFFCC;
-    height: 100%;
+
     width:60%;
 }
