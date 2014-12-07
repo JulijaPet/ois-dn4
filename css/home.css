@@ -1,0 +1,29 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.home {
+    width:100%;
+    height:100%;
+    background-color:black;
+   
+}
+
+.levo {
+    background-color:blue;
+}
+
+.desno {
+    background-color:yellow;
+}
