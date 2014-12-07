@@ -24,7 +24,7 @@ html, body{
 }
 .prijava {
     position: relative;
-   /* margin: 50px auto;*/
+    margin: 15% auto;
     background-size: 100%;
-    width: 15%;
+    width: 50%;
 }
