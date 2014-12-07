@@ -15,4 +15,5 @@ function getSessionId() {
 }
 function uporabnik() {
     $("#zacetnaStran").hide();
+    $("#home").show();
 }
