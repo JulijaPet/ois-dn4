@@ -20,6 +20,7 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: auto;
     
 }
 .prijava {
@@ -28,7 +29,6 @@ html, body{
     background-size: 100%;
     width: 70%;
     height: 100%; 
-    overflow: auto;
 }
 .panel-body input {
     margin:1% 0 1% 0;
