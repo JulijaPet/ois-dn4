@@ -40,7 +40,7 @@ html, body{
     border-bottom-color:black;
 }
 
-@media screen {
+@media screen and (max-width: 33em) {
 	.prijava {
 		width: 100%;
 	}
