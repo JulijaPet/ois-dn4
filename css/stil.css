@@ -31,6 +31,7 @@ html, body{
 }
 .panel-body input {
     margin:1% 0 1% 0;
+    overflow: auto;
 }
 .panel-body button {
     font-weight:bold;
