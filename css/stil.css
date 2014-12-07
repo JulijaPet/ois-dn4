@@ -20,7 +20,7 @@ html, body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+    visibility:hidden;
 }
 .prijava {
     padding-left:0;
