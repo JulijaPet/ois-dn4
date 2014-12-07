@@ -19,4 +19,5 @@ function uporabnik() {
 }
 function prikazi() {
     $("#slide").hide();
+    $("#slide2").show();
 }
