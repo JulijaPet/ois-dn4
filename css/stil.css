@@ -30,7 +30,8 @@ html, body{
     height: 50%;
 }
 .panel-body button {
-    height:50%;
+    height:5%;
+    margin: auto;
     text-align:center;
     font-weight:bold;
     font-size: 100%;
