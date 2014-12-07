@@ -28,7 +28,6 @@ html, body{
     width: 60%;
     height: 100%; 
     overflow: auto;
-    visibility:hidden;
 }
 .panel-body input {
     margin:1% 0 1% 0;
