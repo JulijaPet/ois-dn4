@@ -26,8 +26,8 @@ html, body{
     padding-left:0;
     margin: auto;
     background-size: 100%;
-    width: 50%;
-    height: 40%; 
+    width: 55%;
+    height: 50%; 
     overflow: auto;
 }
 .panel-body input {
