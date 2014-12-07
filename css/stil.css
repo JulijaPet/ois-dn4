@@ -29,15 +29,12 @@ html, body{
     width: 55%;
     height: 50%;
 }
-.panel-body {
-    text-align:center;
-}
+
 .panel-body button {
-    margin: auto;
     font-weight:bold;
     color: #aab2bd;
     text-transform: uppercase;
     cursor: default;
     border-bottom-color:black;
-    margin:10% 0 0 0;
+    margin:10% auto;
 }
