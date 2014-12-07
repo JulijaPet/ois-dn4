@@ -38,16 +38,15 @@ html, body{
     position: relative;
     margin: 15% auto;
     background-size: 100%;
-    width:40%;
+    width:50%;
     background: #434A54;
     color: #aab2bd;
     right: 0px;
     padding: 5px 30px 5px 20px;
-    font-size: 40%;
+    font-size: 70%;
     text-transform: uppercase;
     font-weight: 300;
     top: 15%;
-    margin-top: -26px;
     cursor: default;
     text-align: center;
 }
