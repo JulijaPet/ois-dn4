@@ -29,15 +29,14 @@ html, body{
     height:100%;
 }
 
-.plosca levo {
+.levo {
     background-color:#565695;
     height:100%;
     width:30%;
     
 }
 
-.plosca desno {
+.desno {
     float: right;
-    height:100%;
     width:70%;
 }
