@@ -39,3 +39,9 @@ html, body{
     cursor: default;
     border-bottom-color:black;
 }
+
+@media screen {
+	.prijava {
+		width: 100%;
+	}
+}
