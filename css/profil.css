@@ -24,10 +24,15 @@ html, body{
     overflow: auto;
 }
 
+.plosca {
+    width:100%;
+    height:100%;
+}
+
 .levo {
     background-color:#565695;
     height:100%;
-    width:100%;
+    width:30%;
     
 }
 
