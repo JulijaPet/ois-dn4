@@ -12,8 +12,10 @@ html, body{
     user-select: none;
     cursor: default;
 }
-
-.zacetnaStran {
+#container {
+    height: 100%;
+}
+.homePage {
     width:100%;
     height:100%;
     background:url('../slike/w.png') no-repeat center center;
