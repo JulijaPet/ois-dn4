@@ -28,6 +28,7 @@ html, body{
 }
 
 .desno {
+    float: right;
     background-color:#FFFFCC;
     height: 100%;
     width:60%;
