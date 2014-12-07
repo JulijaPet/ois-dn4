@@ -27,7 +27,7 @@ html, body{
     margin: auto;
     background-size: 100%;
     width: 55%;
-    height: 50%; 
+    height: 100%; 
     overflow: auto;
 }
 .panel-body input {
