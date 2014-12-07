@@ -26,7 +26,8 @@ html, body{
     padding-left:0;
     margin: auto;
     background-size: 100%;
-   
+    width: 70%;
+    height: 40%;
 }
 .panel-body input {
     margin:5% 0 5% 0;
