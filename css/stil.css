@@ -17,6 +17,9 @@ html, body{
     height:100%;
 }
 .prijava {
+    position: relative;
+    margin: 50px auto;
+    background-size: 100%;
     width: 200px;
     height: 190px;
 }
