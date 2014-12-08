@@ -26,10 +26,19 @@ function prikazi() {
     $("#slide").show();
 }
 function moznosti() {
-    $("#slide").show();
-    $("#teza1").show();
-    $("#visina1").show();
-    $("#temperatura1").show
-    $("#krvniTlak1").show();
-    $("#kisik1").show();
+    if($("#slide").css('display') == 'none') {
+        $("#slide").show();
+        $("#teza1").show();
+        $("#visina1").show();
+        $("#temperatura1")();
+        $("#krvniTlak1").show();
+        $("#kisik1").show();
+    } else {
+        $("#slide").hide();
+        $("#teza1").hide();
+        $("#visina1").hide();
+        $("#temperatura1").hide();
+        $("#krvniTlak1").hide();
+        $("#kisik1").hide();
+    }
 }
