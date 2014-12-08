@@ -4,6 +4,8 @@ var queryUrl = baseUrl + '/query';
 var username = "ois.seminar";
 var password = "ois4fri";
 
+var index = 0;
+
 function getSessionId() {
     var response = $.ajax({
         type: "POST",
@@ -26,13 +28,14 @@ function prikazi() {
     $("#slide").show();
 }
 function moznosti() {
-    if($("#slide").css('display') == 'none') {
+    if(index == 0) {
         $("#slide").show();
         $("#teza1").show();
         $("#visina1").show();
         $("#temperatura1")();
         $("#krvniTlak1").show();
         $("#kisik1").show();
+        index = 1;
     } else {
         $("#slide").hide();
         $("#teza1").hide();
@@ -40,5 +43,6 @@ function moznosti() {
         $("#temperatura1").hide();
         $("#krvniTlak1").hide();
         $("#kisik1").hide();
+        index = 0;
     }
 }
