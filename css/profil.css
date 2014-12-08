@@ -63,11 +63,9 @@ html, body{
 } 
 
 @media screen and (min-width: 62em) {
-	/*.mobii {
-	    width:1%;
-        height:1%;
-	    visibility:hidden;
-	}*/
+	.mobii {
+	     display: none;
+	}
 	.desnaPor {
 		visibility:hidden;
 	}
