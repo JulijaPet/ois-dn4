@@ -175,6 +175,7 @@ html, body{
         background-color:#C8C8C8;
         height:100%;
         width:10%;
+        font-weight:bold;
 	}
 	.levo {
 	    display: none;
