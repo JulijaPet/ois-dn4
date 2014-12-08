@@ -1,4 +1,5 @@
 .meritve-teza {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -7,6 +8,7 @@
     filter: alpha(opacity=60);
 }
 .meritve-visina {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -15,6 +17,7 @@
     filter: alpha(opacity=60);
 }
 .meritve-temperatura {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -23,6 +26,7 @@
     filter: alpha(opacity=60);
 }
 .meritve-krvniTlak {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -31,6 +35,7 @@
     filter: alpha(opacity=60);
 }
 .meritve-kisik {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -39,6 +44,7 @@
     filter: alpha(opacity=60);
 }
 .voda-plosca {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -47,6 +53,7 @@
     filter: alpha(opacity=60);
 }
 .vaje-plosca {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -55,6 +62,7 @@
     filter: alpha(opacity=60);
 }
 .dan-plosca{
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
@@ -63,6 +71,7 @@
     filter: alpha(opacity=60);
 }
 .telovadnice-plosca {
+    display: none;
     margin: auto;
     width:100%;
     height:100%;
