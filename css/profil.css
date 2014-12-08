@@ -87,6 +87,10 @@ html, body{
     font-weight:bold;
 }
 
+.oznaka {
+    transform: rotate(270deg);
+}
+
 .voda {
     margin:2% auto;
     width:70%;
@@ -221,7 +225,4 @@ html, body{
         width:80%;
         height:2%;
     }
-}
-.oznaka {
-    transform: rotate(270deg);
 }
