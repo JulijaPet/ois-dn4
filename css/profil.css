@@ -110,12 +110,6 @@ html, body{
     font-weight:bold;
 }
 
-.sel {
-    margin:1% auto;
-    width:70%;
-    height:10%;
-    font-weight:bold;
-}
 @media screen and (min-width: 62em) {
 	.mobii {
 	     display: none;
