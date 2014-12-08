@@ -61,29 +61,6 @@ html, body{
     height:100%;
 } 
 
-@media screen and (min-width: 62em) {
-	.mobii {
-	     display: none;
-	}
-	.desnaPor {
-		visibility:hidden;
-	}
-}
-@media screen and (max-width: 61.99em) {
-    .mobii {
-	    float: left;
-        background-color:#C8C8C8;
-        height:100%;
-        width:10%;
-	}
-	.levo {
-	    display: none;
-        width:50%;
-	}
-    .desno {
-        width:50%;
-    }
-}
 .slikaUporabnika {
     margin:5% auto;
     width:70%;
@@ -123,4 +100,52 @@ html, body{
     width:70%;
     height:5%;
     font-weight:bold;
+}
+@media screen and (min-width: 62em) {
+	.mobii {
+	     display: none;
+	}
+	.desnaPor {
+		visibility:hidden;
+	}
+}
+@media screen and (max-width: 61.99em) {
+    .mobii {
+	    float: left;
+        background-color:#C8C8C8;
+        height:100%;
+        width:10%;
+	}
+	.levo {
+	    display: none;
+        width:50%;
+	}
+    .desno {
+        width:50%;
+    }
+    .levaPor {
+        width:1%;
+    }
+    .slikaUporabnika {
+    margin:5% auto;
+    width:89%;
+    }
+    .ImePriimek {
+        width:89%;
+    }
+    .meritve {
+        width:89%;
+    }
+    .voda {
+        width:89%;
+    }
+    .dan {
+        width:89%;
+    }
+    .vaje {
+        width:89%;
+    }
+    .telovadnice {
+        width:89%;
+    }
 }
