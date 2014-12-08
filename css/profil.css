@@ -68,7 +68,7 @@ html, body{
         box-shadow: 10px 10px 5px #888888;
 }    
 }
-@media screen and (max-width: 61.75em) {
+@media screen and (max-width: 61.99em) {
     .mobii {
 	    float: left;
         background-color:#C8C8C8;
@@ -76,7 +76,6 @@ html, body{
         width:10%;
 	}
 	.levo {
-        display: none;
         float: left;
         background-color:#C8C8C8;
         height:100%;
