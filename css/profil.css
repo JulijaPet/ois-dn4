@@ -68,6 +68,11 @@ html, body{
     width:70%;
 }
 
+.slika {
+    width:60%;
+    height:60%;
+}
+
 .ImePriimek {
     margin:2% auto;
     width:70%;
