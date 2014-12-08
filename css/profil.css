@@ -83,42 +83,40 @@ html, body{
 }
 .slikaUporabnika {
     margin:5% auto;
-    width:70%;
-    height:70%;
 }
 .ImePriimek {
     margin:1% auto;
     width:70%;
-    height:10%;
+    height:5%;
     font-weight:bold;
 }
 .meritve {
     margin:1% auto;
     width:70%;
-    height:10%;
+    height:5%;
     font-weight:bold;
 }
 .voda {
     margin:1% auto;
     width:70%;
-    height:10%;
+    height:5%;
     font-weight:bold;
 }
 .dan {
     margin:1% auto;
     width:70%;
-    height:10%;
+    height:5%;
     font-weight:bold;
 }
 .vaje {
     margin:1% auto;
     width:70%;
-    height:10%;
+    height:5%;
     font-weight:bold;
 }
 .telovadnice {
     margin:1% auto;
     width:70%;
-    height:10%;
+    height:5%;
     font-weight:bold;
 }
