@@ -222,4 +222,8 @@ html, body{
         height:2%;
     }
 }
-
+.oznaka {
+    -ms-transform: rotate(7deg); 
+    -webkit-transform: rotate(7deg); 
+    transform: rotate(7deg);
+}
