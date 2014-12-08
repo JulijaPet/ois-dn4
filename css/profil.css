@@ -35,7 +35,6 @@ html, body{
     height:100%;
     width:20%;
     border: 2px #808080;
-    border-radius: 25px;
     box-shadow: 10px 10px 5px #888888;
 }
 
@@ -79,9 +78,6 @@ html, body{
 	}
 	.levo {
         display: none;
-        float: left;
-        background-color:#C8C8C8;
-        height:100%;
         width:50%;
     }
 }
