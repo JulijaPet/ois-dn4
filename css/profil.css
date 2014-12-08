@@ -77,9 +77,7 @@ html, body{
         width:20%;
 	}
 	.desno {
-         display: none;
-    }
-    .desno {
+        display: none;
         float: right;
         height:100%;
         width:70%;
