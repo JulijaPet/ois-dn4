@@ -223,7 +223,6 @@ html, body{
     }
 }
 .oznaka {
-    -ms-transform: rotate(7deg); 
-    -webkit-transform: rotate(7deg); 
-    transform: rotate(7deg);
+    transform: rotate(90deg);
+	transform-origin: left top 0;
 }
