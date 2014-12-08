@@ -164,10 +164,6 @@ html, body{
         height:100%;
         width:10%;
 	}
-	
-	.slikaUporabnika {
-        margin:1% auto;
-    }
 	.levo {
 	    display: none;
         width:50%;
@@ -186,21 +182,26 @@ html, body{
         width:80%;
     }
     .ImePriimek {
+        margin:1% auto;
         width:80%;
     }
     .meritve {
+        margin:1% auto;
         width:80%;
     }
     .voda {
+        margin:1% auto;
         width:80%;
     }
     .dan {
         width:80%;
     }
     .vaje {
+        margin:1% auto;
         width:80%;
     }
     .telovadnice {
+        margin:1% auto;
         width:80%;
     }
 }
