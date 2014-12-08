@@ -112,23 +112,23 @@ html, body{
 
 .teza {
     display: none;
-    margin:1% auto 10%;
-    width:70%;
+    margin:1% 0 0 10%;
+    width:60%;
     height:5%;
     font-weight:bold;
 }
 
 .visina {
     display: none;
-    margin:1% auto 10%;
-    width:70%;
+    margin:1% 0 0 10%;
+    width:60%;
     height:5%;
     font-weight:bold;
 }
 
 .temperatura {
     display: none;
-    margin:1% auto 10%;
+    margin:1% 0 0 10%;
     width:70%;
     height:5%;
     font-weight:bold;
@@ -136,8 +136,8 @@ html, body{
 
 .krvniTlak {
     display: none;
-    margin:1% auto 10%;
-    width:70%;
+    margin:1% 0 0 10%;
+    width:60%;
     height:5%;
     font-weight:bold;
 }
@@ -145,7 +145,7 @@ html, body{
 .kisik {
     display: none;
     margin:1% auto 10%;
-    width:70%;
+    width:60%;
     height:5%;
     font-weight:bold;
 }
