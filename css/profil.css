@@ -124,28 +124,31 @@ html, body{
         width:50%;
     }
     .levaPor {
-        width:1%;
+        width:5%;
+    }
+    .profilUporabnika {
+        width:85%;
     }
     .slikaUporabnika {
-    margin:5% auto;
-    width:89%;
+        margin:1% auto;
+        width:80%;
     }
     .ImePriimek {
-        width:89%;
+        width:80%;
     }
     .meritve {
-        width:89%;
+        width:80%;
     }
     .voda {
-        width:89%;
+        width:80%;
     }
     .dan {
-        width:89%;
+        width:80%;
     }
     .vaje {
-        width:89%;
+        width:80%;
     }
     .telovadnice {
-        width:89%;
+        width:80%;
     }
 }
