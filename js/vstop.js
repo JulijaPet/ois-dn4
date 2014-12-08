@@ -25,3 +25,11 @@ function prikazi() {
     $("#mobi").hide();
     $("#slide").show();
 }
+function moznosti() {
+    $("#slide").show();
+    $("#teza1").show();
+    $("#visina1").show();
+    $("#temperatura1").show
+    $("#krvniTlak1").show();
+    $("#kisik1").show();
+}
