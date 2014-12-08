@@ -3,6 +3,6 @@
     width:50%;
     height:50%;
     background-color: #ffffff;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
+    opacity: 0.3;
+    filter: alpha(opacity=30);
 }
