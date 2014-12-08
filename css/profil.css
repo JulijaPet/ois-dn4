@@ -164,6 +164,10 @@ html, body{
         height:100%;
         width:10%;
 	}
+	
+	.slikaUporabnika {
+        margin:1% auto;
+    }
 	.levo {
 	    display: none;
         width:50%;
