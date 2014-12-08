@@ -79,6 +79,7 @@ html, body{
 	}
 	.levo {
          display: none;
+         width:100%;
     }
 }
 .slikaUporabnika {
