@@ -29,15 +29,13 @@ function prikazi() {
 }
 function moznosti() {
     if(index == 0) {
-        $("#slide").show();
         $("#teza1").show();
         $("#visina1").show();
-        $("#temperatura1")();
+        $("#temperatura1").show();
         $("#krvniTlak1").show();
         $("#kisik1").show();
         index = 1;
     } else {
-        $("#slide").hide();
         $("#teza1").hide();
         $("#visina1").hide();
         $("#temperatura1").hide();
