@@ -63,6 +63,11 @@ html, body{
 	.desnaPor {
 		visibility:hidden;
 	}
+	.desno {
+        float: right;
+        height:100%;
+        width:70%;
+    }
 }
 @media screen and (max-width: 61.75em) {
     .mobii {
@@ -74,9 +79,9 @@ html, body{
 	.desno {
          display: none;
     }
-}
-.desno {
-    float: right;
-    height:100%;
-    width:70%;
+    .desno {
+        float: right;
+        height:100%;
+        width:70%;
+    }
 }
