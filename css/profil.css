@@ -181,28 +181,39 @@ html, body{
         margin:1% auto;
         width:80%;
     }
+    .slika {
+        width:30%;
+        height:30%;
+    }
     .ImePriimek {
         margin:1% auto;
         width:80%;
+        height:2%;
     }
     .meritve {
         margin:1% auto;
         width:80%;
+        height:2%;
     }
     .voda {
         margin:1% auto;
         width:80%;
+        height:2%;
     }
     .dan {
+        margin:1% auto;
         width:80%;
+        height:2%;
     }
     .vaje {
         margin:1% auto;
         width:80%;
+        height:2%;
     }
     .telovadnice {
         margin:1% auto;
         width:80%;
+        height:2%;
     }
 }
 
