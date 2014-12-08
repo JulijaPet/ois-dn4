@@ -29,15 +29,6 @@ html, body{
     height:100%;
 }
 
-.levo {
-    float: left;
-    background-color:#C8C8C8;
-    height:100%;
-    width:20%;
-    border: 2px #808080;
-    box-shadow: 10px 10px 5px #888888;
-}
-
 .desno {
     float: right;
     height:100%;
@@ -68,6 +59,14 @@ html, body{
 	.desnaPor {
 		visibility:hidden;
 	}
+	.levo {
+        float: left;
+        background-color:#C8C8C8;
+        height:100%;
+        width:20%;
+        border: 2px #808080;
+        box-shadow: 10px 10px 5px #888888;
+}    
 }
 @media screen and (max-width: 61.75em) {
     .mobii {
@@ -78,7 +77,12 @@ html, body{
 	}
 	.levo {
         display: none;
+        float: left;
+        background-color:#C8C8C8;
+        height:100%;
         width:50%;
+        border: 2px #808080;
+        box-shadow: 10px 10px 5px #888888;
     }
 }
 .slikaUporabnika {
