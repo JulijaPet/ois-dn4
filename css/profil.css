@@ -29,12 +29,6 @@ html, body{
     height:100%;
 }
 
-.desno {
-    float: right;
-    height:100%;
-    width:80%;
-}
-
 .levaPor {
     float: left;
     width:10%;
@@ -66,7 +60,12 @@ html, body{
         width:20%;
         border: 2px #808080;
         box-shadow: 10px 10px 5px #888888;
-}    
+    }    
+    .desno {
+        float: right;
+        height:100%;
+        width:80%;
+    }
 }
 @media screen and (max-width: 61.99em) {
     .mobii {
@@ -82,6 +81,11 @@ html, body{
         width:50%;
         border: 2px #808080;
         box-shadow: 10px 10px 5px #888888;
+    }
+    .desno {
+        float: right;
+        height:100%;
+        width:50%;
     }
 }
 .slikaUporabnika {
