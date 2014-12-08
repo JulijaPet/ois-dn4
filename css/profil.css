@@ -110,6 +110,45 @@ html, body{
     font-weight:bold;
 }
 
+.teza {
+    display: none;
+    margin:10% auto;
+    width:70%;
+    height:5%;
+    font-weight:bold;
+}
+
+.visina {
+    display: none;
+    margin:10% auto;
+    width:70%;
+    height:5%;
+    font-weight:bold;
+}
+
+.temperatura {
+    display: none;
+    margin:10% auto;
+    width:70%;
+    height:5%;
+    font-weight:bold;
+}
+
+.krvniTlak {
+    display: none;
+    margin:10% auto;
+    width:70%;
+    height:5%;
+    font-weight:bold;
+}
+
+.kisik {
+    display: none;
+    margin:10% auto;
+    width:70%;
+    height:5%;
+    font-weight:bold;
+}
 @media screen and (min-width: 62em) {
 	.mobii {
 	     display: none;
