@@ -47,63 +47,57 @@ function moznosti() {
 }
 function prikaziTeza() {
     $("#1").show();
-    $("#2").hide();
-    $("#3").hide();
-    $("#4").hide();
-    $("#5").hide();
-    $("#6").hide();
-    $("#7").hide();
-    $("#8").hide();
-    $("#9").hide();
-}/*
+    prikazovanje(id);
+    id = 1;
+}
 function prikaziVis() {
-    $("#mt").hide();
-    $("#mv").show();
-    $("#mtem").hide();
-    $("#mk").hide();
-    $("#mkis").hide();
-    $("#vodaP").hide();
-    $("#vajeP").hide();
-    $("#danP").hide();
-    $("#telP").hide();
+    $("#2").show();
+    prikazovanje(id);
+    id = 2;
 }
 function prikaziTem() {
-    $("#mt").hide();
-    $("#mv").hide();
-    $("#mtem").show();
-    $("#mk").hide();
-    $("#mkis").hide();
-    $("#vodaP").hide();
-    $("#vajeP").hide();
-    $("#danP").hide();
-    $("#telP").hide();
+    $("#3").show();
+    prikazovanje(id);
+    id = 3;
 }
 function prikaziTlak() {
-    $("#mt").hide();
-    $("#mv").hide();
-    $("#mtem").hide();
-    $("#mk").show();
-    $("#mkis").hide();
-    $("#vodaP").hide();
-    $("#vajeP").hide();
-    $("#danP").hide();
-    $("#telP").hide();
+    $("#4").show();
+    prikazovanje(id);
+    id = 4;
 }
 function prikaziKisik() {
-    $("#mt").hide();
-    $("#mv").hide();
-    $("#mtem").hide();
-    $("#mk").hide();
-    $("#mkis").show();
-    $("#vodaP").hide();
-    $("#vajeP").hide();
-    $("#danP").hide();
-    $("#telP").hide();
+    $("#5").show();
+    prikazovanje(id);
+    id = 5;
 }
-*/
-function prikazovanje(div) {
-    if(id !== 0)
-        $("#id").hide();
-    $("#1").show();
-    id = div.id;
+function prikaziVoda() {
+    $("#6").show();
+    prikazovanje(id);
+    id = 6;
+}
+function prikaziVaje() {
+    $("#7").show();
+    prikazovanje(id);
+    id = 7;
+}
+function prikaziDan() {
+    $("#8").show();
+    prikazovanje(id);
+    id = 8;
+}
+function prikaziTel() {
+    $("#9").show();
+    prikazovanje(id);
+    id = 9;
+}
+function prikazovanje(id) {
+    if(id == 1) $("#1").hide();
+    else if(id == 2) $("#2").hide();
+    else if(id == 3) $("#3").hide();
+    else if(id == 4) $("#4").hide();
+    else if(id == 5) $("#5").hide();
+    else if(id == 6) $("#6").hide();
+    else if(id == 7) $("#7").hide();
+    else if(id == 8) $("#8").hide();
+    else if(id == 9) $("#9").hide();
 }
