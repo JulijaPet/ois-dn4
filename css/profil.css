@@ -182,10 +182,10 @@ html, body{
 	    display: none;
         width:50%;
         overflow: auto;
-	}
+	}/*
     .desno {
         width:90%;
-    }
+    }*/
     .levaPor {
         width:5%;
     }
@@ -230,7 +230,4 @@ html, body{
         width:80%;
         height:2%;
     }
-}
-.wide {
-    width:50%;
 }
