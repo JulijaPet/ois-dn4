@@ -5,7 +5,7 @@ var username = "ois.seminar";
 var password = "ois4fri";
 
 var index = 0;
-var trenutnozbrano="";
+var id = 0;
 
 function getSessionId() {
     var response = $.ajax({
@@ -101,9 +101,9 @@ function prikaziKisik() {
     $("#telP").hide();
 }
 */
-function prikazovanje(clicked_id) {
-    if(trenutnozbrano !== "")
-        $("#trenutnozbrano").hide();
-    $("#mt").show();
-    trenutnozbrano = clicked_id;
+function prikazovanje(div) {
+    if(id !== 0)
+        $("#id").hide();
+    $("#1").show();
+    id = div.id;
 }
