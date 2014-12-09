@@ -3,6 +3,7 @@
     font-weight:bold;
     text-transform: uppercase;
     width:10%;
+    height:10%;
 }
 .diagramTeza {
     margin: 1% auto;
@@ -16,7 +17,7 @@
     text-transform: uppercase; 
 }
 .podatkiPlosca {
-    height:20%;
+    height:9%;
     width:100%;
     margin:5% auto;
 }
