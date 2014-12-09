@@ -1,4 +1,4 @@
-.meritve-teza {
+.meritveTeza {
     display: none;
     margin: auto;
     width:100%;
@@ -6,6 +6,7 @@
     background-color: #ffffff;
     opacity: 0.6;
     filter: alpha(opacity=60);
+    overflow:auto;
 }
 .meritve-visina {
     display: none;
