@@ -1,8 +1,11 @@
 .imePlosceTeza {
-    font-weight:bold;
-    text-transform: uppercase;
     height:5%;
     width:100%;
+}
+.imePlosceTeza h1 {
+    margin:1% auto;
+    font-weight:bold;
+    text-transform: uppercase;
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
     text-align: center;
