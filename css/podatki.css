@@ -19,5 +19,6 @@
 .podatkiPlosca {
     background-color:#E0E0E0 ;
     height:9%;
-    margin:5% 0 0 0;
+    width:50;
+    margin:5% 0 auto;
 }

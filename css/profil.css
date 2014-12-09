@@ -11,11 +11,11 @@
 
 .levo {
     float: left;
-    background-color:#666699;
+    background-color:#9999CC;
     height:100%;
     width:20%;
     border: 2px #808080;
-    box-shadow: 10px 10px 5px #9999CC;
+    box-shadow: 10px 10px 5px #666699;
 }   
 
 .desno {
