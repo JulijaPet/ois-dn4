@@ -46,15 +46,15 @@ function moznosti() {
     }
 }
 function prikaziTeza() {
-    $("#mt").show();
-    $("#mv").hide();
-    $("#mtem").hide();
-    $("#mk").hide();
-    $("#mkis").hide();
-    $("#vodaP").hide();
-    $("#vajeP").hide();
-    $("#danP").hide();
-    $("#telP").hide();
+    $("#1").show();
+    $("#2").hide();
+    $("#3").hide();
+    $("#4").hide();
+    $("#5").hide();
+    $("#6").hide();
+    $("#7").hide();
+    $("#8").hide();
+    $("#9").hide();
 }/*
 function prikaziVis() {
     $("#mt").hide();
