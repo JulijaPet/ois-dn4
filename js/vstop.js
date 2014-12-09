@@ -100,4 +100,5 @@ function prikazovanje(id) {
     else if(id == 7) $("#7").hide();
     else if(id == 8) $("#8").hide();
     else if(id == 9) $("#9").hide();
+    else id = 0;
 }
