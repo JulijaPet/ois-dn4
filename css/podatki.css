@@ -23,9 +23,10 @@
     height:10%;
     width:80%;
     margin:auto;
-    text-align: center;
+    text-align: right;
     font-weight:bold;
     text-transform: uppercase;
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
+    font-size:50%;
 }
