@@ -1,5 +1,6 @@
 .imePlosceTeza {
     width:100%;
+    height:10%;
 }
 .h1 {
     font-weight:bold;
@@ -7,7 +8,6 @@
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
     text-align: center;
-    font-size:100%;
 }
 .diagramTeza {
     margin: 1% auto;
