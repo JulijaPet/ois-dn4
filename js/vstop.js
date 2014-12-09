@@ -22,7 +22,8 @@ function uporabnik() {
 }
 function skrij() {
     $("#slide").hide();
-    $("#mobi").show();
+    $("#mobi").show
+     document.getElementById('desno').style.width = '90%';
 }
 function prikazi() {
     $("#mobi").hide();
