@@ -1,10 +1,11 @@
 .imePlosceTeza {
     font-weight:bold;
     text-transform: uppercase;
-    height:20%;
+    height:10%;
     width:100%;
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
+    text-align: center;
 }
 .diagramTeza {
     margin: 1% auto;
