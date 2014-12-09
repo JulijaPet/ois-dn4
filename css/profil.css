@@ -42,6 +42,7 @@ html, body{
 .plosca {
     width:100%;
     height:100%;
+    overflow:auto;
 }
 
 .levaPor {
@@ -184,7 +185,6 @@ html, body{
 	}
     .desno {
         width:90%;
-        overflow:auto;
     }
     .levaPor {
         width:5%;
