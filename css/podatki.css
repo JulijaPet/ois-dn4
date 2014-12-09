@@ -1,0 +1,10 @@
+.imePlosceTeza {
+    margin: 5% auto 5%;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.diagramTeza {
+    margin: 1% auto;
+    width:60%;
+    height:60%;
+}
