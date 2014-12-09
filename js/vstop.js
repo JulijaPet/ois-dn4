@@ -47,6 +47,8 @@ function moznosti() {
 }
 function prikaziTeza() {
     $("#1").show();
+    if(id == 1)
+        id = 0;
     prikazovanje(id);
     id = 1;
 }
@@ -100,5 +102,4 @@ function prikazovanje(id) {
     else if(id == 7) $("#7").hide();
     else if(id == 8) $("#8").hide();
     else if(id == 9) $("#9").hide();
-    else id = 0;
 }
