@@ -75,7 +75,23 @@
 						<div class="desnaPor" onclick="skrij()">&gt;</div>
 					</div>
 					<div id="Desno" class="desno">
-						<div id="1" class="meritve-teza">bbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+						<div id="1" class="meritve-teza">
+							<span>
+								Teža
+							</span>
+							<div class="row">
+								<div>
+									diagram
+								</div>
+								<p id="datum"></p>
+								<script>
+									var d = new Date();
+									document.getElementById("datum").innerHTML = d.toDateString();
+								</script>
+								<input id="uporabnikovaTeza" type="text" class="form-control input-mini" placeholder="Vnesi vaso tezo">KG
+								<span id="ITM">tukaj se bo izpisal itm</span>
+							</div>
+						</div>
 						<div id="2" class="meritve-visina">aaaaaaaaaaaaaaaaaaa</div>
 						<div id="3" class="meritve-temperatura">hhhhhhhhhhhhhhhhhh</div>
 						<div id="4" class="meritve-krvniTlak" >ggggggggggggggggggggggggggggg</div>
