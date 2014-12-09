@@ -183,7 +183,8 @@ html, body{
         overflow: auto;
 	}
     .desno {
-        width:50%;
+        width:90%;
+        overflow:auto;
     }
     .levaPor {
         width:5%;
