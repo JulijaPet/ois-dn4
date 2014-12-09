@@ -1,11 +1,17 @@
 .imePlosceTeza {
-    margin: 5% 0 0 20%;
+    margin: 5% 0 0 10%;
     font-weight:bold;
     text-transform: uppercase;
+    width:10%;
 }
 .diagramTeza {
     margin: 1% auto;
-    width:60%;
-    height:60%;
+    width:70%;
+    height:70%;
     background-color:black;
+}
+.datum {
+    margin: 5% auto;
+    font-weight: bold;
+    text-transform: uppercase; 
 }
