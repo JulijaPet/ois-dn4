@@ -186,6 +186,7 @@ html, body{
     .desno {
         float: right;
         width:90%;
+        overflow:auto;
     }
     .levaPor {
         width:5%;
