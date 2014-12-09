@@ -44,7 +44,7 @@ function moznosti() {
         $("#kisik1").hide();
         index = 0;
     }
-}/*
+}
 function prikaziTeza() {
     $("#mt").show();
     $("#mv").hide();
@@ -55,7 +55,7 @@ function prikaziTeza() {
     $("#vajeP").hide();
     $("#danP").hide();
     $("#telP").hide();
-}
+}/*
 function prikaziVis() {
     $("#mt").hide();
     $("#mv").show();
