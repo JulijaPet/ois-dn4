@@ -47,10 +47,11 @@ function moznosti() {
 }
 function prikaziTeza() {
     $("#1").show();
+    prikazovanje(id);
     if(id == 1)
         id = 0;
-    prikazovanje(id);
-    id = 1;
+    else
+        id = 1;
 }
 function prikaziVis() {
     $("#2").show();
