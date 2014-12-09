@@ -104,6 +104,6 @@ function prikaziKisik() {
 function prikazovanje(clicked_id) {
     if(trenutnozbrano !== "")
         $("#trenutnozbrano").hide();
-    $("#clicked_id").show();
+    $("#mt").show();
     trenutnozbrano = clicked_id;
 }
