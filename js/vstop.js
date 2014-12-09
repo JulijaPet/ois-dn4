@@ -28,7 +28,6 @@ function skrij() {
 function prikazi() {
     $("#mobi").hide();
     $("#slide").show();
-    document.getElementById('desno').style.width = '50%';
 }
 function moznosti() {
     if(index === 0) {
