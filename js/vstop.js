@@ -56,42 +56,66 @@ function prikaziTeza() {
 function prikaziVis() {
     $("#2").show();
     prikazovanje(id);
-    id = 2;
+    if(id == 2)
+        id = 0;
+    else
+        id = 2;
 }
 function prikaziTem() {
     $("#3").show();
     prikazovanje(id);
-    id = 3;
+    if(id == 3)
+        id = 0;
+    else
+        id = 3;
 }
 function prikaziTlak() {
     $("#4").show();
     prikazovanje(id);
-    id = 4;
+    if(id == 4)
+        id = 0;
+    else
+        id = 4;
 }
 function prikaziKisik() {
     $("#5").show();
     prikazovanje(id);
-    id = 5;
+    if(id == 5)
+        id = 0;
+    else
+        id = 5;
 }
 function prikaziVoda() {
     $("#6").show();
     prikazovanje(id);
-    id = 6;
+    if(id == 6)
+        id = 0;
+    else
+        id = 6;
 }
 function prikaziVaje() {
     $("#7").show();
     prikazovanje(id);
-    id = 7;
+    if(id == 7)
+        id = 0;
+    else
+        id = 7;
 }
 function prikaziDan() {
     $("#8").show();
     prikazovanje(id);
-    id = 8;
+    if(id == 8)
+        id = 0;
+    else
+        id = 8;
 }
 function prikaziTel() {
     $("#9").show();
     prikazovanje(id);
-    id = 9;
+    if(id == 9)
+        id = 0;
+    else
+        id = 9;
 }
 function prikazovanje(id) {
     if(id == 1) $("#1").hide();
