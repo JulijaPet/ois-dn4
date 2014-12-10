@@ -1,5 +1,5 @@
 .imePlosce {
-    width:100%;
+    width:80%;
     height:10%;
     font-weight:bold;
     text-transform: uppercase;
@@ -48,5 +48,8 @@
     .vitalniZnaki {
         width:60%;
         margin-left:1%;
+    }
+    .imePlosce {
+        width:50%;
     }
 }
