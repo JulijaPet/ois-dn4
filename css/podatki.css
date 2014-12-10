@@ -19,11 +19,7 @@
     height:10%;
     color:#000000;
     margin: 2% auto;
-}
-.ploscaIzpisa {
-    width:80%;
-    margin:5% auto;
-    height:10%;
+    background-color:#F0F0F0 ;
 }
 
 .date {
@@ -37,6 +33,12 @@
     width:30%;
     height:100%;
 }
+.ploscaIzpisa {
+    width:80%;
+    margin:5% auto;
+    height:10%;
+}
+
 
 @media screen and (max-width: 61.75em) {
 	.date {

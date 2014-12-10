@@ -7,6 +7,7 @@
     background-color:#FFFFFF  ;
 }
 .meritve-visina {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -16,6 +17,7 @@
     filter: alpha(opacity=80);
 }
 .meritve-temperatura {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -25,6 +27,7 @@
     filter: alpha(opacity=60);
 }
 .meritve-krvniTlak {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -34,6 +37,7 @@
     filter: alpha(opacity=60);
 }
 .meritve-kisik {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -43,6 +47,7 @@
     filter: alpha(opacity=60);
 }
 .voda-plosca {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -52,6 +57,7 @@
     filter: alpha(opacity=60);
 }
 .vaje-plosca {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -61,6 +67,7 @@
     filter: alpha(opacity=60);
 }
 .dan-plosca{
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
@@ -70,6 +77,7 @@
     filter: alpha(opacity=60);
 }
 .telovadnice-plosca {
+    overflow:auto;
     display: none;
     margin: auto;
     width:100%;
