@@ -36,6 +36,7 @@
 }
 
 .date {
+    margin: 2% auto;
     text-align:left;
     float: left;
     width:20%;
@@ -48,6 +49,7 @@
     height:20%;
 }
 .kilogrami {
+    margin: 2% 0 0 2%;
     text-align:left;
     float: left;
     width:10%;
