@@ -19,6 +19,8 @@
     text-transform: uppercase; 
 }
 .podatkiPlosca {
+    width:80%;
+    height:30%;
     background-color:#A0A0A0;
     margin: auto;
     font-weight:bold;
