@@ -10,7 +10,7 @@
 .diagramTeza {
     margin: 1% auto;
     width:80%;
-    height:60%;
+    height:50%;
     background-color:black;
 }
 .datum {
@@ -20,10 +20,9 @@
 }
 .podatkiPlosca {
     background-color:#C8C8C8 ;
-    height:10%;
+    height:20%;
     width:80%;
     margin:auto;
-    text-align: center;
     font-weight:bold;
     text-transform: uppercase;
     font-style: italic;
@@ -31,6 +30,11 @@
 }
 #datum {
     margin:10% auto;
+    text-align: center;
+}
+#ITM {
+    margin:10% auto;
+    text-align: center;
 }
 #vnesiTezo {
     text-align: right;
