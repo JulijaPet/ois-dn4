@@ -38,7 +38,7 @@
     margin:auto;
     text-align:left;
     float: left;
-    width:20%;
+    width:10%;
     height:100%;
 }
 .tezaa {
@@ -50,7 +50,7 @@
 }
 @media screen and (max-width: 61.75em) {
 	.date {
-        width:40%;
+        width:30%;
     }
     .tezaa {
         width:60%;
