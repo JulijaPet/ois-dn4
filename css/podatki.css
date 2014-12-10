@@ -44,11 +44,12 @@
 .tezaa {
     margin:auto;
     text-align:left;
-    float: left;
+    float: right;
     width:30%;
     height:100%;
 }
 .presledek {
+    margin:auto;
     text-align:left;
     width:10%;
     height:100%;
