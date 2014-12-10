@@ -7,24 +7,20 @@
     font-family: "Courier New", Georgia, Serif;
     text-align: center;
 }
-.diagramTeza {
+.diagram {
     margin: 1% auto;
     width:80%;
     height:50%;
     background-color:black;
 }
-.datum {
-    margin:auto;
-    font-weight: bold;
-    text-transform: uppercase; 
-}
+
 .podatkiPlosca {
     width:80%;
     height:10%;
     color:#000000;
     margin: 2% auto;
 }
-.ITMplosca {
+.ploscaIzpisa {
     width:80%;
     margin:5% auto;
     height:10%;
@@ -35,7 +31,7 @@
     width:20%;
     height:100%;
 }
-.tezaa {
+.vitalniZnaki {
     float: left;
     margin-left:10%;
     width:30%;
@@ -49,8 +45,5 @@
     .tezaa {
         width:60%;
         margin-left:1%;
-    }
-    .presledek {
-        width:1%;
     }
 }
