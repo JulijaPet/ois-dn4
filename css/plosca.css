@@ -5,8 +5,8 @@
     height:100%;
     overflow:auto;
     background-color:#FFFFFF ;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 .meritve-visina {
     overflow:auto;
@@ -15,8 +15,8 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 .meritve-temperatura {
     overflow:auto;
@@ -35,8 +35,8 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 .meritve-kisik {
     overflow:auto;
@@ -45,8 +45,8 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 .voda-plosca {
     overflow:auto;
@@ -55,8 +55,8 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 .vaje-plosca {
     overflow:auto;
@@ -65,8 +65,8 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.8;
+    filter: alpha(opacity=85);
 }
 .dan-plosca{
     overflow:auto;
@@ -75,8 +75,8 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 .telovadnice-plosca {
     overflow:auto;
@@ -85,6 +85,6 @@
     width:100%;
     height:100%;
     background-color: #ffffff;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
