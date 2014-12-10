@@ -35,6 +35,7 @@
     height:100%;
     opacity: 0.95;
     filter: alpha(opacity=95);
+    background-color:white;
 }
 .ploscaIzpisa {
     width:80%;
