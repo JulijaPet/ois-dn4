@@ -20,7 +20,7 @@
 }
 .podatkiPlosca {
     width:80%;
-    height:20%;
+    height:10%;
     color:#000000;
     margin: 2% auto;
     font-weight:bold;
@@ -37,22 +37,22 @@
 }
 
 .date {
-    margin: 2% auto;
+    margin: 1% auto;
     text-align:left;
     float: left;
     width:20%;
-    height:30%;
+    height:100%;
 }
 .tezaa {
     text-align:right;
     float: left;
     width:40%;
-    height:20%;
+    height:100%;
 }
 .kilogrami {
     margin: 1% 0 0 1%;
     text-align:left;
     float: left;
     width:10%;
-    height:20%;
+    height:100%;
 }
