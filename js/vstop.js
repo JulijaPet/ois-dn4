@@ -24,13 +24,11 @@ function skrij() {
     $("#slide").hide();
     $("#mobi").show();
     document.getElementById("Desno").style.width="90%";
-    document.getElementById("podPl").style.width="80%";
 }
 function prikazi() {
     $("#mobi").hide();
     $("#slide").show();
     document.getElementById("Desno").style.width="50%";
-    document.getElementById("podPl").style.width="40%";
 }
 function moznosti() {
     if(index === 0) {
