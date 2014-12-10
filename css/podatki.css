@@ -11,6 +11,7 @@
     margin: 1% auto;
     width:80%;
     height:50%;
+    background-color:black;
 }
 .datum {
     margin:auto;
@@ -31,4 +32,14 @@
 .ITMplosca {
     width:100%;
     margin:1% auto;
+}
+
+#datum {
+    width:20%;
+}
+#uporabnikovaTeza {
+    width:50%;
+}
+#vnesiTezo {
+     width:10%;
 }
