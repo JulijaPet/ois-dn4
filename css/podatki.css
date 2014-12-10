@@ -27,13 +27,5 @@
     text-transform: uppercase;
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
-}
-#datum {
-    text-align: center;
-}
-#ITM {
-    text-align: center;
-}
-#vnesiTezo {
     text-align: left;
 }
