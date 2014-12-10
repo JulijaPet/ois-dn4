@@ -19,7 +19,7 @@
     text-transform: uppercase; 
 }
 .podatkiPlosca {
-    width:50%;
+    width:80%;
     height:10%;
     color:#000000;
     margin: 2% auto;
@@ -35,7 +35,7 @@
 }
 
 .date {
-    margin: 1% auto;
+    margin: 5% auto;
     text-align:left;
     float: left;
     width:20%;
