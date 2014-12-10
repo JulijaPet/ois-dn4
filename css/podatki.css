@@ -38,12 +38,13 @@
     margin:auto;
     text-align:left;
     float: left;
-    width:15%;
+    width:20%;
     height:100%;
 }
 .tezaa {
+    margin-left: 10%;
     margin:auto;
-    text-align:center;
+    text-align:left;
     float: left;
     width:30%;
     height:100%;
