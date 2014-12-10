@@ -49,14 +49,17 @@
     height:100%;
 }
 .presledek {
+    text-align:left;
     width:10%;
-    height:100%;
 }
 @media screen and (max-width: 61.75em) {
 	.date {
-        width:40%;
+        width:39%;
     }
     .tezaa {
         width:60%;
+    }
+    .presledek {
+        width:1%;
     }
 }
