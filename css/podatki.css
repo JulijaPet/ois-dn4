@@ -19,7 +19,7 @@
     text-transform: uppercase; 
 }
 .podatkiPlosca {
-    width:60%;
+    width:80%;
     height:10%;
     color:#000000;
     margin: 2% auto;
@@ -36,7 +36,7 @@
     height:100%;
 }
 .tezaa {
-    float: right;
+    float: left;
     width:30%;
     height:100%;
 }
