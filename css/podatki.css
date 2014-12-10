@@ -51,6 +51,7 @@
 .presledek {
     text-align:left;
     width:10%;
+    height:100%;
 }
 @media screen and (max-width: 61.75em) {
 	.date {
