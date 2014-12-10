@@ -5,8 +5,8 @@
     height:100%;
     overflow:auto;
     background-color:#FFFFFF ;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 .meritve-visina {
     overflow:auto;
