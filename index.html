@@ -86,13 +86,11 @@
 							<div class="diagramTeza">diagram</div>
 							<div id="podPl" class="podatkiPlosca">
 								<div class="date">
-									<label for="date">Date Input:</label>
-									<input type="date" name="date" id="date" value=""  />	
-									<script>
-  										$( document ).bind( "mobileinit", function(){
-    									$.mobile.page.prototype.options.degradeInputs.date = true;
-  										});	
-									</script>	
+									<form action="action_page.php">
+ 										Datum:
+  										<input type="date" name="bday">
+  										<input type="submit">
+									</form>
 								</div>
 								<div class="tezaa">
 									<span class="label label-default">Kg</span>
