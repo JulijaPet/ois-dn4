@@ -23,13 +23,15 @@
     height:10%;
     width:80%;
     margin:auto;
-    text-align: right;
+    text-align: center;
     font-weight:bold;
     text-transform: uppercase;
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
-    font-size:100%;
 }
 #datum {
-    margin:10% 0 10% 0;
+    margin:10% auto;
+}
+.vnesiTezo {
+    text-align: right;
 }
