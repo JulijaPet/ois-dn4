@@ -6,6 +6,7 @@
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
     text-align: center;
+    margin:5% auto;
 }
 .diagram {
     margin: 1% auto;
@@ -35,7 +36,7 @@
 }
 .ploscaIzpisa {
     width:80%;
-    margin:2% auto;
+    margin:3% auto;
     height:10%;
 }
 
