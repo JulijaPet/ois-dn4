@@ -13,6 +13,7 @@
 	  		.btn {margin-top: 10px;}
 	  		.obvestilo {margin-left:10px;}
 	  	</style>
+	  	
 	</head>
 	<body>
 		<div class="page-header"><h2>Vnos in poizvedovanje po EHR podatkih <small>EhrScape platforma</small></h2></div>
