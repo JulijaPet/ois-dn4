@@ -8,6 +8,9 @@
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" /> 
+  		<script src="jQuery.ui.datepicker.js"></script>
+  		<script src="jquery.ui.datepicker.mobile.js"></script>
 	    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	 	<link rel="stylesheet" type="text/css" href="css/stil.css" />
 	 	<link rel="stylesheet" type="text/css" href="css/profil.css" />
@@ -84,7 +87,12 @@
 							<div id="podPl" class="podatkiPlosca">
 								<div class="date">
 									<label for="date">Date Input:</label>
-<input type="date" name="date" id="date" value=""  />	
+									<input type="date" name="date" id="date" value=""  />	
+									<script>
+  										$( document ).bind( "mobileinit", function(){
+    									$.mobile.page.prototype.options.degradeInputs.date = true;
+  										});	
+									</script>	
 								</div>
 								<div class="tezaa">
 									<span class="label label-default">Kg</span>
