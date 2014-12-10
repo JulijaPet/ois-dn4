@@ -20,7 +20,7 @@
 }
 .podatkiPlosca {
     width:80%;
-    height:20%;
+    height:30%;
     color:#000000;
     margin: 2% auto;
     font-weight:bold;
@@ -36,17 +36,26 @@
 }
 
 #datum {
-    float: left;
-    width:30%;
-    height:10%;
+    text-align:left;
 }
 #uporabnikovaTeza {
-    float: left;
-    width:50%;
-    height:10%;
+    text-align:right;
 }
 #vnesiTezo {
+    text-align:left;
+}
+.date {
     float: left;
-    width:20%;
-    height:10%;
+    width:30%;
+    height:30%;
+}
+.tezaa {
+    float: left;
+    width:50%;
+    height:20%;
+}
+.kilogrami {
+    float: left;
+    width:50%;
+    height:20%;
 }

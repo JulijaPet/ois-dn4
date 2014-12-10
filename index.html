@@ -82,13 +82,17 @@
 							<div class="imePlosceTeza"><h1>Teža</h1></div>
 							<div class="diagramTeza">diagram</div>
 							<div id="podPl" class="podatkiPlosca">
-								<p id="datum"></p>
-								<script>
-									var d = new Date();
-									document.getElementById("datum").innerHTML = d.toDateString();
-								 </script>
-								<input id="uporabnikovaTeza" type="text" class="form-control input-mini" placeholder="Vnesi tezo">
-								<div>
+								<div class="date">
+									<p id="datum"></p>
+									<script>
+										var d = new Date();
+										document.getElementById("datum").innerHTML = d.toDateString();
+									 </script>
+								</div>
+								<div class="tezaa">
+									<input id="uporabnikovaTeza" type="text" class="form-control input-mini" placeholder="Vnesi tezo">	
+								</div>
+								<div class="kilogrami">
 									<h2 id="vnesiTezo"><b>KG</b></h2>
 								</div>
 							</div>
