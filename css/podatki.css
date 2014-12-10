@@ -32,14 +32,21 @@
 .ITMplosca {
     width:100%;
     margin:1% auto;
+    height:10%;
 }
 
 #datum {
-    width:20%;
+    float: left;
+    width:30%;
+    height:100%;
 }
 #uporabnikovaTeza {
+    float: left;
     width:50%;
+    height:100%;
 }
 #vnesiTezo {
-     width:10%;
+    float: left;
+    width:20%;
+    height:100%;
 }

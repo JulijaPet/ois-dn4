@@ -13,7 +13,17 @@
 	  		.btn {margin-top: 10px;}
 	  		.obvestilo {margin-left:10px;}
 	  	</style>
-	  	
+	  	<style type="text/css">
+			svg {
+				font-family: "Helvetica Neue", Helvetica;
+			}
+
+			.line {
+  				fill: none;
+  				stroke: #000;
+  				stroke-width: 2px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="page-header"><h2>Vnos in poizvedovanje po EHR podatkih <small>EhrScape platforma</small></h2></div>

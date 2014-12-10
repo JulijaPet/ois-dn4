@@ -82,20 +82,18 @@
 							<div class="imePlosceTeza"><h1>Teža</h1></div>
 							<div class="diagramTeza">diagram</div>
 							<div id="podPl" class="podatkiPlosca">
-								<div class="row">
-										<div class="panel panel-default">
-											<p id="datum"></p>
-												<script>
-													var d = new Date();
-													document.getElementById("datum").innerHTML = d.toDateString();
-												 </script>
-											<input id="uporabnikovaTeza" type="text" class="form-control input-mini" placeholder="Vnesi tezo">
-											<span id="vnesiTezo"><b>KG</b></span>
-										</div>
+								<p id="datum"></p>
+								<script>
+									var d = new Date();
+									document.getElementById("datum").innerHTML = d.toDateString();
+								 </script>
+								<input id="uporabnikovaTeza" type="text" class="form-control input-mini" placeholder="Vnesi tezo">
+								<div>
+									<h2 id="vnesiTezo"><b>KG</b></h2>
 								</div>
-								<div class="ITMplosca">
-									<span id="ITM">tukaj se bo izpisal itm</span>
-								</div>
+							</div>
+							<div class="ITMplosca">
+								<span id="ITM">tukaj se bo izpisal itm</span>
 							</div>
 						</div>
 						<div id="2" class="meritve-visina">aaaaaaaaaaaaaaaaaaa</div>
