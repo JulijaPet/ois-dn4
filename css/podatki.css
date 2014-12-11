@@ -66,12 +66,12 @@
 }
 #vodaVnesi {
     float: left;
-    width:20%;
+    width:30%;
     height:100%;
 }
 #datum {
     float: left;
-    width:20%;
+    width:30%;
     height:100%;
 }
 #gumbGraf {
@@ -83,6 +83,15 @@
     }
     .vitalniZnaki {
         width:60%;
+        margin-left:1%;
+    }
+    #vodaVnesi {
+        width:80%;
+    }
+    #datum {
+        width:80%;
+    }
+    #gumbGraf {
         margin-left:1%;
     }
 }
