@@ -16,11 +16,18 @@
 	 	<link rel="stylesheet" type="text/css" href="css/profil.css" />
 	 	<link rel="stylesheet" type="text/css" href="css/plosca.css" />
 	 	<link rel="stylesheet" type="text/css" href="css/podatki.css" />
-	 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	 	<script src="js/vstop.js"></script>
 	 	<script src="js/grafi.js"></script>
 	 	<script src="js/funkcije.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	 	<style>
+	      #map-canvas {
+	        width: 500px;
+	        height: 400px;
+	        background-color: #CCC;
+	      }
+	    </style>
+	    <script src="https://maps.googleapis.com/maps/api/js"></script>
 	 	<script>
 	 		var x=46.0552778;
 	 		var y=14.5144444;
@@ -199,9 +206,7 @@
 					<div id="humanBody">
 						<img alt="" src="http://www.3dcadbrowser.com/th/1/62/62803.jpg" style="height:80%;width:80%;margin:5%;">
 					</div>
-					<div id="telovadnice">
-						<div id="map-canvas" style="height:80%;width:80%;margin:5%;"></div>
-					</div>
+					<div id="map-canvas" ></div>
 				</div>
 			</div>			
 		</div>
