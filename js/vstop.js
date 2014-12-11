@@ -42,6 +42,7 @@ function prikaziTeza() {
     $("#kajVnesujes").html("<span>telesna masa</span>");
     $("#mera1").html("<span>kg</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziVis() {
     $("#polje2").hide();
@@ -50,6 +51,7 @@ function prikaziVis() {
     $("#kajVnesujes").html("<span>telesna višina</span>");
     $("#mera1").html("<span>cm</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziTem() {
     $("#polje2").hide();
@@ -58,6 +60,7 @@ function prikaziTem() {
     $("#kajVnesujes").html("<span>telesna temperatura</span>");
     $("#mera1").html("<span>°C</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziTlak() {
     $("#polje2").show();
@@ -68,6 +71,7 @@ function prikaziTlak() {
     $("#kajVnesujes2").html("<span>diastolični krvni tlak</span>");
     $("#mera2").html("<span>mm Hg</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziKisik() {
     $("#polje2").hide();
@@ -76,6 +80,7 @@ function prikaziKisik() {
     $("#kajVnesujes").html("<span>nasičenost krvi s kisikom</span>");
     $("#mera1").html("<span>%</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziVoda() {
     $("#polje2").hide();
@@ -84,10 +89,12 @@ function prikaziVoda() {
     $("#kajVnesujes").html("<span>voda</span>");
     $("#mera1").html("<span>dl</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziVaje() {
     $("#row2").hide();
     $("#humanBody").show();
+    $("#telovadnice").hide();
 }
 function prikaziDan() {
     $("#vitalniZnakiPlosca").show();
@@ -98,13 +105,17 @@ function prikaziDan() {
     $("#kajVnesujes2").html("<span>kolicina</span>");
     $("#mera2").html("<span>kos-ov</span>");
     $("#humanBody").hide();
+    $("#telovadnice").hide();
 }
 function prikaziTel() {
     $("#row2").hide();
     $("#humanBody").hide();
+    $("#telovadnice").show();
 }
 function domov() {
     $("#row2").hide();
+    $("#telovadnice").hide();
+    $("#humanBody").hide();
 }
 function prikaziGraf() {
     $("#graf").show();
