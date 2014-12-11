@@ -143,6 +143,6 @@ function prikaziGrafDAN() {
     $("#danc").hide(); 
 }
 function shraniPokaziDanesDAN() {
-    $("#graf").hide();
-    $("#danc").show(); 
+    $("#grafDAN").hide();
+    $("#dancDAN").show(); 
 }
