@@ -38,8 +38,8 @@ function moznosti() {
 function prikaziTeza() {
     $("#polje2").hide();
     $("#row2").show();
-    $("#kajVnesujes").html("<span class='label label-default'>'telesna masa'</span>");
-    $("#mera1").html("<span class='input-group-addon'>'KG'</span>");
+    $("#kajVnesujes").html("<span>'telesna masa'</span>");
+    $("#mera1").html("<span>'KG'</span>");
 }
 function prikaziVis() {
     $("#2").show();
