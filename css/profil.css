@@ -38,16 +38,9 @@
 
 .profilUporabnika {
     float: left;
-    width:80%;
+    width:90%;
     height:100%;
 }
-
-.desnaPor {
-    font-weight:bold;
-    float: right;
-    width:10%;
-    height:100%;
-} 
 
 .slikaUporabnika {
     margin:5% auto;

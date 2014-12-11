@@ -16,6 +16,14 @@ function getSessionId() {
     });
     return response.responseJSON.sessionId;
 }
+function odjava() {
+    $("#zacetnaStran").show();
+    $("#prijavaZac").show();
+    $("#preberiPredlogoBolnika").show();
+    $("#home").hide();
+    $("#uporabnikImeInPriimek").hide();
+    $("#prikatiSkrij").hide();
+}
 function uporabnik() {
     $("#zacetnaStran").hide();
     $("#prijavaZac").hide();
@@ -24,16 +32,7 @@ function uporabnik() {
     $("#uporabnikImeInPriimek").show();
     $("#prikatiSkrij").show();
 }
-function skrij() {
-    $("#slide").hide();
-    $("#mobi").show();
-    document.getElementById("Desno").style.width="90%";
-}
-function prikazi() {
-    $("#mobi").hide();
-    $("#slide").show();
-    document.getElementById("Desno").style.width="50%";
-}
+
 function moznosti() {
     if(index === 0) {
         $("#teza1").show();
