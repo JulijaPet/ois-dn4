@@ -112,8 +112,22 @@ function shraniPokaziDanesDAN() {
 var map;
 var infowindow;
 
+var x=46.0552778;
+var y=14.5144444;
+function getLocation() {
+   if (navigator.geolocation) {
+	    navigator.geolocation.watchPosition(showPosition);
+    } else { 
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+function showPosition(position) {
+    x = position.coords.latitude;
+	y = position.coords.longitude;
+}
+
 function initialize() {
-  var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
+  var pyrmont = new google.maps.LatLng(x, y);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: pyrmont,
@@ -152,17 +166,3 @@ function createMarker(place) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-/*var x=46.0552778;
-					 		var y=14.5144444;
-							function getLocation() {
-							    if (navigator.geolocation) {
-							        navigator.geolocation.watchPosition(showPosition);
-							    } else { 
-							        alert("Geolocation is not supported by this browser.");
-							    	
-							    }
-							}
-							function showPosition(position) {
-							    x = position.coords.latitude;
-						    	y = position.coords.longitude;
-							}*/
