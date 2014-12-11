@@ -84,7 +84,6 @@ function prikaziTel() {
     $("#row2").hide();
     $("#humanBody").hide();
     $("#map-canvas").show();
-    initialize();
     google.maps.event.addDomListener(window, 'load', initialize);
 }
 function domov() {
@@ -138,7 +137,7 @@ function initialize() {
 
   var request = {
     location: pyrmont,
-    radius: 500,
+    radius: 1000,
     query: 'fitness'
   };
   infowindow = new google.maps.InfoWindow();
