@@ -149,6 +149,9 @@
     font-weight:bold;
 }
 @media screen and (min-width: 62em) {
+	#mobi {
+	     display: none;
+	}
 	.desnaPor {
 		display: none;
 	}
