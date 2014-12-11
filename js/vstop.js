@@ -88,6 +88,9 @@ function prikaziVoda() {
 function prikaziVaje() {
     $("#vitalniZnakiPlosca").hide();
     $("#row2").show();
+    $("#diagram").hide();
+    $("#izpis").hide();
+    $("#humanBody").show();
 }
 function prikaziDan() {
     $("#vitalniZnakiPlosca").show();
@@ -103,6 +106,8 @@ function prikaziTel() {
     $("#vitalniZnakiPlosca").hide();
     $("#row2").show();
     $("#humanBody").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziGraf() {
     $("#graf").show();
