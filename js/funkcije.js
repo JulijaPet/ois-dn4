@@ -56,6 +56,7 @@ function uporabnik() {
                             $("#home").show();
                             $("#uporabnikImeInPriimek").show();
                             $("#prikatiSkrij").show();
+                            document.getElementById("row2").style.display = "none";
                           //  shraniVDatoteko();
 		                }
 		            },
