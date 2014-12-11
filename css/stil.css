@@ -56,10 +56,10 @@ html, body{
 }
 #preberiPredlogoBolnika {
     text-align:left;
-    margin:auto;
+    margin:2% auto;
 }
 #prikatiSkrij {
     display:none;
-    text-align:left;
-    margin:auto;
+    float:left;
+    margin:2% auto;
 }
