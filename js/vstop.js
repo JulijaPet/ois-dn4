@@ -68,36 +68,26 @@ function prikaziKisik() {
     $("#mera1").html("<span>%</span>");
 }
 function prikaziVoda() {
-    $("#6").show();
-    prikazovanje(id);
-    if(id == 6)
-        id = 0;
-    else
-        id = 6;
+    $("#polje2").hide();
+    $("#row2").show();
+    $("#kajVnesujes").html("<span>voda</span>");
+    $("#mera1").html("<span>dl</span>");
 }
 function prikaziVaje() {
-    $("#7").show();
-    prikazovanje(id);
-    if(id == 7)
-        id = 0;
-    else
-        id = 7;
+    $("#vitalniZnakiPlosca").hide();
+    $("#row2").show();
 }
 function prikaziDan() {
-    $("#8").show();
-    prikazovanje(id);
-    if(id == 8)
-        id = 0;
-    else
-        id = 8;
+    $("#polje2").hide();
+    $("#row2").show();
+    $("#kajVnesujes").html("<span>sadje/zelenjava</span>");
+    $("#mera1").hide();
+    $("#kajVnesujes2").html("<span>kolicina</span>");
+    $("#mera2").html("<span>kos-ov</span>");
 }
 function prikaziTel() {
-    $("#9").show();
-    prikazovanje(id);
-    if(id == 9)
-        id = 0;
-    else
-        id = 9;
+    $("#vitalniZnakiPlosca").hide();
+    $("#row2").show();
 }
 function prikaziGraf() {
     $("#graf").show();
