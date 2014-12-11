@@ -157,13 +157,7 @@
 	}
 }
 @media screen and (max-width: 61.99em) {
-    #mobi {
-	    float: left;
-        background-color:#C8C8C8;
-        height:100%;
-        width:10%;
-        font-weight:bold;
-	}
+   
 	.levo {
 	    display: none;
         width:50%;
