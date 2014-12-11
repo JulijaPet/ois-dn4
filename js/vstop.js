@@ -132,13 +132,13 @@ function initialize() {
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: pyrmont,
-    zoom: 15
+    zoom: 8
   });
 
   var request = {
     location: pyrmont,
     radius: 500,
-    types: ['store']
+    types: ['fitness']
   };
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
