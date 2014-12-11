@@ -1,5 +1,6 @@
 .imePlosce {
     width:90%;
+    height:10%;
     font-weight:bold;
     text-transform: uppercase;
     font-style: italic;
@@ -40,6 +41,11 @@
     height:10%;
 }
 
+.gumb {
+    height:10%;
+    width:80%;
+    text-align:center;
+}
 @media screen and (max-width: 61.75em) {
 	.date {
         width:39%;
