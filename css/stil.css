@@ -13,7 +13,7 @@ html, body{
     cursor: default;
 }
 #container {
-    height: 90%;
+    height: 100%;
 }
 .homePage {
     width:100%;
@@ -42,7 +42,7 @@ html, body{
     cursor: default;
     border-bottom-color:black;
 }
-.home {
+.prof {
     display:none;
 }
 

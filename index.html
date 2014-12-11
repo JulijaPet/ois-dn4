@@ -61,74 +61,76 @@
 						</button>
 					</nav>				
 				</div>
-			
-			<div class="panel-body">
-		<div id="container">
-			<div id="zacetnaStran" class="homePage">
-				<div class="prijava">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<div class="row">
-										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><b>Najprej se prijavite:</b></div>
+				<div class="panel-body">
+					<div id="container">
+						<div id="zacetnaStran" class="homePage">
+							<div class="prijava">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="row">
+													<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><b>Najprej se prijavite:</b></div>
+												</div>
+											</div>
+											<div class="panel-body">
+												<div class="col-xs-3 col-sm-3 col-md-4 col-lg-4"><img alt="" src="http://www.extensions.in.th/amitiae/09_2012_1/images/user_icon.png" style="height:70px;width:70px;"></div>
+												<form action="upload.php" method="post" enctype="multipart/form-data">
+				  									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><input type="file" name="fileToUpload" id="fileToUpload">
+				  									<input type="submit" value="Upload Image" name="submit">
+												</form>
+												<input id="kreirajIme" type="text" class="form-control input-mini" placeholder="IME">
+												<input id="kreirajPriimek" type="text" class="form-control" placeholder="PRIIMEK">
+												<input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="DATUM ROJSTVA">
+												<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik()">Prijavi se</button>
+								 	 			</div>
+									 		</div>
+								 	 	</div>
 									</div>
 								</div>
-								<div class="panel-body">
-									<div class="col-xs-3 col-sm-3 col-md-4 col-lg-4"><img alt="" src="http://www.extensions.in.th/amitiae/09_2012_1/images/user_icon.png" style="height:70px;width:70px;"></div>
-									<form action="upload.php" method="post" enctype="multipart/form-data">
-	  									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><input type="file" name="fileToUpload" id="fileToUpload">
-	  									<input type="submit" value="Upload Image" name="submit">
-									</form>
-									<input id="kreirajIme" type="text" class="form-control input-mini" placeholder="IME">
-									<input id="kreirajPriimek" type="text" class="form-control" placeholder="PRIIMEK">
-									<input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="DATUM ROJSTVA">
-									<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik()">Prijavi se</button>
-					 	 			</div>
-						 		</div>
-					 	 	</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="home" class="prof">
-				<div class="plosca">
-					<div id="slide" class="levo">
-						<div class="levaPor"></div>
-						<div class="profilUporabnika">
-							<div class="row">
-								<div class="slikaUporabnika">
-									<img class="slika" alt="" src="http://www.extensions.in.th/amitiae/09_2012_1/images/user_icon.png">
-								</div>
-								<ul class="nav nav-pills nav-stacked">
-									<li role="presentation" class="#"><a href="#">IME & PRIIMEK</a></li>
-									<li role="presentation" class="dropdown">
-									    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-				  				      		Meritve <span class="caret"></span>
-									    </a>
-									    <ul class="dropdown-menu" role="menu">
-											<li><a href="#">Teža</a></li>
-											<li><a href="#">Višina</a></li>
-											<li><a href="#">Temperatura</a></li>
-											<li><a href="#">Krvni tlak</a></li>
-											<li><a href="#">Nasičenost krvi s kisikom</a></li>
-								    	</ul>
-									</li>
-		  							<li role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
-		  							<li role="presentation" class="#"><a href="#">5 na dan</a></li>
-		  							<li role="presentation" class="#"><a href="#">Vaje</a></li>
-		  							<li role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
-								</ul>
 							</div>
 						</div>
-						<div id="znak" class="desnaPor" onclick="skrij()">
-							&lt;
+						<div id="home" class="prof">
+							<div class="plosca">
+								<div id="slide" class="levo">
+									<div class="levaPor"></div>
+									<div class="profilUporabnika">
+										<div class="row">
+											<div class="slikaUporabnika">
+												<img class="slika" alt="" src="http://www.extensions.in.th/amitiae/09_2012_1/images/user_icon.png">
+											</div>
+											<ul class="nav nav-pills nav-stacked">
+												<li role="presentation" class="#"><a href="#">IME & PRIIMEK</a></li>
+												<li role="presentation" class="dropdown">
+												    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+							  				      		Meritve <span class="caret"></span>
+												    </a>
+												    <ul class="dropdown-menu" role="menu">
+														<li><a href="#">Teža</a></li>
+														<li><a href="#">Višina</a></li>
+														<li><a href="#">Temperatura</a></li>
+														<li><a href="#">Krvni tlak</a></li>
+														<li><a href="#">Nasičenost krvi s kisikom</a></li>
+											    	</ul>
+												</li>
+					  							<li role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
+					  							<li role="presentation" class="#"><a href="#">5 na dan</a></li>
+					  							<li role="presentation" class="#"><a href="#">Vaje</a></li>
+					  							<li role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
+											</ul>
+										</div>
+									</div>
+									<div id="znak" class="desnaPor" onclick="skrij()">
+										&lt;
+									</div>
+								</div>
+									<div id="Desno" class="desno"></div>
+										
+							</div>
 						</div>
 					</div>
-						<div id="Desno" class="desno"></div>
-							
 				</div>
 			</div>
-		</div></div></div></div>
+		</div>
 	</body>
 </html>
