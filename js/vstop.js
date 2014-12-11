@@ -84,7 +84,6 @@ function prikaziTel() {
     $("#row2").hide();
     $("#humanBody").hide();
     $("#map-canvas").show();
-    google.maps.event.addDomListener(window, 'load', initialize);
 }
 function domov() {
     $("#row2").hide();
