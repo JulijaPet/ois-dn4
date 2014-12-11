@@ -80,16 +80,16 @@
 								  	 	<a tabindex="-1" href="#">Meritve</a>
 								  	 	<ul class="dropdown-menu-right">
 											<li onclick="prikaziTeza()"><a href="#">Teža</a></li>
-											<li><a href="#">Višina</a></li>
-											<li><a href="#">Temperatura</a></li>
-											<li><a href="#">Krvni tlak</a></li>
-											<li><a href="#">Nasičenost krvi s kisikom</a></li>
+											<li onclick="prikaziVis()"><a href="#">Višina</a></li>
+											<li onclick="prikaziTem()"><a href="#">Temperatura</a></li>
+											<li onclick="prikaziTlak()"><a href="#">Krvni tlak</a></li>
+											<li onclick="prikaziKisik()"><a href="#">Nasičenost krvi s kisikom</a></li>
 							    		</ul>
 									</li>
-									<li><a href="#">Ste spili dovolj vode?!</a></li>
-									<li><a href="#">5 na dan</a></li>
-									<li><a href="#">Vaje</a></li>
-									<li><a href="#">Telovadnice v vaši bližini</a></li>
+									<li onclick="prikaziVoda()"><a href="#">Ste spili dovolj vode?!</a></li>
+									<li onclick="prikaziDan()"><a href="#">5 na dan</a></li>
+									<li onclick="prikaziVaje()"><a href="#">Vaje</a></li>
+									<li onclick="prikaziTel()"><a href="#">Telovadnice v vaši bližini</a></li>
 									<li onclick="odjava()" ><a href="#">Odjavi se</a></li>
 						    </ul>
 						</div></div>
@@ -142,16 +142,16 @@
 								  	  </a>
 								  	  <ul class="dropdown-menu" role="menu">
 											<li onclick="prikaziTeza()"><a href="#">Teža</a></li>
-											<li><a href="#">Višina</a></li>
-											<li><a href="#">Temperatura</a></li>
-											<li><a href="#">Krvni tlak</a></li>
-											<li><a href="#">Nasičenost krvi s kisikom</a></li>
+											<li onclick="prikaziVis()"><a href="#">Višina</a></li>
+											<li onclick="prikaziTem()"><a href="#">Temperatura</a></li>
+											<li onclick="prikaziTlak()"><a href="#">Krvni tlak</a></li>
+											<li onclick="prikaziKisik()"><a href="#">Nasičenost krvi s kisikom</a></li>
 							    		</ul>
 									</li>
-					  				<li onclick="prikazi()" role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
-					  				<li role="presentation" class="#"><a href="#">5 na dan</a></li>
-					  				<li role="presentation" class="#"><a href="#">Vaje</a></li>
-									<li role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
+					  				<li onclick="prikaziVoda()" role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
+					  				<li onclick="prikaziDan()" role="presentation" class="#"><a href="#">5 na dan</a></li>
+					  				<li onclick="prikaziVaje()" role="presentation" class="#"><a href="#">Vaje</a></li>
+									<li onclick="prikaziTel()" role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
 								</ul>
 							</div>
 						</div>
@@ -162,7 +162,7 @@
 							<div class="panel-heading" style="margin-top:2%">
 								<ul class="nav nav-pills">
 									<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
-	  									<li role="presentation" class="active"><a href="#">Home</a></li>
+	  									<li role="presentation" class="active"><id="izbranoIme" a href="#"></a></li>
 	  								</div>
 	  								<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
 	  									<li role="presentation"><a href="#">Prikazi graf</a></li>
@@ -183,7 +183,7 @@
 									<div class="panel-heading">
 										<div class="row">
 											<div id="polje1" class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span id="kajVnesujes" class="label label-default"></span><div class="input-group"><input id="dodaj" type="text" class="form-control input-mini" placeholder="vnesi podatek"><span id="mera1" class="input-group-addon"></span></div></div>
-											<div id="polje2" class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span class="label label-default"></span><div class="input-group"><input id="dodaj" type="text" class="form-control input-mini" placeholder="vnesi podatek"><span id="mera2" class="input-group-addon"></span></div></div>
+											<div id="polje2" class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span id="kajVnesujes2" class="label label-default"></span><div class="input-group"><input id="dodaj" type="text" class="form-control input-mini" placeholder="vnesi podatek"><span id="mera2" class="input-group-addon"></span></div></div>
 										</div>
 									</div>				
 									<div class="panel-body">	

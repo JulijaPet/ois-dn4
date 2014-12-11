@@ -38,40 +38,38 @@ function moznosti() {
 function prikaziTeza() {
     $("#polje2").hide();
     $("#row2").show();
-    $("#kajVnesujes").html("<span>'telesna masa'</span>");
-    $("#mera1").html("<span>'KG'</span>");
+    $("#kajVnesujes").html("<span>telesna masa</span>");
+    $("#mera1").html("<span>kg</span>");
+    $("#izbranoIme").html("<a>Teža</a>");
 }
 function prikaziVis() {
-    $("#2").show();
-    prikazovanje(id);
-    if(id == 2)
-        id = 0;
-    else
-        id = 2;
+    $("#polje2").hide();
+    $("#row2").show();
+    $("#kajVnesujes").html("<span>telesna višina</span>");
+    $("#mera1").html("<span>cm</span>");
+    $("#izbranoIme").html("<a>Višina</a>");
 }
 function prikaziTem() {
-    $("#3").show();
-    prikazovanje(id);
-    if(id == 3)
-        id = 0;
-    else
-        id = 3;
+    $("#polje2").hide();
+    $("#row2").show();
+    $("#kajVnesujes").html("<span>telesna temperatura</span>");
+    $("#mera1").html("<span>°C</span>");
+    $("#izbranoIme").html("<a>Temperatura</a>");
 }
 function prikaziTlak() {
-    $("#4").show();
-    prikazovanje(id);
-    if(id == 4)
-        id = 0;
-    else
-        id = 4;
+    $("#row2").show();
+    $("#kajVnesujes").html("<span>sistolični krvni tlak</span>");
+    $("#mera1").html("<span>mm Hg</span>");
+    $("#kajVnesujes").html("<span>diastolični krvni tlak</span>");
+    $("#mera1").html("<span>mm Hg</span>");
+    $("#izbranoIme").html("<a>krvni tlak</a>");
 }
 function prikaziKisik() {
-    $("#5").show();
-    prikazovanje(id);
-    if(id == 5)
-        id = 0;
-    else
-        id = 5;
+    $("#polje2").hide();
+    $("#row2").show();
+    $("#kajVnesujes").html("<span>nasičenost krvi s kisikom</span>");
+    $("#mera1").html("<span>%</span>");
+    $("#izbranoIme").html("<a>Nasičenost krvi s kisikom</a>");
 }
 function prikaziVoda() {
     $("#6").show();
