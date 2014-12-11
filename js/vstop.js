@@ -130,3 +130,11 @@ function prikazovanje(id) {
     else if(id == 8) $("#8").hide();
     else if(id == 9) $("#9").hide();
 }
+function prikaziGraf() {
+    $("#graf").show();
+    $("#danc").hide(); 
+}
+function shraniPokaziDanes() {
+    $("#graf").hide();
+    $("#danc").show(); 
+}

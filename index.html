@@ -177,23 +177,19 @@
 							</div>
 						</div>
 						<div id="6" class="voda-plosca" >
-							<div class="imePlosce">nasičenost krvi s kisikom</div>
-							<div class="diagram">diagram</div>
-							<div id="podPl" class="podatkiPlosca">
-								<div class="date">
- 									<span class="label label-default">Datum</span><input id="KisikDatum" type="date" class="form-control">
-								</div>
-								
-								<div class="vitalniZnaki">
-									<span class="label label-default">Kisik</span><input id="KisikUporabnika" type="text" class="form-control" placeholder="Vnesi nasicenost krvi s kisikom">
-								</div>
+							<div class="imePlosce">Količina spite vode</div>
+							<div class="podatkiPlosca">
+ 								<span class="label label-default">Datum</span><input id="vodaDatum" type="date" class="form-control">
 							</div>
-							<div class="gumb">
-								<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="teza()">Shrani</button>
+							<div class="podatkiPlosca">
+								<span class="label label-default">liter</span><input id="vodaUporabnika" type="text" class="form-control" placeholder="Vnesi kolicino vode">
 							</div>
-							<div class="ploscaIzpisa">
-								<span id="izpisKisik">tukaj se bo izpisal itm</span>
+							<div class="gumb2">
+								<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="shraniPokaziDanes()">Shrani</button>
+								<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="prikaziGraf()">Shrani in prikazi graf</button>
 							</div>
+							<div id="graf" class="diagram2">diagram</div>
+							<div id="danc" class="danes">popita voda</div>
 						</div>
 						<div id="7" class="vaje-plosca">wwwwwwwwwwwwwwwwwwwwwwwwwwwww</div>
 						<div id="8" class="dan-plosca">tttttttttttttttttttttttttttttttttttt</div>
