@@ -128,7 +128,7 @@ function showPosition(position) {
 
 function initialize() {
     getLocation();
-    var pyrmont = new google.maps.LatLng(x, y);
+    var pyrmont = new google.maps.LatLng(46.0552778, 14.5144444);
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: pyrmont,
