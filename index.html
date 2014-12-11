@@ -219,8 +219,28 @@
 							<div id="grafDAN" class="diagram2">diagram</div>
 							<div id="dancDAN" class="danes">popita voda</div>
 						</div>
-						<div id="9" class="telovadnice-plosca"><object type="text/html" data="https://www.google.si/?gws_rd=cr&ei=Y_GIVOuGB4TdaomdgNAH" width="100%" height="100%" style="overflow:auto;border:5px ridge blue">
-    </object></div>
+						<div id="9" class="telovadnice-plosca">
+							<style>
+							 	#map-canvas {
+						        	width: 500px;
+						       		height: 400px;
+						      	}
+						   	 </style>
+						    <script src="https://maps.googleapis.com/maps/api/js"></script>
+						    <script>
+						     	function initialize() {
+						        	var mapCanvas = document.getElementById('map-canvas');
+						        	var mapOptions = {
+						          	center: new google.maps.LatLng(44.5403, -78.5463),
+						          	zoom: 8,
+						          	mapTypeId: google.maps.MapTypeId.ROADMAP
+						        	}
+						        	var map = new google.maps.Map(mapCanvas, mapOptions)
+						      		}
+						      		google.maps.event.addDomListener(window, 'load', initialize);
+						    </script>
+						    <div id="map-canvas"></div>
+						</div>
 					</div>
 				</div>
 			</div>
