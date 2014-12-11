@@ -64,6 +64,9 @@
         width:50%;
         overflow: auto;
 	}
+	.desno {
+	    width:100%;
+	}
     .levaPor {
         width:5%;
     }
