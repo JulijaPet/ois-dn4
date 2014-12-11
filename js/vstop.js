@@ -38,24 +38,28 @@ function moznosti() {
 function prikaziTeza() {
     $("#polje2").hide();
     $("#row2").show();
+    $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna masa</span>");
     $("#mera1").html("<span>kg</span>");
 }
 function prikaziVis() {
     $("#polje2").hide();
     $("#row2").show();
+    $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna višina</span>");
     $("#mera1").html("<span>cm</span>");
 }
 function prikaziTem() {
     $("#polje2").hide();
     $("#row2").show();
+    $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna temperatura</span>");
     $("#mera1").html("<span>°C</span>");
 }
 function prikaziTlak() {
     $("#polje2").show();
     $("#row2").show();
+    $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>sistolični krvni tlak</span>");
     $("#mera1").html("<span>mm Hg</span>");
     $("#kajVnesujes2").html("<span>diastolični krvni tlak</span>");
@@ -64,12 +68,14 @@ function prikaziTlak() {
 function prikaziKisik() {
     $("#polje2").hide();
     $("#row2").show();
+    $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>nasičenost krvi s kisikom</span>");
     $("#mera1").html("<span>%</span>");
 }
 function prikaziVoda() {
     $("#polje2").hide();
     $("#row2").show();
+    $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>voda</span>");
     $("#mera1").html("<span>dl</span>");
 }
@@ -78,6 +84,7 @@ function prikaziVaje() {
     $("#row2").show();
 }
 function prikaziDan() {
+    $("#vitalniZnakiPlosca").show();
     $("#polje2").hide();
     $("#row2").show();
     $("#kajVnesujes").html("<span>sadje/zelenjava</span>");
