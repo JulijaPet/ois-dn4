@@ -54,6 +54,7 @@ function prikaziTem() {
     $("#mera1").html("<span>°C</span>");
 }
 function prikaziTlak() {
+    $("#polje2").show();
     $("#row2").show();
     $("#kajVnesujes").html("<span>sistolični krvni tlak</span>");
     $("#mera1").html("<span>mm Hg</span>");
