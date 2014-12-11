@@ -18,7 +18,11 @@ function getSessionId() {
 }
 function uporabnik() {
     $("#zacetnaStran").hide();
+    $("#prijavaZac").hide();
+    $("#preberiPredlogoBolnika").hide();
     $("#home").show();
+    $("#uporabnikImeInPriimek").show();
+    $("#prikatiSkrij").show();
 }
 function skrij() {
     $("#slide").hide();
