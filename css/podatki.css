@@ -43,6 +43,7 @@
 .gumb {
     width:100%;
     text-align:center;
+    margin:1% auto;
 }
 @media screen and (max-width: 61.75em) {
 	.date {
