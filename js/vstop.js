@@ -138,3 +138,11 @@ function shraniPokaziDanes() {
     $("#graf").hide();
     $("#danc").show(); 
 }
+function prikaziGrafDAN() {
+    $("#graf").show();
+    $("#danc").hide(); 
+}
+function shraniPokaziDanesDAN() {
+    $("#graf").hide();
+    $("#danc").show(); 
+}
