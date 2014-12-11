@@ -149,7 +149,7 @@
     font-weight:bold;
 }
 @media screen and (min-width: 62em) {
-	.mobii {
+	#mobi {
 	     display: none;
 	}
 	.desnaPor {
@@ -157,7 +157,7 @@
 	}
 }
 @media screen and (max-width: 61.99em) {
-    .mobii {
+    #mobi {
 	    float: left;
         background-color:#C8C8C8;
         height:100%;
