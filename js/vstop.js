@@ -111,6 +111,7 @@ function prikaziTel() {
     $("#row2").hide();
     $("#humanBody").hide();
     $("#telovadnice").show();
+    $("#map-canvas").show();
 }
 function domov() {
     $("#row2").hide();
