@@ -35,7 +35,7 @@ function moznosti() {
         index = 0;
     }
 }
-function prikazi() {
+function prikaziTeza() {
   //  document.getElementById("#polje2").style.display = "none";
     $("#row2").show();
 //    $("#kajVnesujes").html("<span class='label label-default'>'telesna masa'</span>");
