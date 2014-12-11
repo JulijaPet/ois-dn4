@@ -20,7 +20,6 @@
 	 	<script src="js/grafi.js"></script>
 	 	<script src="js/funkcije.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	    <script src="http://maps.googleapis.com/maps/api/js"></script>
 	</head>
 	<style>
       html, body, #map-canvas {
@@ -45,7 +44,6 @@ function initialize() {
   var request = {
     location: pyrmont,
     radius: 2000,
-    query: 'fitness', 
     types: ['fitness']
   };
   infowindow = new google.maps.InfoWindow();
