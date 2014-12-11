@@ -21,10 +21,24 @@
 	 	<script src="js/grafi.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	 	<script>
+	 		var x=46.0552778;
+	 		var y=14.5144444;
+			function getLocation() {
+			    if (navigator.geolocation) {
+			        navigator.geolocation.watchPosition(showPosition);
+			    } else { 
+			        alert("Geolocation is not supported by this browser.");
+			    	
+			    }
+			}
+			function showPosition(position) {
+			    x = position.coords.latitude;
+		    	y = position.coords.longitude;	
+			}
 			function initialize() {
 		     	var mapCanvas = document.getElementById('map-canvas');
 			   	var mapOptions = {
-		        	center: new google.maps.LatLng(46.0508404, 14.4883354),
+		        	center: new google.maps.LatLng(x, y),
 		          	zoom: 8,
 		          	mapTypeId: google.maps.MapTypeId.ROADMAP
 	        	}
