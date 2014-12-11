@@ -138,6 +138,7 @@ function initialize() {
   var request = {
     location: pyrmont,
     radius: 500,
+    query: 'fitness',
     types: ['fitness']
   };
   infowindow = new google.maps.InfoWindow();
