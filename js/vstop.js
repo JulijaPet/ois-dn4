@@ -84,6 +84,7 @@ function prikaziTel() {
     $("#row2").hide();
     $("#humanBody").hide();
     $("#map-canvas").show();
+    initialize();
 }
 function domov() {
     $("#row2").hide();
