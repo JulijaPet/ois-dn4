@@ -35,16 +35,10 @@ function moznosti() {
         index = 0;
     }
 }
-function prikazi() {
-    $("#row2").show();
-}
 function prikaziTeza() {
-    $("#1").show();
-    prikazovanje(id);
-    if(id == 1)
-        id = 0;
-    else
-        id = 1;
+    document.getElementById("#polje2").style.display = "none";
+    $("#kajVnesujes").html("<span class='label label-default'>'telesna masa'</span>");
+    $("#mera1").html("<span class='input-group-addon'>'KG'</span>");
 }
 function prikaziVis() {
     $("#2").show();
@@ -109,17 +103,6 @@ function prikaziTel() {
         id = 0;
     else
         id = 9;
-}
-function prikazovanje(id) {
-    if(id == 1) $("#1").hide();
-    else if(id == 2) $("#2").hide();
-    else if(id == 3) $("#3").hide();
-    else if(id == 4) $("#4").hide();
-    else if(id == 5) $("#5").hide();
-    else if(id == 6) $("#6").hide();
-    else if(id == 7) $("#7").hide();
-    else if(id == 8) $("#8").hide();
-    else if(id == 9) $("#9").hide();
 }
 function prikaziGraf() {
     $("#graf").show();
