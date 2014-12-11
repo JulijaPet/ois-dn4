@@ -172,7 +172,7 @@
 					<div id="humanBody">
 						<img alt="" src="http://www.3dcadbrowser.com/th/1/62/62803.jpg" style="height:80%;width:80%;margin:5%;">
 					</div>
-					<div id="map-canvas" style="width:80%;height:80%;background-color:#CCC;">
+					<div id="map-canvas" onload="initialize()" style="width:80%;height:80%;background-color:#CCC;">
 						<script>
 					 		var x=46.0552778;
 					 		var y=14.5144444;
@@ -187,9 +187,9 @@
 							function showPosition(position) {
 							    x = position.coords.latitude;
 						    	y = position.coords.longitude;
-						    	initialize();
 							}
 							function initialize() {
+								getLocation();
 						     	var mapCanvas = document.getElementById('map-canvas');
 							   	var mapOptions = {
 							   		query: 'fitness',
