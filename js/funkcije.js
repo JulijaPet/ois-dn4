@@ -49,6 +49,7 @@ function uporabnik() {
 		                if (party.action == 'CREATE') {
 		                    console.log("Uspešno kreiran EHR '" + ehrId + "'.");
 		                    $("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
+		                    $("#izpisUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
 		                    $("#zacetnaStran").hide();
                             $("#prijavaZac").hide();
                             $("#preberiPredlogoBolnika").hide();
