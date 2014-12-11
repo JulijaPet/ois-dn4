@@ -13,7 +13,7 @@ html, body{
     cursor: default;
 }
 #container {
-    height: 100%;
+    height: 90%;
 }
 .homePage {
     width:100%;
@@ -42,7 +42,7 @@ html, body{
     cursor: default;
     border-bottom-color:black;
 }
-,home {
+.home {
     display:none;
 }
 @media screen and (max-width: 61.75em) {
