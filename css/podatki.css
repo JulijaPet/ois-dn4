@@ -20,7 +20,7 @@
     width:80%;
     height:10%;
     color:#000000;
-    margin: 2% auto;
+    margin-top: 2%;
     
 }
 
@@ -43,7 +43,7 @@
 
 .gumb {
     height:10%;
-    width:80%;
+    width:100%;
     text-align:center;
 }
 @media screen and (max-width: 61.75em) {
