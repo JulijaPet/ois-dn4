@@ -106,3 +106,62 @@ function shraniPokaziDanesDAN() {
     $("#grafDAN").hide();
     $("#dancDAN").show(); 
 }
+
+
+var map;
+var infowindow;
+
+function initialize() {
+  var pyrmont = new google.maps.LatLng(-33.8665433, 151.1956316);
+
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: pyrmont,
+    zoom: 15
+  });
+
+  var request = {
+    location: pyrmont,
+    radius: 500,
+    types: ['store']
+  };
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+/*var x=46.0552778;
+					 		var y=14.5144444;
+							function getLocation() {
+							    if (navigator.geolocation) {
+							        navigator.geolocation.watchPosition(showPosition);
+							    } else { 
+							        alert("Geolocation is not supported by this browser.");
+							    	
+							    }
+							}
+							function showPosition(position) {
+							    x = position.coords.latitude;
+						    	y = position.coords.longitude;
+							}*/
