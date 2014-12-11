@@ -179,14 +179,14 @@
 						<div id="6" class="voda-plosca" >
 							<div class="imePlosce">Količina spite vode</div>
 							<div class="podatkiPlosca">
- 								<span class="label label-default">Datum</span><input id="vodaDatum" type="date" class="form-control">
+ 								<span id="datum" class="label label-default">Datum</span><input id="vodaDatum" type="date" class="form-control">
 							</div>
 							<div class="podatkiPlosca">
-								<span class="label label-default">liter</span><input id="vodaUporabnika" type="text" class="form-control" placeholder="Vnesi kolicino vode">
+								<span id="vodaVnesi" class="label label-default">liter</span><input id="vodaUporabnika" type="text" class="form-control" placeholder="Vnesi kolicino vode">
 							</div>
 							<div class="gumb2">
-								<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="shraniPokaziDanes()">Shrani</button>
-								<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="prikaziGraf()">Shrani in prikazi graf</button>
+								<button id="gumbShrani" type="button" class="btn btn-primary btn-xs" onclick="shraniPokaziDanes()">Shrani</button>
+								<button id="gumbGraf" type="button" class="btn btn-primary btn-xs" onclick="prikaziGraf()">Shrani in prikazi graf</button>
 							</div>
 							<div id="graf" class="diagram2">diagram</div>
 							<div id="danc" class="danes">popita voda</div>

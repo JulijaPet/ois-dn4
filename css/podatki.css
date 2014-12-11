@@ -53,7 +53,7 @@
     display:none;
 }
 .gumb2 {
-    width:100%;
+    width:80%;
     text-align:left;
     margin:1% auto;
 }
@@ -63,6 +63,19 @@
     height:50%;
     background-color:black;
     display:none;
+}
+#vodaVnesi {
+    float: left;
+    width:20%;
+    height:100%;
+}
+#datum {
+    float: left;
+    width:20%;
+    height:100%;
+}
+#gumbGraf {
+    margin-left:5%;
 }
 @media screen and (max-width: 61.75em) {
 	.date {
