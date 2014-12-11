@@ -151,15 +151,26 @@
 							</div>
 						</div>
 					</div>
-				<div id="Desno" class="desno">
+				<div id="Desno" class="desno" <style type="text/css">
+					desno {
+					    float: right;
+					    height:100%;
+					    width:85%;
+					}
+				</style>>
 					<div id="row2" class="row">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<ul class="nav nav-pills">
   									<li role="presentation" class="active"><a href="#">Home</a></li>
-  									<li role="presentation"><a href="#">Profile</a></li>
-  									<li role="presentation"><a href="#">Messages</a></li>
+  									<li role="presentation"><a href="#">Prikazi graf</a></li>
+  									<li role="presentation"><a href="#">Shrani vnešene podatke</a></li>
 								</ul>
+								<p id="datum"></p>
+								<script>
+									var d = new Date();
+									document.getElementById("datum").innerHTML = d;
+								</script>
 							</div>
 							<div class="panel-body">
 								
