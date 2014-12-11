@@ -1,5 +1,5 @@
 .imePlosce {
-    width:100%;
+    width:90%;
     font-weight:bold;
     text-transform: uppercase;
     font-style: italic;
@@ -39,7 +39,6 @@
     margin:3% auto;
     height:10%;
 }
-
 
 @media screen and (max-width: 61.75em) {
 	.date {
