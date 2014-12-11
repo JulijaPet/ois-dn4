@@ -155,16 +155,20 @@
 					<div id="row2" class="row">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<ul class="nav nav-pills">
-  									<li role="presentation" class="active"><a href="#">Home</a></li>
-  									<li role="presentation"><a href="#">Prikazi graf</a></li>
-  									<li role="presentation"><a href="#">Shrani vnešene podatke</a></li>
-								</ul>
-								<p id="datum"></p>
-								<script>
-									var d = new Date();
-									document.getElementById("datum").innerHTML = d;
-								</script>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<ul class="nav nav-pills">
+	  									<li role="presentation" class="active"><a href="#">Home</a></li>
+	  									<li role="presentation"><a href="#">Prikazi graf</a></li>
+	  									<li role="presentation"><a href="#">Shrani vnešene podatke</a></li>
+									</ul>
+								</div>
+								<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+									<p id="datum"></p>
+									<script>
+										var d = new Date();
+										document.getElementById("datum").innerHTML = d;
+									</script>
+								</div>
 							</div>
 							<div class="panel-body">
 								
