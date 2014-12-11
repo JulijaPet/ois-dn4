@@ -149,11 +149,8 @@
     font-weight:bold;
 }
 @media screen and (min-width: 62em) {
-	#mobi {
-	     display: none;
-	}
 	.desnaPor {
-		visibility:hidden;
+		display: none;
 	}
 }
 @media screen and (max-width: 61.99em) {
