@@ -35,6 +35,9 @@ function moznosti() {
         index = 0;
     }
 }
+function prikazi() {
+    $("#row2").show();
+}
 function prikaziTeza() {
     $("#1").show();
     prikazovanje(id);

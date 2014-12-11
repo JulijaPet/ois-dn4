@@ -50,6 +50,14 @@
 	   </script>
 	</head>
 	<body>
+		 <?php
+			$myfile = fopen("uporabniki.txt", "w") or die("Unable to open file!");
+			$txt = "John Doe\n";
+			fwrite($myfile, $txt);
+			$txt = "Jane Doe\n";
+			fwrite($myfile, $txt);
+			fclose($myfile);
+		?>
 		<div class="row">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -135,7 +143,7 @@
 											<li><a href="#">Nasičenost krvi s kisikom</a></li>
 							    		</ul>
 									</li>
-					  				<li role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
+					  				<li onclick="prikazi()" role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
 					  				<li role="presentation" class="#"><a href="#">5 na dan</a></li>
 					  				<li role="presentation" class="#"><a href="#">Vaje</a></li>
 									<li role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
@@ -143,7 +151,22 @@
 							</div>
 						</div>
 					</div>
-				<div id="Desno" class="desno"></div>
+				<div id="Desno" class="desno">
+					<div id="row2" class="row">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<ul class="nav nav-pills">
+  									<li role="presentation" class="active"><a href="#">Home</a></li>
+  									<li role="presentation"><a href="#">Profile</a></li>
+  									<li role="presentation"><a href="#">Messages</a></li>
+								</ul>
+							</div>
+							<div class="panel-body">
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>			
 		</div>
 	</body>

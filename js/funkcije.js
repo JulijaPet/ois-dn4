@@ -56,6 +56,7 @@ function uporabnik() {
                             $("#home").show();
                             $("#uporabnikImeInPriimek").show();
                             $("#prikatiSkrij").show();
+                          //  shraniVDatoteko();
 		                }
 		            },
 		            error: function(err) {
@@ -75,4 +76,7 @@ $(document).ready(function() {
 		$("#kreirajPriimek").val(podatki[1]);
 		$("#kreirajDatumRojstva").val(podatki[2]);
 	});
-});*/
+});
+function shraniVDatoteko() {
+
+}*/
