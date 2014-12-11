@@ -19,6 +19,7 @@
 	 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	 	<script src="js/vstop.js"></script>
 	 	<script src="js/grafi.js"></script>
+	 	<script src="js/funkcije.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	 	<script>
 	 		var x=46.0552778;
@@ -54,7 +55,7 @@
 				<div class="panel-heading">
 					<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"><p id="prijavaZac" class="navbar-text navbar-left"><b>PRIJAVA</b></p>
-						<p id="uporabnikImeInPriimek" class="navbar-text navbar-left">Prijavljen kot <a href="#" class="navbar-link">Ime & Priimek</a></p></div>
+						<p id="uporabnikImeInPriimek" class="navbar-text navbar-left">Prijavljen kot <a id="izpisUporabnika" href="#" class="navbar-link"></a></p></div>
 						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><select class="form-control input-sm" id="preberiPredlogoBolnika"><option value=""></option><option value=""></option></select>
 						<div id="prikatiSkrij"  class="btn-group" role="group">
 						    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
