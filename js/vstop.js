@@ -40,36 +40,31 @@ function prikaziTeza() {
     $("#row2").show();
     $("#kajVnesujes").html("<span>telesna masa</span>");
     $("#mera1").html("<span>kg</span>");
-    $("#izbranoIme").html("<a>Teža</a>");
 }
 function prikaziVis() {
     $("#polje2").hide();
     $("#row2").show();
     $("#kajVnesujes").html("<span>telesna višina</span>");
     $("#mera1").html("<span>cm</span>");
-    $("#izbranoIme").html("<a>Višina</a>");
 }
 function prikaziTem() {
     $("#polje2").hide();
     $("#row2").show();
     $("#kajVnesujes").html("<span>telesna temperatura</span>");
     $("#mera1").html("<span>°C</span>");
-    $("#izbranoIme").html("<a>Temperatura</a>");
 }
 function prikaziTlak() {
     $("#row2").show();
     $("#kajVnesujes").html("<span>sistolični krvni tlak</span>");
     $("#mera1").html("<span>mm Hg</span>");
-    $("#kajVnesujes").html("<span>diastolični krvni tlak</span>");
-    $("#mera1").html("<span>mm Hg</span>");
-    $("#izbranoIme").html("<a>krvni tlak</a>");
+    $("#kajVnesujes2").html("<span>diastolični krvni tlak</span>");
+    $("#mera2").html("<span>mm Hg</span>");
 }
 function prikaziKisik() {
     $("#polje2").hide();
     $("#row2").show();
     $("#kajVnesujes").html("<span>nasičenost krvi s kisikom</span>");
     $("#mera1").html("<span>%</span>");
-    $("#izbranoIme").html("<a>Nasičenost krvi s kisikom</a>");
 }
 function prikaziVoda() {
     $("#6").show();
