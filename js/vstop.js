@@ -109,6 +109,9 @@ function prikaziTel() {
     $("#diagram").hide();
     $("#izpis").hide();
 }
+function domov() {
+    $("#row2").hide();
+}
 function prikaziGraf() {
     $("#graf").show();
     $("#danc").hide(); 
