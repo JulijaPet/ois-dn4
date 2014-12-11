@@ -86,10 +86,7 @@ function prikaziVoda() {
     $("#humanBody").hide();
 }
 function prikaziVaje() {
-    $("#vitalniZnakiPlosca").hide();
-    $("#row2").show();
-    $("#diagram").hide();
-    $("#izpis").hide();
+    $("#row2").hide();
     $("#humanBody").show();
 }
 function prikaziDan() {
@@ -103,11 +100,8 @@ function prikaziDan() {
     $("#humanBody").hide();
 }
 function prikaziTel() {
-    $("#vitalniZnakiPlosca").hide();
-    $("#row2").show();
+    $("#row2").hide();
     $("#humanBody").hide();
-    $("#diagram").hide();
-    $("#izpis").hide();
 }
 function domov() {
     $("#row2").hide();
