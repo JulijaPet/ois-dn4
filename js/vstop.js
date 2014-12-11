@@ -85,7 +85,7 @@ function prikaziVaje() {
 }
 function prikaziDan() {
     $("#vitalniZnakiPlosca").show();
-    $("#polje2").hide();
+    $("#polje2").show();
     $("#row2").show();
     $("#kajVnesujes").html("<span>sadje/zelenjava</span>");
     $("#mera1").hide();
