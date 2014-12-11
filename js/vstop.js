@@ -36,10 +36,10 @@ function moznosti() {
     }
 }
 function prikazi() {
-    document.getElementById("#polje2").style.display = "none";
+  //  document.getElementById("#polje2").style.display = "none";
     $("#row2").show();
-    $("#kajVnesujes").html("<span class='label label-default'>'telesna masa'</span>");
-    $("#mera1").html("<span class='input-group-addon'>'KG'</span>");
+//    $("#kajVnesujes").html("<span class='label label-default'>'telesna masa'</span>");
+   // $("#mera1").html("<span class='input-group-addon'>'KG'</span>");
 }
 function prikaziVis() {
     $("#2").show();
