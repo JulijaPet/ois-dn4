@@ -85,6 +85,7 @@ function prikaziTel() {
     $("#humanBody").hide();
     $("#map-canvas").show();
     initialize();
+    google.maps.event.addDomListener(window, 'load', initialize);
 }
 function domov() {
     $("#row2").hide();
@@ -165,5 +166,3 @@ function createMarker(place) {
     infowindow.open(map, this);
   });
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
