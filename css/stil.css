@@ -42,11 +42,19 @@ html, body{
     cursor: default;
     border-bottom-color:black;
 }
-.home {
-    display:none;
-}
+
+
 @media screen and (max-width: 61.75em) {
 	.prijava {
 		width: 100%;
 	}
+}
+#uporabnikImeInPriimek {
+    display:none;
+}
+#preberiPredlogoBolnika {
+    text-align:left;
+}
+#prikatiSkrij {
+    display:none;
 }
