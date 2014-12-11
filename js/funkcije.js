@@ -17,13 +17,13 @@ function getSessionId() {
     return response.responseJSON.sessionId;
 }
 function uporabnik() {
-	sessionId = getSessionId();
+	var sessionId = getSessionId();
 
 	var ime = $("#kreirajIme").val();
 	var priimek = $("#kreirajPriimek").val();
 	var datumRojstva = $("#kreirajDatumRojstva").val();
 
-	if (!ime || !priimek || !datumRojstva || ime.trim().length == 0 || priimek.trim().length == 0 || datumRojstva.trim().length == 0) {
+	if (!ime || !priimek || !datumRojstva || ime.trim().length === 0 || priimek.trim().length === 0 || datumRojstva.trim().length === 0) {
 		alert("PROSIMO VNESITE PODATKE!");
 	} else {
 		$.ajaxSetup({
@@ -49,6 +49,12 @@ function uporabnik() {
 		                if (party.action == 'CREATE') {
 		                    console.log("Uspešno kreiran EHR '" + ehrId + "'.");
 		                    $("#izpisUporabnika").val(ime + " " + priimek);
+		                    $("#zacetnaStran").hide();
+                            $("#prijavaZac").hide();
+                            $("#preberiPredlogoBolnika").hide();
+                            $("#home").show();
+                            $("#uporabnikImeInPriimek").show();
+                            $("#prikatiSkrij").show();
 		                }
 		            },
 		            error: function(err) {
