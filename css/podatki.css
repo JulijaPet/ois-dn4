@@ -5,6 +5,8 @@
     font-style: italic;
     font-family: "Courier New", Georgia, Serif;
     text-align: left;
+    margin-top:2%;
+    margin-left:2%;
 }
 .diagram {
     margin: 1% auto;
