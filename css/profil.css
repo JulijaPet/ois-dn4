@@ -157,10 +157,7 @@
 	}
 }
 @media screen and (max-width: 61.99em) {
-    #mobi {
-	     display: none;
-	}
-	.levo {
+    .levo {
 	    display: none;
         width:50%;
         overflow: auto;

@@ -19,7 +19,6 @@ function getSessionId() {
 function uporabnik() {
     $("#zacetnaStran").hide();
     $("#home").show();
-    $("#mobi").show();
 }
 function skrij() {
     $("#slide").hide();

@@ -85,187 +85,43 @@
 						<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
 					</button>
 				</nav>
-			<div class="plosca">
-				<div id="slide" class="levo">
-					<div class="levaPor"></div>
-					<div class="profilUporabnika">
-						<div class="row">
-							<div class="slikaUporabnika">
-								<img class="slika" alt="" src="http://www.extensions.in.th/amitiae/09_2012_1/images/user_icon.png">
-							</div>
-							<ul class="nav nav-pills nav-stacked">
-								<li role="presentation" class="#"><a href="#">IME & PRIIMEK</a></li>
-								<li role="presentation" class="dropdown">
-								    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-			  				      		Meritve <span class="caret"></span>
-								    </a>
-								    <ul class="dropdown-menu" role="menu">
-										<li><a href="#">Teža</a></li>
-										<li><a href="#">Višina</a></li>
-										<li><a href="#">Temperatura</a></li>
-										<li><a href="#">Krvni tlak</a></li>
-										<li><a href="#">Nasičenost krvi s kisikom</a></li>
-							    	</ul>
-								</li>
-	  							<li role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
-	  							<li role="presentation" class="#"><a href="#">5 na dan</a></li>
-	  							<li role="presentation" class="#"><a href="#">Vaje</a></li>
-	  							<li role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
-							</ul>
-						</div>
-					</div>
-					<div id="znak" class="desnaPor" onclick="skrij()">
-						&gt;
-					</div>
-				</div>
-						<div id="Desno" class="desno">
-							<div id="1" class="meritveTeza">
-								<div class="imePlosce">Teža</div>
-								<div class="diagram">diagram</div>
-								<div id="podPl" class="podatkiPlosca">
-									<div class="date">
-	 									<span class="label label-default">Datum</span><input id="tezaDatum" type="date" class="form-control">
-									</div>
-									
-									<div class="vitalniZnaki">
-										<span class="label label-default">Kg</span><input id="tezaUporabnika" type="text" class="form-control" placeholder="vnesi tezo">
-									</div>
+				<div class="plosca">
+					<div id="slide" class="levo">
+						<div class="levaPor"></div>
+						<div class="profilUporabnika">
+							<div class="row">
+								<div class="slikaUporabnika">
+									<img class="slika" alt="" src="http://www.extensions.in.th/amitiae/09_2012_1/images/user_icon.png">
 								</div>
-								<div class="gumb">
-									<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="teza()">Shrani</button>
-								</div>
-								<div class="ploscaIzpisa">
-									<span id="izpisTeza">tukaj se bo izpisal itm</span>
-								</div>
-							</div>
-							<div id="2" class="meritve-visina">
-								<div class="imePlosce">Višina</div>
-								<div class="diagram">diagram</div>
-								<div id="podPl" class="podatkiPlosca">
-									<div class="date">
-	 									<span class="label label-default">Datum</span><input id="visinaDatum" type="date" class="form-control">
-									</div>
-									
-									<div class="vitalniZnaki">
-										<span class="label label-default">m</span><input id="visinaUporabnika" type="text" class="form-control" placeholder="Vnesi visino">
-									</div>
-								</div>
-								<div class="gumb">
-									<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="teza()">Shrani</button>
-								</div>
-								<div class="ploscaIzpisa">
-									<span id="izpisVisina">tukaj se bo izpisal itm</span>
-								</div>
-							</div>
-							<div id="3" class="meritve-temperatura">
-								<div class="imePlosce">Temperatura</div>
-								<div class="diagram">diagram</div>
-								<div id="podPl" class="podatkiPlosca">
-									<div class="date">
-	 									<span class="label label-default">Datum</span><input id="TemDatum" type="date" class="form-control">
-									</div>
-									
-									<div class="vitalniZnaki">
-										<span class="label label-default">¨C</span><input id="TemUporabnika" type="text" class="form-control" placeholder="Vnesi temperaturo">
-									</div>
-								</div>
-								<div class="gumb">
-									<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="teza()">Shrani</button>
-								</div>
-								<div class="ploscaIzpisa">
-									<span id="izpisTem">tukaj se bo izpisal itm</span>
-								</div>
-							</div>
-							<div id="4" class="meritve-krvniTlak" >
-								<div class="imePlosce">sistolični in diastolični krvni tlak</div>
-								<div class="diagram">diagram</div>
-								<div id="podPl" class="podatkiPlosca">
-									<div class="date">
-	 									<span class="label label-default">Datum</span><input id="TlakDatum" type="date" class="form-control">
-									</div>
-									
-									<div class="vitalniZnaki">
-										<span class="label label-default">Tlak</span><input id="TlakUporabnika" type="text" class="form-control" placeholder="Vnesi sistolični krvni tlak">
-									</div>
-								</div>
-								<div class="gumb">
-									<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="teza()">Shrani</button>
-								</div>
-								<div class="ploscaIzpisa">
-									<span id="izpisTlak">tukaj se bo izpisal itm</span>
-								</div>
-							</div>
-							<div id="5" class="meritve-kisik">
-								<div class="imePlosce">nasičenost krvi s kisikom</div>
-								<div class="diagram">diagram</div>
-								<div id="podPl" class="podatkiPlosca">
-									<div class="date">
-	 									<span class="label label-default">Datum</span><input id="KisikDatum" type="date" class="form-control">
-									</div>
-									
-									<div class="vitalniZnaki">
-										<span class="label label-default">Kisik</span><input id="KisikUporabnika" type="text" class="form-control" placeholder="Vnesi nasicenost krvi s kisikom">
-									</div>
-								</div>
-								<div class="gumb">
-									<button id="shrani" type="button" class="btn btn-primary btn-xs" onclick="teza()">Shrani</button>
-								</div>
-								<div class="ploscaIzpisa">
-									<span id="izpisKisik">tukaj se bo izpisal itm</span>
-								</div>
-							</div>
-							<div id="6" class="voda-plosca" >
-								<div class="imePlosce">Količina spite vode</div>
-								<div class="podatkiPlosca">
-									<div id="datum">
-										<span class="label label-default">Datum</span><input id="vodaDatum" type="date" class="form-control">
-									</div>
-								</div>
-								<div class="podatkiPlosca">
-									<div id="vnesi">
-										<span class="label label-default">liter</span><input id="vodaUporabnika" type="text" class="form-control" placeholder="Vnesi kolicino vode">
-									</div>
-								</div>
-								<div class="gumb2">
-									<button id="gumbShrani" type="button" class="btn btn-primary btn-xs" onclick="shraniPokaziDanes()">Shrani</button>
-									<button id="gumbGraf" type="button" class="btn btn-primary btn-xs" onclick="prikaziGraf()">Shrani in prikazi graf</button>
-								</div>
-								<div id="graf" class="diagram2">diagram</div>
-								<div id="danc" class="danes">popita voda</div>
-							</div>
-							<div id="7" class="vaje-plosca">
-								
-								<iframe class="vajeRoke" src="http://www.zenska.si/zdravje/hujsanje-in-rekreacija/vaje-za-cvrste-roke-ki-jih-vsak-lahko-dela-doma/"></iframe>
-							</div>
-							<div id="8" class="dan-plosca">
-								<div class="imePlosce">Količina spite vode</div>
-								<div class="podatkiPlosca">
-									<div id="datum">
-										<span class="label label-default">Datum</span><input id="vodaDatum" type="date" class="form-control">
-									</div>
-								</div>
-								<div class="podatkiPlosca">
-									<div class="vitalniZnaki1">
-	 									<span class="label label-default">Vrsta sadja/zelenjave</span><input id="vrsta" type="text" class="form-control" placeholder="sadje/zelenjava">
-									</div>
-									
-									<div class="vitalniZnaki">
-										<span class="label label-default">st. kosov</span><input id="kolicina" type="text" class="form-control" placeholder="Vnesi kolicino">
-									</div>
-								</div>
-								<div class="gumb2">
-									<button id="gumbShrani" type="button" class="btn btn-primary btn-xs" onclick="shraniPokaziDanesDAN()">Shrani</button>
-									<button id="gumbGraf" type="button" class="btn btn-primary btn-xs" onclick="prikaziGrafDAN()">Shrani in prikazi graf</button>
-								</div>
-								<div id="grafDAN" class="diagram2">diagram</div>
-								<div id="dancDAN" class="danes">popita voda</div>
-							</div>
-							<div id="9" class="telovadnice-plosca">
-							    <div id="map-canvas"></div>
+								<ul class="nav nav-pills nav-stacked">
+									<li role="presentation" class="#"><a href="#">IME & PRIIMEK</a></li>
+									<li role="presentation" class="dropdown">
+									    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+				  				      		Meritve <span class="caret"></span>
+									    </a>
+									    <ul class="dropdown-menu" role="menu">
+											<li><a href="#">Teža</a></li>
+											<li><a href="#">Višina</a></li>
+											<li><a href="#">Temperatura</a></li>
+											<li><a href="#">Krvni tlak</a></li>
+											<li><a href="#">Nasičenost krvi s kisikom</a></li>
+								    	</ul>
+									</li>
+		  							<li role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
+		  							<li role="presentation" class="#"><a href="#">5 na dan</a></li>
+		  							<li role="presentation" class="#"><a href="#">Vaje</a></li>
+		  							<li role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
+								</ul>
 							</div>
 						</div>
+						<div id="znak" class="desnaPor" onclick="skrij()">
+							&lt;
+						</div>
 					</div>
+						<div id="Desno" class="desno"></div>
+							
 				</div>
+			</div>
 		</div>
 	</body>
 </html>
