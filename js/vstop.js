@@ -106,14 +106,14 @@ function shraniPokaziDanesDAN() {
     $("#grafDAN").hide();
     $("#dancDAN").show(); 
 }
-function getLocation() {
+/*function getLocation() {
 	if (navigator.geolocation) {
 	    navigator.geolocation.getCurrentPosition(showPosition);
 	} else { 
 		alert("Geolocation is not supported by this browser.");
 	}
 }
-/*			
+	
 function showPosition(position) {
    //$("#map-canvas").html("<iframe src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></iframe>");
   //  var latlon = position.coords.latitude + "," + position.coords.longitude;
@@ -127,7 +127,7 @@ function showPosition(position) {
     var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
     +latlon+"&zoom=14&size=400x300&sensor=false";
     document.getElementById("map-canvas").innerHTML = "<img src='"+img_url+"'>";
-}*/
+}
 function showPosition(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
@@ -145,4 +145,4 @@ function showPosition(position) {
     
     var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
     var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
-}
+}*/
