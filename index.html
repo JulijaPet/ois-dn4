@@ -94,9 +94,8 @@ function initialize() {
   // Create the search box and link it to the UI element.
   var input = /** @type {HTMLInputElement} */(
       document.getElementById('pac-input'));
-      input='fitness ljubljana';
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
+alert(input.toString());
   var searchBox = new google.maps.places.SearchBox(
     /** @type {HTMLInputElement} */(input));
 
