@@ -107,61 +107,19 @@ function shraniPokaziDanesDAN() {
     $("#dancDAN").show(); 
 }
 
+var x = document.getElementById("map");
 
-var map;
-var infowindow;
-
-var x=46.0552778;
-var y=14.5144444;
 function getLocation() {
-   if (navigator.geolocation) {
-	    navigator.geolocation.watchPosition(showPosition);
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
-        alert("Geolocation is not supported by this browser.");
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
+
 function showPosition(position) {
-    x = position.coords.latitude;
-	y = position.coords.longitude;
-}
-
-function initialize() {
-    getLocation();
-    var pyrmont = new google.maps.LatLng(46.0552778, 14.5144444);
-
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: pyrmont,
-    zoom: 8
-  });
-
-  var request = {
-    location: pyrmont,
-    radius: 1000,
-    query: 'fitness'
-  };
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
-}
-
-function callback(results, status) {
-    alert(results);
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
-    }
-  }
-}
-
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
-    infowindow.open(map, this);
-  });
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	
+    $("#siteloader")
+            .html("<object data='https://www.google.com/maps/search/fitness/@'" + position.coords.latitude +"," + position.coords.longitude+"',12z'/>");
 }
