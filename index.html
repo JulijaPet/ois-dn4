@@ -27,7 +27,7 @@
 
 <p id="demo"></p>
 <p>
-<a id="neki" href="http://www.w3.org/">W3C</a> is a link to a website on the World Wide Web.
+<a id="neki" href="#">W3C</a> is a link to a website on the World Wide Web.
 </p>
 <script>
 var x = document.getElementById("demo");
@@ -43,7 +43,7 @@ function getLocation() {
 function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;	
-    $("#neki").html("<a href='https://www.google.com/maps/search/fitness/@'" + position.coords.latitude +"','" + position.coords.longitude+"',12z'></a>");
+    $("#neki").html("<a href='https://www.google.com/maps/search/fitness/@'" + position.coords.latitude +"','" + position.coords.longitude+"',12z'>nelo</a>");
 }
 </script>
 	
