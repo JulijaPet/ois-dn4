@@ -14,10 +14,6 @@ html, body{
 }
 #container {
     height: 100%;
-    display:none;
-}
-#roww {
-    display:none;
 }
 .homePage {
     width:100%;

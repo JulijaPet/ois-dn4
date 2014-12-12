@@ -23,30 +23,19 @@
 	
     </head>
 	<body>
-		<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-<p>
-<a id="neki" href="#">W3C</a> is a link to a website on the World Wide Web.
-</p>
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;	
-    $("#neki").html("<a href='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'>nelo</a>");
-}
-</script>
-	
+		<script>
+			function getLocation() {
+			    if (navigator.geolocation) {
+			        navigator.geolocation.getCurrentPosition(showPosition);
+			    } else { 
+			        alert("Geolocation is not supported by this browser.");
+			    }
+			}
+			
+			function showPosition(position) {
+			    $("#neki").html("<a href='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'>Telovadnice v vaši bližini</a>");
+			}
+		</script>
 		<div id="roww" class="row">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -74,7 +63,7 @@ function showPosition(position) {
 									<li onclick="prikaziVoda()"><a href="#">Ste spili dovolj vode?!</a></li>
 									<li onclick="prikaziDan()"><a href="#">5 na dan</a></li>
 									<li onclick="prikaziVaje()"><a href="#">Vaje</a></li>
-									<li onclick="prikaziTel()"><a href="#">Telovadnice v vaši bližini</a></li>
+									<li onclick="prikaziTel()"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
 									<li onclick="odjava()" ><a href="#">Odjavi se</a></li>
 						    </ul>
 						</div></div>
@@ -102,7 +91,7 @@ function showPosition(position) {
 										<input id="kreirajIme" type="text" class="form-control input-mini" placeholder="IME">
 										<input id="kreirajPriimek" type="text" class="form-control" placeholder="PRIIMEK">
 										<input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="DATUM ROJSTVA">
-										<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik()">Prijavi se</button>
+										<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik();getLocation();">Prijavi se</button>
 					 	 			</div>
 						 		</div>
 					 	 	</div>
@@ -137,7 +126,7 @@ function showPosition(position) {
 					  				<li onclick="prikaziVoda()" role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
 					  				<li onclick="prikaziDan()" role="presentation" class="#"><a href="#">5 na dan</a></li>
 					  				<li onclick="prikaziVaje()" role="presentation" class="#"><a href="#">Vaje</a></li>
-									<li onclick="prikaziTel()" role="presentation" class="#"><a href="#">Telovadnice v vaši bližini</a></li>
+									<li onclick="prikaziTel()" role="presentation" class="#"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
 								</ul>
 							</div>
 						</div>
