@@ -115,10 +115,10 @@ function getLocation() {
 }
 			
 function showPosition(position) {
-   // $("#map-canvas").html("<div src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></div>");
+    $("#map-canvas").html("<object data='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'/>");
     var latlon = position.coords.latitude + "," + position.coords.longitude;
 
     var img_url = "https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z";
     document.getElementById("map-canvas").innerHTML = "<img src='"+img_url+"'>";
-    
+//   $("#map-canvas").html("<object data='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z"'/>"); 
 }
