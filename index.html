@@ -50,7 +50,7 @@
 									<li onclick="prikaziVoda()"><a href="#">Ste spili dovolj vode?!</a></li>
 									<li onclick="prikaziDan()"><a href="#">5 na dan</a></li>
 									<li onclick="prikaziVaje()"><a href="#">Vaje</a></li>
-									<li onclick="prikaziTel()"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
+									<li onclick="prikaziTel();getLocation();"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
 									<li onclick="odjava()" ><a href="#">Odjavi se</a></li>
 						    </ul>
 						</div></div>
@@ -78,7 +78,7 @@
 										<input id="kreirajIme" type="text" class="form-control input-mini" placeholder="IME">
 										<input id="kreirajPriimek" type="text" class="form-control" placeholder="PRIIMEK">
 										<input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="DATUM ROJSTVA">
-										<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik();getLocation();">Prijavi se</button>
+										<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik()">Prijavi se</button>
 					 	 			</div>
 						 		</div>
 					 	 	</div>
@@ -113,7 +113,7 @@
 					  				<li onclick="prikaziVoda()" role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
 					  				<li onclick="prikaziDan()" role="presentation" class="#"><a href="#">5 na dan</a></li>
 					  				<li onclick="prikaziVaje()" role="presentation" class="#"><a href="#">Vaje</a></li>
-									<li onclick="prikaziTel()" role="presentation" class="#"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
+									<li onclick="prikaziTel();getLocation();" role="presentation" class="#"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
 								</ul>
 							</div>
 						</div>
