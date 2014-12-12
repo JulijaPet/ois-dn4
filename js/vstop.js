@@ -106,4 +106,14 @@ function shraniPokaziDanesDAN() {
     $("#grafDAN").hide();
     $("#dancDAN").show(); 
 }
-
+function getLocation() {
+	if (navigator.geolocation) {
+	    navigator.geolocation.getCurrentPosition(showPosition);
+	} else { 
+		alert("Geolocation is not supported by this browser.");
+	}
+}
+			
+function showPosition(position) {
+    $("#neki").html("<a href='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'>Telovadnice v vaši bližini</a>");
+}
