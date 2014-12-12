@@ -115,16 +115,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-   //$("#map-canvas").html("<iframe src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></iframe>");
-  //  var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-   // var img_url = "https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z";
- //   document.getElementById("map-canvas").innerHTML = "<img src='"+img_url+"'>";
-//   $("#map-canvas").html("<object data='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z"'/>"); 
-
     var latlon = position.coords.latitude + "," + position.coords.longitude;
-    var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=10";
-    /*var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=400x300&sensor=false";*/
-    document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:80%;height:80%;margin:5% auto;'></iframe>";
+    var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=15";
+    document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:100%;height:100%;margin:auto;'></iframe>";
 }
