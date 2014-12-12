@@ -87,7 +87,7 @@ function prikaziTel() {
 }
 function domov() {
     $("#row2").hide();
-    $("#telovadnice").hide();
+    $("#map-canvas").hide();
     $("#humanBody").hide();
 }
 function prikaziGraf() {
@@ -115,7 +115,7 @@ function getLocation() {
 }
 			
 function showPosition(position) {
-    $("#zemljevid").html("<iframe src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></iframe>");
+    $("#map-canvas").html("<iframe src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></iframe>");
   //  var latlon = position.coords.latitude + "," + position.coords.longitude;
 
    // var img_url = "https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z";
