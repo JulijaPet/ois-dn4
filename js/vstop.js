@@ -120,5 +120,7 @@ function getLocation() {
 function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude;	
+    alert("Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	);
    // $("#map").html("<object data='https://www.google.com/maps/search/fitness/@'" + position.coords.latitude +"," + position.coords.longitude+"',12z'/>");
 }
