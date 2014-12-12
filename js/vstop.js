@@ -106,14 +106,14 @@ function shraniPokaziDanesDAN() {
     $("#grafDAN").hide();
     $("#dancDAN").show(); 
 }
-/*function getLocation() {
+function getLocation() {
 	if (navigator.geolocation) {
 	    navigator.geolocation.getCurrentPosition(showPosition);
 	} else { 
 		alert("Geolocation is not supported by this browser.");
 	}
 }
-	
+/*	
 function showPosition(position) {
    //$("#map-canvas").html("<iframe src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></iframe>");
   //  var latlon = position.coords.latitude + "," + position.coords.longitude;
