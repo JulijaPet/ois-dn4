@@ -126,5 +126,5 @@ function showPosition(position) {
     var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=10";
     /*var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
     +latlon+"&zoom=14&size=400x300&sensor=false";*/
-    document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"'></iframe>";
+    document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:80%;height:80%;margin:5% auto;'></iframe>";
 }
