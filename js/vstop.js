@@ -115,5 +115,5 @@ function getLocation() {
 }
 			
 function showPosition(position) {
-    $("#map-canvas").html("<div src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'>Telovadnice v vaši bližini</div>");
+    $("#map-canvas").html("<div src='https://www.google.com/maps/search/fitness/@" + position.coords.latitude +"," + position.coords.longitude+",10z'></div>");
 }
