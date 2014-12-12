@@ -64,12 +64,16 @@ html, body{
     margin:2% auto;
 }
 #humanBody {
-    width:80%;
-    height:80%;
+    width:100%;
+    height:100%;
     background:url('../slike/human-body.png') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     overflow: auto;
+}
+.container2 {
+    width:80%;
+    height:80%;
 }
