@@ -114,8 +114,8 @@ function shraniPodatke() {
 	var polje1 = $("#dodaj").val();
 	var polje2 = $("#dodaj2").val();
 	var datumInUra = $("#datum").val();
-	$("#dodaj").html("");
-	$("#dodaj2").html("");
+	$("#dodaj").val("");
+	$("#dodaj2").val("");
 	var parametriZahteve={};
 	var podatki = {};
 	if(polje1 !== "") {
