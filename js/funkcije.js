@@ -48,19 +48,8 @@ function uporabnik() {
 		            data: JSON.stringify(partyData),
 		            success: function (party) {
 		                if (party.action == 'CREATE') {
+		                	$("#kreirajIme").val(ehrId);
 		                    console.log("Uspešno kreiran EHR '" + ehrId + "'.");
-		                    $("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
-		                    $("#izpi11sUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
-		                    $("#zacetn1aStran").hide();
-                            $("#prijavaZac").hide();
-                            $("#preberiPredlogoBolnika").hide();
-                            $("#home").show();
-                            $("#uporabnikImeInPriimek").show();
-                            $("#prikatiSkrij").show();
-                            document.getElementById("row2").style.display = "none";
-                            document.getElementById("humanBody").style.display = "none";
-                            document.getElementById("map-canvas").style.display = "none";
-                          //  shraniVDatoteko();
 		                }
 		            },
 		            error: function(err) {
@@ -71,6 +60,19 @@ function uporabnik() {
 		    }
 		});
 	}
+}
+function naprej() {
+	$("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
+	$("#izpi11sUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
+	$("#zacetn1aStran").hide();
+    $("#prijavaZac").hide();
+    $("#preberiPredlogoBolnika").hide();
+    $("#home").show();
+    $("#uporabnikImeInPriimek").show();
+    $("#prikatiSkrij").show();
+    document.getElementById("row2").style.display = "none";
+    document.getElementById("humanBody").style.display = "none";
+    document.getElementById("map-canvas").style.display = "none";
 }
 $(document).ready(function() {
 	$('#uporabnikiIzberi').change(function() {
@@ -86,6 +88,7 @@ $(document).ready(function() {
 				$("#kreirajIme").val(party.firstNames);
 				$("#kreirajPriimek").val(party.lastNames);
 				$("#kreirajDatumRojstva").val(party.dateOfBirth);
+				$("#kreirajKljuc").val(ehrId);
 	    	},	
 	    });
 	});
