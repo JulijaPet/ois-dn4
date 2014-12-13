@@ -8,9 +8,9 @@ var ehrPrveOsebe="0c50e172-b324-49b7-8c02-36fbc5b6dbde"; //Jack Falahee
 var ehrDrugeOsebe="10135f74-aead-42e1-b739-05d330c7a95a"; // Jensen Ackles
 var ehrTretjeOsebe="d4494b2-5234-41b4-b90f-95bab401155"; //Jesse Eisenberg
 
-var ime = $("#kreirajIme").val();
-var priimek = $("#kreirajPriimek").val();
-var datumRojstva = $("#kreirajDatumRojstva").val();
+var ime = "";
+var priimek = "";
+var datumRojstva = "";
 
 function getSessionId() {
     var response = $.ajax({
@@ -23,7 +23,11 @@ function getSessionId() {
 }
 function uporabnik() {
 	var sessionId = getSessionId();
-
+	
+	ime = $("#kreirajIme").val();
+ 	priimek = $("#kreirajPriimek").val();
+ 	datumRojstva = $("#kreirajDatumRojstva").val();
+ 	
 	if (!ime || !priimek || !datumRojstva || ime.trim().length === 0 || priimek.trim().length === 0 || datumRojstva.trim().length === 0) {
 		alert("PROSIMO VNESITE PODATKE!");
 	} else {
