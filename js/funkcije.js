@@ -66,7 +66,7 @@ function uporabnik() {
 	}
 }
 function naprej() {
-	ehrId = $('#uporabnikiIzberi').val();
+	ehrId = $('#kreirajKljuc').val();
 	if(ehrId !== "") {
 		var	sessionId = getSessionId();	
 		$.ajax({
