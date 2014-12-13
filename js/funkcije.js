@@ -111,8 +111,8 @@ $(document).ready(function() {
 });
 function shraniPodatke() {
 	var sessionId = getSessionId();
-	var polje1 = $("#mera1").val();
-	var polje2 = $("#mera2").val();
+	var polje1 = $("#dodaj").val();
+	var polje2 = $("#dodaj2").val();
 	var datumInUra = $("#datum").val();
 	if(izbranaKategorija == 1 && polje1 !== "") {
 			$.ajaxSetup({
