@@ -109,3 +109,7 @@ $(document).ready(function() {
 	    });
 	});
 });
+function shraniPodatke() {
+	var sessionId = getSessionId();
+
+}

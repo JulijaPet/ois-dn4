@@ -16,6 +16,8 @@ function prikaziTeza() {
     $("#mera1").html("<span>kg</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziVis() {
     $("#polje2").hide();
@@ -25,6 +27,8 @@ function prikaziVis() {
     $("#mera1").html("<span>cm</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziTem() {
     $("#polje2").hide();
@@ -34,6 +38,8 @@ function prikaziTem() {
     $("#mera1").html("<span>°C</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziTlak() {
     $("#polje2").show();
@@ -45,6 +51,8 @@ function prikaziTlak() {
     $("#mera2").html("<span>mm Hg</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziKisik() {
     $("#polje2").hide();
@@ -54,6 +62,8 @@ function prikaziKisik() {
     $("#mera1").html("<span>%</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziVoda() {
     $("#polje2").hide();
@@ -63,11 +73,15 @@ function prikaziVoda() {
     $("#mera1").html("<span>dl</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziVaje() {
     $("#row2").hide();
     $("#humanBody").show();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziDan() {
     $("#vitalniZnakiPlosca").show();
@@ -79,28 +93,26 @@ function prikaziDan() {
     $("#mera2").html("<span>kos-ov</span>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziTel() {
     $("#row2").hide();
     $("#humanBody").hide();
     $("#map-canvas").show();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function domov() {
     $("#row2").hide();
     $("#map-canvas").hide();
     $("#humanBody").hide();
+    $("#diagram").hide();
+    $("#izpis").hide();
 }
 function prikaziGraf() {
-    $("#graf").show();
-    $("#danc").hide(); 
-}
-function shraniPokaziDanes() {
-    $("#graf").hide();
-    $("#danc").show(); 
-}
-function prikaziGrafDAN() {
-    $("#graf").show();
-    $("#danc").hide(); 
+    $("#diagram").show();
+    $("#izpis").show();
 }
 
 function getLocation() {
