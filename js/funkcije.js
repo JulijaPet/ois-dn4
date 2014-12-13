@@ -86,6 +86,7 @@ function naprej() {
 	    $("#uporabnikImeInPriimek").show();
 	    $("#prikatiSkrij").show();
 	    document.getElementById("row2").style.display = "none";
+	    document.getElementById("map-canvas").style.display = "none";
 	    document.getElementById("container2").style.display = "none";
 	} else
 		alert("Napaka");
