@@ -144,6 +144,8 @@ function shraniPodatke() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});
+	} else {
+		alert("Vnesi podatke!" + polje1);
 	}
 }
 
