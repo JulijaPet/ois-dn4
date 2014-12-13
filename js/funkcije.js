@@ -48,7 +48,7 @@ function uporabnik() {
 		            data: JSON.stringify(partyData),
 		            success: function (party) {
 		                if (party.action == 'CREATE') {
-		                	$("#kreirajIme").val(ehrId);
+		                	$("#kreirajKljuc").val(ehrId);
 		                    console.log("Uspešno kreiran EHR '" + ehrId + "'.");
 		                }
 		            },
