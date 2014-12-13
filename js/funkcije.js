@@ -173,6 +173,7 @@ function shraniPodatke() {
 		    data: JSON.stringify(podatki),
 		    success: function (res) {
 		    	console.log(res.meta.href);
+		    	prikaaziPodatkeTabela(sessionId);
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -182,7 +183,6 @@ function shraniPodatke() {
 	} else {
 		alert("Vnesi podatke!" + polje1);
 	}
-	prikaaziPodatkeTabela(sessionId);
 }
 function prikaaziPodatkeTabela(sessionId) {
 	if(izbranaKategorija == 1) {
