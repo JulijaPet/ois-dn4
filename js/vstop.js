@@ -11,7 +11,6 @@ function odjava() {
 function prikaziTeza() {
     $("#polje2").hide();
     $("#row2").show();
-    $("#uporabnikiIzberi").show();
     $("#kajVnesujes").html("<span>telesna masa</span>");
     $("#mera1").html("<span>kg</span>");
     $("#humanBody").hide();
