@@ -114,18 +114,52 @@ function shraniPodatke() {
 	var polje1 = $("#dodaj").val();
 	var polje2 = $("#dodaj2").val();
 	var datumInUra = $("#datum").val();
-	if(izbranaKategorija == 1 && polje1 !== "") {
-			$.ajaxSetup({
+	var parametriZahteve={};
+	var podatki = {};
+	if(polje1 !== "") {
+		$.ajaxSetup({
 		    headers: {"Ehr-Session": sessionId}
 		});
-		var podatki = {
-			// Preview Structure: https://rest.ehrscape.com/rest/v1/template/Vital%20Signs/example
-		    "ctx/language": "en",
-		    "ctx/territory": "SI",
-		    "ctx/time": datumInUra,
-		    "vital_signs/body_weight/any_event/body_weight": polje1
-		};
-		var parametriZahteve = {
+		if(izbranaKategorija == 1 && polje1 !== "") {
+			podatki = {
+			    "ctx/language": "en",
+			    "ctx/territory": "SI",
+			    "ctx/time": datumInUra,
+			    "vital_signs/body_weight/any_event/body_weight": polje1
+			};
+		} else if(izbranaKategorija == 2 && polje1 !== "") {
+			podatki = {
+			    "ctx/language": "en",
+			    "ctx/territory": "SI",
+			    "ctx/time": datumInUra,
+			    "vital_signs/height_length/any_event/body_height_length": polje1
+			};
+		} else if(izbranaKategorija == 3 && polje1 !== "") {
+			podatki = {
+			    "ctx/language": "en",
+			    "ctx/territory": "SI",
+			    "ctx/time": datumInUra,
+			    "vital_signs/body_temperature/any_event/temperature|magnitude": polje1,
+			    "vital_signs/body_temperature/any_event/temperature|unit": "°C"
+			};
+		} else if(izbranaKategorija == 4 && polje1 !== "" && polje2 !== "") {
+			podatki = {
+			    "ctx/language": "en",
+			    "ctx/territory": "SI",
+			    "ctx/time": datumInUra,
+			    "vital_signs/blood_pressure/any_event/systolic": polje1,
+		    	"vital_signs/blood_pressure/any_event/diastolic": polje2
+			};
+		} else if(izbranaKategorija == 5 && polje1 !== "") {
+			podatki = {
+			    "ctx/language": "en",
+			    "ctx/territory": "SI",
+			    "ctx/time": datumInUra,
+			    "vital_signs/indirect_oximetry:0/spo2|numerator": polje1
+			};
+		}
+		
+		parametriZahteve = {
 		    "ehrId": ehrId,
 		    templateId: 'Vital Signs',
 		    format: 'FLAT'
@@ -147,6 +181,8 @@ function shraniPodatke() {
 	} else {
 		alert("Vnesi podatke!" + polje1);
 	}
+	$("#dodaj").html("");
+	$("#dodaj2").html("");
 }
 
 function odjava() {
