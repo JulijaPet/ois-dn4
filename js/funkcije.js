@@ -89,6 +89,7 @@ function naprej() {
 	    document.getElementById("row2").style.display = "none";
 	    document.getElementById("map-canvas").style.display = "none";
 	    document.getElementById("humanBody").style.display = "none";
+	    $("#Jack").show();
 	} else
 		alert("Napaka");
 }
