@@ -111,5 +111,5 @@ $(document).ready(function() {
 });
 function shraniPodatke() {
 	var sessionId = getSessionId();
-
+	alert($("#kreirajKljuc").val());
 }

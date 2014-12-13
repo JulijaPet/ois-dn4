@@ -25,6 +25,7 @@ function prikaziVis() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna višina</span>");
     $("#mera1").html("<span>cm</span>");
+    $("#kategorija").html("<a>Višina</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
@@ -36,6 +37,7 @@ function prikaziTem() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna temperatura</span>");
     $("#mera1").html("<span>°C</span>");
+    $("#kategorija").html("<a>Temperatura</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
@@ -49,6 +51,7 @@ function prikaziTlak() {
     $("#mera1").html("<span>mm Hg</span>");
     $("#kajVnesujes2").html("<span>diastolični krvni tlak</span>");
     $("#mera2").html("<span>mm Hg</span>");
+    $("#kategorija").html("<a>Krvni tlak</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
@@ -60,6 +63,7 @@ function prikaziKisik() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>nasičenost krvi s kisikom</span>");
     $("#mera1").html("<span>%</span>");
+    $("#kategorija").html("<a>Kisik</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
@@ -71,6 +75,7 @@ function prikaziVoda() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>voda</span>");
     $("#mera1").html("<span>dl</span>");
+    $("#kategorija").html("<a>Voda</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
@@ -91,6 +96,7 @@ function prikaziDan() {
     $("#mera1").hide();
     $("#kajVnesujes2").html("<span>kolicina</span>");
     $("#mera2").html("<span>kos-ov</span>");
+    $("#kategorija").html("<a>Sadje/zelenjava</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
