@@ -4,8 +4,9 @@ var queryUrl = baseUrl + '/query';
 var username = "ois.seminar";
 var password = "ois4fri";
 
-var index = 0;
-var id = 0;
+var ehrPrveOsebe=0;
+var ehrDrugeOsebe=0;
+var ehrTretjeOsebe=0;
 
 function getSessionId() {
     var response = $.ajax({
@@ -48,9 +49,10 @@ function uporabnik() {
 		            success: function (party) {
 		                if (party.action == 'CREATE') {
 		                    console.log("Uspešno kreiran EHR '" + ehrId + "'.");
+		                    alert(ehrId);
 		                    $("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
-		                    $("#izpisUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
-		                    $("#zacetnaStran").hide();
+		                    $("#izpi11sUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
+		                    $("#zacetn1aStran").hide();
                             $("#prijavaZac").hide();
                             $("#preberiPredlogoBolnika").hide();
                             $("#home").show();
