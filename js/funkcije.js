@@ -67,8 +67,8 @@ function uporabnik() {
 }
 function naprej() {
 	$("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
-	$("#izpi11sUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
-	$("#zacetn1aStran").hide();
+	$("#izpisUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
+	$("#zacetnaStran").hide();
     $("#prijavaZac").hide();
     $("#uporabnikiIzberi").hide();
     $("#home").show();
