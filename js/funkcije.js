@@ -66,18 +66,30 @@ function uporabnik() {
 	}
 }
 function naprej() {
-	$("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
-	$("#izpisUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
-	$("#zacetnaStran").hide();
-    $("#prijavaZac").hide();
-    $("#uporabnikiIzberi").hide();
-    $("#home").show();
-    $("#uporabnikImeInPriimek").show();
-    $("#prikatiSkrij").show();
-    document.getElementById("row2").style.display = "none";
-    document.getElementById("humanBody").style.display = "none";
-    document.getElementById("map-canvas").style.display = "none";
-    alert(ehrId);
+	ehrId = $('#uporabnikiIzberi').val();
+	if(ehrId !== "") {
+		var	sessionId = getSessionId();	
+		$.ajax({
+			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
+	    	type: 'GET',
+	    	headers: {"Ehr-Session": sessionId},
+	    	success: function (data) {
+				var party = data.party;
+				$("#izpisUporabnika").html("<span class='navbar-link'>" + party.firstNames + " " + party.lastNames + "</span>");
+				$("#izpisUporabnika2").html("<a href='#'>" + party.firstNames + " " + party.lastNames + "</a>");
+	    	},	
+	    });
+		$("#zacetnaStran").hide();
+	    $("#prijavaZac").hide();
+	    $("#uporabnikiIzberi").hide();
+	    $("#home").show();
+	    $("#uporabnikImeInPriimek").show();
+	    $("#prikatiSkrij").show();
+	    document.getElementById("row2").style.display = "none";
+	    document.getElementById("humanBody").style.display = "none";
+	    document.getElementById("map-canvas").style.display = "none";
+	} else
+		alert("Napaka");
 }
 $(document).ready(function() {
 	$('#uporabnikiIzberi').change(function() {
@@ -89,7 +101,6 @@ $(document).ready(function() {
 	    	headers: {"Ehr-Session": sessionId},
 	    	success: function (data) {
 				var party = data.party;
-			//	$("#rezultatMeritveVitalnihZnakov").html("<br/><span>Pridobivanje podatkov za <b>'" + tip + "'</b> bolnika <b>'" + party.firstNames + " " + party.lastNames + "'</b>.</span><br/><br/>");
 				$("#kreirajIme").val(party.firstNames);
 				$("#kreirajPriimek").val(party.lastNames);
 				$("#kreirajDatumRojstva").val(party.dateOfBirth);
