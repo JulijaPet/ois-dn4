@@ -174,6 +174,7 @@ function shraniPodatke() {
 		    success: function (res) {
 		    	console.log(res.meta.href);
 		    	prikaaziPodatkeTabela(sessionId);
+		    	$("#izpis").show();
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -228,7 +229,7 @@ function prikaziTeza() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=1;
 }
 function prikaziVis() {
@@ -241,7 +242,7 @@ function prikaziVis() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=2;
 }
 function prikaziTem() {
@@ -339,7 +340,6 @@ function domov() {
 }
 function prikaziGraf() {
     $("#diagram").show();
-    $("#izpis").show();
 }
 
 function getLocation() {
