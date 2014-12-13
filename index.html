@@ -16,7 +16,6 @@
 	 	<link rel="stylesheet" type="text/css" href="css/profil.css" />
 	 	<link rel="stylesheet" type="text/css" href="css/plosca.css" />
 	 	<link rel="stylesheet" type="text/css" href="css/podatki.css" />
-	 	<script src="js/vstop.js"></script>
 	 	<script src="js/grafi.js"></script>
 	 	<script src="js/funkcije.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -156,9 +155,6 @@
 	  								<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
 	  									<button  onclick="prikaziGraf()" class="btn btn-primary" type="button">Prikazi graf</button>
 	  								</div>
-	  								<div class="col-xs-5 col-sm-5 col-md-2 col-lg-2">
-	  									<button  onclick="shraniPodatke()" class="btn btn-primary" type="button">Shrani vnešene podatke</button>
-	  								</div>
 									<p id="datum" style="float:right;"></p>
 									<script>
 										var d = new Date();
@@ -173,6 +169,7 @@
 										<div class="row">
 											<div id="polje1" class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span id="kajVnesujes" class="label label-default"></span><div class="input-group"><input id="dodaj" type="text" class="form-control input-mini" placeholder="vnesi podatek"><span id="mera1" class="input-group-addon"></span></div></div>
 											<div id="polje2" class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span id="kajVnesujes2" class="label label-default"></span><div class="input-group"><input id="dodaj" type="text" class="form-control input-mini" placeholder="vnesi podatek"><span id="mera2" class="input-group-addon"></span></div></div>
+											<button  onclick="shraniPodatke()" class="btn btn-primary" type="button">Shrani vnešene podatke</button>
 										</div>
 									</div>				
 									<div class="panel-body">	
