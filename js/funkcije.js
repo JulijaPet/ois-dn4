@@ -4,9 +4,9 @@ var queryUrl = baseUrl + '/query';
 var username = "ois.seminar";
 var password = "ois4fri";
 
-var ehrPrveOsebe=0;
-var ehrDrugeOsebe=0;
-var ehrTretjeOsebe=0;
+var ehrPrveOsebe="0c50e172-b324-49b7-8c02-36fbc5b6dbde"; //Jack Falahee
+var ehrDrugeOsebe="10135f74-aead-42e1-b739-05d330c7a95a"; // Jensen Ackles
+var ehrTretjeOsebe="d4494b2-5234-41b4-b90f-95bab401155"; //Jesse Eisenberg
 
 function getSessionId() {
     var response = $.ajax({
@@ -49,7 +49,6 @@ function uporabnik() {
 		            success: function (party) {
 		                if (party.action == 'CREATE') {
 		                    console.log("Uspešno kreiran EHR '" + ehrId + "'.");
-		                    alert(ehrId);
 		                    $("#izpisUporabnika").html("<span class='navbar-link'>" + ime + " " + priimek + "</span>");
 		                    $("#izpi11sUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
 		                    $("#zacetn1aStran").hide();
@@ -72,16 +71,22 @@ function uporabnik() {
 		    }
 		});
 	}
-}/*
+}
 $(document).ready(function() {
-	$('#preberiPredlogoBolnika').change(function() {
-		$("#kreirajSporocilo").html("");
-		var podatki = $(this).val().split(",");
-		$("#kreirajIme").val(podatki[0]);
-		$("#kreirajPriimek").val(podatki[1]);
-		$("#kreirajDatumRojstva").val(podatki[2]);
+	$('#uporabnikiIzberi').change(function() {
+		var ehrId = $(this).val();
+		var	sessionId = getSessionId();	
+		$.ajax({
+			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
+	    	type: 'GET',
+	    	headers: {"Ehr-Session": sessionId},
+	    	success: function (data) {
+				var party = data.party;
+			//	$("#rezultatMeritveVitalnihZnakov").html("<br/><span>Pridobivanje podatkov za <b>'" + tip + "'</b> bolnika <b>'" + party.firstNames + " " + party.lastNames + "'</b>.</span><br/><br/>");
+				$("#kreirajIme").val(party.firstNames);
+				$("#kreirajPriimek").val(party.lastNames);
+				$("#kreirajDatumRojstva").val(party.dateOfBirth);
+	    	},	
+	    });
 	});
 });
-function shraniVDatoteko() {
-
-}*/
