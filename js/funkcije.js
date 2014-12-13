@@ -173,7 +173,7 @@ function shraniPodatke() {
 		    data: JSON.stringify(podatki),
 		    success: function (res) {
 		    	console.log(res.meta.href);
-		    	prikaaziPodatkeTabela(sessionId);
+		    	prikaaziPodatkeTabela();
 		    	$("#izpis").show();
 		    },
 		    error: function(err) {
@@ -185,7 +185,8 @@ function shraniPodatke() {
 		alert("Vnesi podatke!" + polje1);
 	}
 }
-function prikaaziPodatkeTabela(sessionId) {
+function prikaaziPodatkeTabela() {
+	var sessionId = getSessionId();
 	if(izbranaKategorija == 1) {
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
@@ -200,11 +201,99 @@ function prikaaziPodatkeTabela(sessionId) {
 			        results += "</table>";
 			        $("#izpis").append(results);
 		    	} else {
-		  			$("#izpis").html("<span class='obvestilo label label-warning fade-in'>Ni podatkov!</span>");
+		  			$("#izpis").html("Ni podatkov!");
 			  	}
 		    },
-		    error: function() {
-		    	$("#izpis").html("<span class='obvestilo label label-danger fade-in'>Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	} else if(izbranaKategorija == 2) {
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "height",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna višina</th></tr>";
+			        for (var i in res) {
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].height + " " 	+ res[i].unit + "</td>";
+			        }
+			        results += "</table>";
+			        $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("Ni podatkov!");
+			  	}
+		    },
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	} else if(izbranaKategorija == 3) {
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "body_temperature",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna temperatura</th></tr>";
+			        for (var i in res) {
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].temperature + " " 	+ res[i].unit + "</td>";
+			        }
+			        results += "</table>";
+			        $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("Ni podatkov!");
+			  	}
+		    },
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	} else if(izbranaKategorija == 4) {
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "blood_pressure",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Krvni tlak</th></tr>";
+			        for (var i in res) {
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + "sistolicni" + res[i].systolic + "distolicni:" + res[i].diastolic  + " " 	+ res[i].unit + "</td>";
+			        }
+			        results += "</table>";
+			        $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("Ni podatkov!");
+			  	}
+		    },
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	} else if(izbranaKategorija == 5) {
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "spO2",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Nasičenost krvi s kisikom</th></tr>";
+			        for (var i in res) {
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].spO2 + " " 	+ res[i].unit + "</td>";
+			        }
+			        results += "</table>";
+			        $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("Ni podatkov!");
+			  	}
+		    },
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
