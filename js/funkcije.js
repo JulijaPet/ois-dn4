@@ -89,8 +89,6 @@ function naprej() {
 	    document.getElementById("row2").style.display = "none";
 	    document.getElementById("map-canvas").style.display = "none";
 	    document.getElementById("humanBody").style.display = "none";
-	    document.getElementById("slikaUporabnik2").style.display = "none";
-	    $("#Jack1").show();
 	} else
 		alert("Napaka");
 }
@@ -110,19 +108,31 @@ $(document).ready(function() {
 				$("#kreirajKljuc").val(ehrId);
 				if(ehrId == "0c50e172-b324-49b7-8c02-36fbc5b6dbde") {
 					document.getElementById("slikaUporabnik").style.display = "none";
+					document.getElementById("slikaUporabnik2").style.display = "none";
 					$("#Jack").show();
 					$("#Jesse").hide();
 					$("#Jensen").hide();
+					$("#Jack2").show();
+					$("#Jesse2").hide();
+					$("#Jensen2").hide();
 				} else if(ehrId == "10135f74-aead-42e1-b739-05d330c7a95a") {
 					document.getElementById("slikaUporabnik").style.display = "none";
+					document.getElementById("slikaUporabnik2").style.display = "none";
 					$("#Jensen").show();
 					$("#Jesse").hide();
 					$("#Jack").hide();
+					$("#Jensen2").show();
+					$("#Jesse2").hide();
+					$("#Jack2").hide();
 				} else if(ehrId == "bbc7659c-43ca-4482-8f08-1fd0568f515a") {
 					document.getElementById("slikaUporabnik").style.display = "none";
+					document.getElementById("slikaUporabnik2").style.display = "none";
 					$("#Jesse").show();
 					$("#Jensen").hide();
 					$("#Jack").hide();
+					$("#Jesse2").show();
+					$("#Jensen2").hide();
+					$("#Jack2").hide();
 				}
 	    	},	
 	    });
