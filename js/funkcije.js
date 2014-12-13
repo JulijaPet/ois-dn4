@@ -70,7 +70,7 @@ function naprej() {
 	$("#izpi11sUporabnika2").html("<a href='#'>" + ime + " " + priimek + "</a>");
 	$("#zacetn1aStran").hide();
     $("#prijavaZac").hide();
-    $("#preberiPredlogoBolnika").hide();
+    $("#uporabnikiIzberi").hide();
     $("#home").show();
     $("#uporabnikImeInPriimek").show();
     $("#prikatiSkrij").show();
