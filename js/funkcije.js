@@ -3,7 +3,7 @@ var queryUrl = baseUrl + '/query';
 
 var username = "ois.seminar";
 var password = "ois4fri";
-
+var ehrId = "";
 var ehrPrveOsebe="0c50e172-b324-49b7-8c02-36fbc5b6dbde"; //Jack Falahee
 var ehrDrugeOsebe="10135f74-aead-42e1-b739-05d330c7a95a"; // Jensen Ackles
 var ehrTretjeOsebe="d4494b2-5234-41b4-b90f-95bab401155"; //Jesse Eisenberg
@@ -38,7 +38,7 @@ function uporabnik() {
 		    url: baseUrl + "/ehr",
 		    type: 'POST',
 		    success: function (data) {
-		        var ehrId = data.ehrId;
+		        ehrId = data.ehrId;
 		        var partyData = {
 		            firstNames: ime,
 		            lastNames: priimek,
@@ -77,10 +77,11 @@ function naprej() {
     document.getElementById("row2").style.display = "none";
     document.getElementById("humanBody").style.display = "none";
     document.getElementById("map-canvas").style.display = "none";
+    alert(ehrId);
 }
 $(document).ready(function() {
 	$('#uporabnikiIzberi').change(function() {
-		var ehrId = $(this).val();
+		ehrId = $(this).val();
 		var	sessionId = getSessionId();	
 		$.ajax({
 			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
