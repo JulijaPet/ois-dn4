@@ -13,6 +13,7 @@ function prikaziTeza() {
     $("#row2").show();
     $("#kajVnesujes").html("<span>telesna masa</span>");
     $("#mera1").html("<span>kg</span>");
+    $("#kategorija").html("<a>Teža</a>");
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
