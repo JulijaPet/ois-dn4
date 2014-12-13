@@ -14,7 +14,7 @@ function prikaziTeza() {
     $("#uporabnikiIzberi").show();
     $("#kajVnesujes").html("<span>telesna masa</span>");
     $("#mera1").html("<span>kg</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziVis() {
@@ -23,7 +23,7 @@ function prikaziVis() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna višina</span>");
     $("#mera1").html("<span>cm</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziTem() {
@@ -32,7 +32,7 @@ function prikaziTem() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>telesna temperatura</span>");
     $("#mera1").html("<span>°C</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziTlak() {
@@ -43,7 +43,7 @@ function prikaziTlak() {
     $("#mera1").html("<span>mm Hg</span>");
     $("#kajVnesujes2").html("<span>diastolični krvni tlak</span>");
     $("#mera2").html("<span>mm Hg</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziKisik() {
@@ -52,7 +52,7 @@ function prikaziKisik() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>nasičenost krvi s kisikom</span>");
     $("#mera1").html("<span>%</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziVoda() {
@@ -61,12 +61,12 @@ function prikaziVoda() {
     $("#vitalniZnakiPlosca").show();
     $("#kajVnesujes").html("<span>voda</span>");
     $("#mera1").html("<span>dl</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziVaje() {
     $("#row2").hide();
-    $("#container2").show();
+    $("#humanBody").show();
     $("#map-canvas").hide();
 }
 function prikaziDan() {
@@ -77,18 +77,18 @@ function prikaziDan() {
     $("#mera1").hide();
     $("#kajVnesujes2").html("<span>kolicina</span>");
     $("#mera2").html("<span>kos-ov</span>");
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").hide();
 }
 function prikaziTel() {
     $("#row2").hide();
-    $("#container2").hide();
+    $("#humanBody").hide();
     $("#map-canvas").show();
 }
 function domov() {
     $("#row2").hide();
     $("#map-canvas").hide();
-    $("#container2").hide();
+    $("#humanBody").hide();
 }
 function prikaziGraf() {
     $("#graf").show();
