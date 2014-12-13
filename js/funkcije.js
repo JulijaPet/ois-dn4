@@ -114,6 +114,8 @@ function shraniPodatke() {
 	var polje1 = $("#dodaj").val();
 	var polje2 = $("#dodaj2").val();
 	var datumInUra = $("#datum").val();
+	$("#dodaj").html("");
+	$("#dodaj2").html("");
 	var parametriZahteve={};
 	var podatki = {};
 	if(polje1 !== "") {
@@ -171,7 +173,6 @@ function shraniPodatke() {
 		    data: JSON.stringify(podatki),
 		    success: function (res) {
 		    	console.log(res.meta.href);
-		        alert(res.meta.href);
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -181,8 +182,6 @@ function shraniPodatke() {
 	} else {
 		alert("Vnesi podatke!" + polje1);
 	}
-	$("#dodaj").html("");
-	$("#dodaj2").html("");
 }
 
 function odjava() {
