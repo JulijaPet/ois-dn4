@@ -106,6 +106,10 @@ $(document).ready(function() {
 				$("#kreirajPriimek").val(party.lastNames);
 				$("#kreirajDatumRojstva").val(party.dateOfBirth);
 				$("#kreirajKljuc").val(ehrId);
+				if(ehrId == "0c50e172-b324-49b7-8c02-36fbc5b6dbde") {
+					document.getElementById("slikaUporabnik").style.display = "none";
+					$("#Jack").show();
+				}
 	    	},	
 	    });
 	});

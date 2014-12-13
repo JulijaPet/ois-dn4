@@ -73,3 +73,12 @@ html, body{
     background-size: cover;
     overflow: auto;
 }
+#Jack {
+    display:none;
+}
+#Jensen {
+    display:none;
+}
+#Jesse {
+    display:none;
+}
