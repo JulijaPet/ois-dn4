@@ -182,8 +182,33 @@ function shraniPodatke() {
 	} else {
 		alert("Vnesi podatke!" + polje1);
 	}
+	prikaaziPodatkeTabela(sessionId);
 }
-
+function prikaaziPodatkeTabela(sessionId) {
+	if(izbranaKategorija == 1) {
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
+			        for (var i in res) {
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
+			        }
+			        results += "</table>";
+			        $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("<span class='obvestilo label label-warning fade-in'>Ni podatkov!</span>");
+			  	}
+		    },
+		    error: function() {
+		    	$("#izpis").html("<span class='obvestilo label label-danger fade-in'>Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	}
+}
 function odjava() {
     $("#zacetnaStran").show();
     $("#prijavaZac").show();
