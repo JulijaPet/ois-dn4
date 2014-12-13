@@ -11,6 +11,7 @@ var izbranaKategorija = 0;
 var ime = "";
 var priimek = "";
 var datumRojstva = "";
+var index=0;
 
 function getSessionId() {
     var response = $.ajax({
@@ -240,7 +241,7 @@ function prikaaziPodatkeTabela() {
 			  	if (res.length > 0) {
 				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna temperatura</th></tr>";
 			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].temperature + " " 	+ res[i].unit + "</td>";
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].temperature + " %"+ "</td>";
 			        }
 			        results += "</table>";
 			        $("#izpis").append(results);
@@ -262,7 +263,7 @@ function prikaaziPodatkeTabela() {
 			  	if (res.length > 0) {
 				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Krvni tlak</th></tr>";
 			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + "sistolicni" + res[i].systolic + "distolicni:" + res[i].diastolic  + " " 	+ res[i].unit + "</td>";
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + "sistolicni: " + res[i].systolic + "distolicni: " + res[i].diastolic  + " " 	+ res[i].unit + "</td>";
 			        }
 			        results += "</table>";
 			        $("#izpis").append(results);
@@ -344,7 +345,7 @@ function prikaziTem() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=3;
 }
 function prikaziTlak() {
@@ -359,7 +360,7 @@ function prikaziTlak() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=4;
 }
 function prikaziKisik() {
@@ -372,7 +373,7 @@ function prikaziKisik() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=5;
 }
 function prikaziVoda() {
@@ -385,7 +386,7 @@ function prikaziVoda() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=6;
 }
 function prikaziDan() {
@@ -400,7 +401,7 @@ function prikaziDan() {
     $("#humanBody").hide();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=7;
 }
 function prikaziVaje() {
@@ -408,7 +409,7 @@ function prikaziVaje() {
     $("#humanBody").show();
     $("#map-canvas").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=8;
 }
 function prikaziTel() {
@@ -416,7 +417,7 @@ function prikaziTel() {
     $("#humanBody").hide();
     $("#map-canvas").show();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=9;
 }
 function domov() {
@@ -424,11 +425,19 @@ function domov() {
     $("#map-canvas").hide();
     $("#humanBody").hide();
     $("#diagram").hide();
-    $("#izpis").hide();
+    $("#izpis").html("");
     izbranaKategorija=0;
 }
 function prikaziGraf() {
-    $("#diagram").show();
+	if(index == 0) {
+		$("#diagram").show();
+ 		$("#izpis").hide();
+ 		index=1;
+	} else {
+		$("#diagram").hide();
+    	$("#izpis").show();
+    	index=0;
+	}
 }
 
 function getLocation() {

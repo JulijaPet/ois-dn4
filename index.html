@@ -19,7 +19,6 @@
 	 	<script src="js/grafi.js"></script>
 	 	<script src="js/funkcije.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
     </head>
 	<body>
 		<div id="roww" class="row">
@@ -32,6 +31,7 @@
 						</div>
 						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 							<select class="form-control input-sm" id="uporabnikiIzberi" style="margin:2% auto;">
+								<option value=""></option>
 								<option value="0c50e172-b324-49b7-8c02-36fbc5b6dbde">Jack Falahee</option>
 								<option value="10135f74-aead-42e1-b739-05d330c7a95a">Jensen Ackles</option>
 								<option value="bbc7659c-43ca-4482-8f08-1fd0568f515a">Jesse Eisenberg</option>
@@ -181,9 +181,9 @@
 										<button  onclick="shraniPodatke()" class="btn btn-primary" type="button" style="margin-top:1%;">Shrani vnešene podatke</button>
 										<button  onclick="prikaziGraf()" class="btn btn-primary" type="button" style="margin-top:1%;">Prikazi graf</button>
 									</div>				
-									<div class="panel-body">	
+									<div class="panel-body">
+										<div id="izpis"></div>	
 										<div id="diagram">diagram</div>
-										<div id="izpis"></div>
 									</div>
 								</div>
 							</div>
