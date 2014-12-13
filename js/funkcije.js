@@ -89,8 +89,8 @@ function naprej() {
 	    document.getElementById("row2").style.display = "none";
 	    document.getElementById("map-canvas").style.display = "none";
 	    document.getElementById("humanBody").style.display = "none";
-	    document.getElementById("slikaUporabnik").style.display = "none";
-	    $("#Jack").show();
+	    document.getElementById("slikaUporabnik2").style.display = "none";
+	    $("#Jack1").show();
 	} else
 		alert("Napaka");
 }
