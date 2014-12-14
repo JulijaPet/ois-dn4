@@ -456,8 +456,11 @@ function domov() {
     $("#izpis").html("");
     izbranaKategorija=0;
 }
+function nazaj() {
+	
+}
 function prikaziGraf() {
-	if(index == 0) {
+	if(index === 0) {
 		$("#diagram").show();
  		$("#izpis").hide();
  		index=1;
