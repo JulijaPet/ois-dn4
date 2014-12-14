@@ -46,3 +46,34 @@
     width:60%;
     height:60%;
 }
+
+@media screen and (min-width: 62em) {
+	
+	.desnaPor {
+		display: none;
+	}
+}
+@media screen and (max-width: 61.99em) {
+    .levo {
+	    display: none;
+        width:50%;
+        overflow: auto;
+	}
+	.desno {
+	    width:100%;
+	}
+    .levaPor {
+        width:5%;
+    }
+    .profilUporabnika {
+        width:85%;
+    }
+    .slikaUporabnika {
+        margin:1% auto;
+        width:80%;
+    }
+    .slika {
+        width:30%;
+        height:30%;
+    }
+}
