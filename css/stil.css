@@ -64,8 +64,8 @@ html, body{
     margin:2% auto;
 }
 #humanBody {
-    width:60%;
-    height:60%;
+    width:90%;
+    height:90%;
     background:url('../slike/human-body.png') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
