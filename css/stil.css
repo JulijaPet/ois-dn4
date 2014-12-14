@@ -76,7 +76,11 @@ html, body{
 @media screen and (max-width: 61.75em) {
 	#humanBody {
 		width:100%;
-        height:60%;
+        height:65%;
+	}
+	#Jack {
+	    width:50%;
+	    height:50%;
 	}
 }
 #Jack {
