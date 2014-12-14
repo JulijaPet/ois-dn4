@@ -65,13 +65,19 @@ html, body{
 }
 #humanBody {
     width:60%;
-    height:95%;
+    height:90%;
     background:url('http://thumbs.dreamstime.com/z/human-body-image-31257066.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     overflow: auto;
+}
+@media screen and (max-width: 61.75em) {
+	#humanBody {
+		width:30%;
+        height:60%;
+	}
 }
 #Jack {
     display:none;
