@@ -75,7 +75,7 @@ html, body{
 }
 @media screen and (max-width: 61.75em) {
 	#humanBody {
-		width:30%;
+		width:50%;
         height:60%;
 	}
 }
