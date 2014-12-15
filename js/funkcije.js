@@ -291,7 +291,7 @@ function prikaaziPodatkeTabela() {
 			  	if (res.length > 0) {
 				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Krvni tlak</th></tr>";
 			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + "sistolicni: " + res[i].systolic + "distolicni: " + res[i].diastolic  + " " 	+ res[i].unit + "</td>";
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + "sistolicni: " + res[i].systolic + " distolicni: " + res[i].diastolic  + " " 	+ res[i].unit + "</td>";
 			        }
 			        results += "</table>";
 			        $("#izpis").append(results);
