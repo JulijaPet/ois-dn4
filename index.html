@@ -29,7 +29,7 @@
 							<p id="prijavaZac" class="navbar-text navbar-left"><b>PRIJAVA</b></p>
 							<p id="uporabnikImeInPriimek" class="navbar-text navbar-left">Prijavljen kot <span id="izpisUporabnika"></span></p>
 						</div>
-						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><div id=nazaj onclick="nazaj()"><li><a href="#">NAZAJ</a></li></div></div>
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><div id=nazaj onclick="nazaj()" style="margin-top:2% auto;"><li><a href="#">NAZAJ</a></li></div></div>
 						<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
 							<select class="form-control input-sm" id="uporabnikiIzberi" style="margin:2% auto;">
 								<option value=""></option>
@@ -200,13 +200,36 @@
 						</div>
 					</div>
 					<div  id="humanBody">
-						
-								<div id="roke" style="height:20%;display: block;"></div>
-								<div id="trebuh" style="height:20%" onmouseover="this.style.background='yellow';" onmouseout="this.style.background='white';"></div>
-								<div id="rit" style="height:10%" onmouseover="this.style.background='grey';" onmouseout="this.style.background='white';"></div>
-								<div id="noge" style="height:40%" onmouseover="this.style.background='red';" onmouseout="this.style.background='white';"></div>
+						<div id="roke" style="height:20%;display: block;">
+							<style>
+								a:hover {
+								    background-color: blue;
+								}
+							</style>
+						</div>
+						<div id="trebuh" style="height:20%">
+							<style>
+								a:hover {
+								    background-color: blue;
+								}
+							</style>
+						</div>
+						<div id="rit" style="height:10%">
+							<style>
+								a:hover {
+								    background-color: blue;
+								}
+							</style>
+						</div>
+						<div id="noge" style="height:50%">
+							<style>
+								a:hover {
+								    background-color: blue;
+								}
+							</style>
+						</div>
 							
-							<div id="prikaziVaje"></div>
+						<div id="prikaziVaje"></div>
 						
 					</div>
 					<div id="map-canvas">
