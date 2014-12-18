@@ -494,6 +494,10 @@ function prikaziGraf() {
 }
 function prikaziVajeRoke() {
 	$("#prikaziVajeDIV").show();
+	$("#vajeRoke").show();
+	$("#vajeTrebuh").hide();
+	$("#vajeRit").hide();
+	$("#vajeNoge").hide();
 	$("#humanBody").hide();
 }
 
