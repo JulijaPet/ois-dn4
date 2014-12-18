@@ -476,6 +476,11 @@ function domov() {
     $("#prikaziVajeDIV").show();
     $("#nazaj").hide();
     $("#domov").show();
+    $("#prikaziVajeDIV").show();
+	$("#vajeRoke").hide();
+	$("#vajeTrebuh").hide();
+	$("#vajeNoge").hide();
+	$("#humanBody").hide();
     izbranaKategorija=0;
 }
 function nazaj() {
