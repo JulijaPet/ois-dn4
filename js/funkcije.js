@@ -500,6 +500,30 @@ function prikaziVajeRoke() {
 	$("#vajeNoge").hide();
 	$("#humanBody").hide();
 }
+function prikaziVajeTrebuh() {
+	$("#prikaziVajeDIV").show();
+	$("#vajeRoke").hide();
+	$("#vajeTrebuh").show();
+	$("#vajeRit").hide();
+	$("#vajeNoge").hide();
+	$("#humanBody").hide();
+}
+function prikaziVajeRit() {
+	$("#prikaziVajeDIV").show();
+	$("#vajeRoke").hide();
+	$("#vajeTrebuh").hide();
+	$("#vajeRit").show();
+	$("#vajeNoge").hide();
+	$("#humanBody").hide();
+}
+function prikaziVajeNoge() {
+	$("#prikaziVajeDIV").show();
+	$("#vajeRoke").hide();
+	$("#vajeTrebuh").hide();
+	$("#vajeRit").hide();
+	$("#vajeNoge").show();
+	$("#humanBody").hide();
+}
 
 function getLocation() {
 	if (navigator.geolocation) {
