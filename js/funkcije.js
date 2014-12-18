@@ -86,6 +86,8 @@ function naprej() {
 	    $("#home").show();
 	    $("#uporabnikImeInPriimek").show();
 	    $("#prikatiSkrij").show();
+	    $("#prikaziVajeDIV").show();
+    	$("#domov").show();
 	    document.getElementById("row2").style.display = "none";
 	    document.getElementById("map-canvas").style.display = "none";
 	    document.getElementById("humanBody").style.display = "none";
@@ -476,7 +478,6 @@ function domov() {
     $("#prikaziVajeDIV").show();
     $("#nazaj").hide();
     $("#domov").show();
-    $("#prikaziVajeDIV").show();
 	$("#vajeRoke").hide();
 	$("#vajeTrebuh").hide();
 	$("#vajeNoge").hide();
@@ -502,7 +503,7 @@ function prikaziVajeRoke() {
 	$("#prikaziVajeDIV").show();
 	$("#vajeRoke").show();
 	$("#vajeTrebuh").hide();
-
+	$("#domov").hide();
 	$("#vajeNoge").hide();
 	$("#humanBody").hide();
 }
@@ -511,13 +512,7 @@ function prikaziVajeTrebuh() {
 	$("#vajeRoke").hide();
 	$("#vajeTrebuh").show();
 	$("#vajeNoge").hide();
-	$("#humanBody").hide();
-}
-function prikaziVajeRit() {
-	$("#prikaziVajeDIV").show();
-	$("#vajeRoke").hide();
-	$("#vajeTrebuh").hide();
-	$("#vajeNoge").hide();
+	$("#domov").hide();
 	$("#humanBody").hide();
 }
 function prikaziVajeNoge() {
@@ -526,6 +521,7 @@ function prikaziVajeNoge() {
 	$("#vajeTrebuh").hide();
 	$("#vajeNoge").show();
 	$("#humanBody").hide();
+	$("#domov").hide();
 }
 
 function getLocation() {
