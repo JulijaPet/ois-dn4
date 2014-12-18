@@ -75,7 +75,7 @@ html, body{
 }
 #prikaziVaje {
     width:100%;
-    height:100%;
+    height:95%;
     display:none;
 }
 @media screen and (max-width: 61.75em) {
