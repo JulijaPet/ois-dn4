@@ -492,6 +492,10 @@ function prikaziGraf() {
     	index=0;
 	}
 }
+function prikaziVajeRoke() {
+	$("#prikaziVajeDIV").show();
+	$("#humanBody").hide();
+}
 
 function getLocation() {
 	if (navigator.geolocation) {
