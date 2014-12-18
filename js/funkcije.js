@@ -473,6 +473,7 @@ function domov() {
     $("#humanBody").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
     $("#nazaj").hide();
     $("#domov").show();
     izbranaKategorija=0;
