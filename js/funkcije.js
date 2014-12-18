@@ -473,7 +473,6 @@ function domov() {
     $("#humanBody").hide();
     $("#diagram").hide();
     $("#izpis").html("");
-    $("#prikaziVajeDIV").hide();
     $("#nazaj").hide();
     $("#domov").show();
     izbranaKategorija=0;
@@ -497,7 +496,7 @@ function prikaziVajeRoke() {
 	$("#prikaziVajeDIV").show();
 	$("#vajeRoke").show();
 	$("#vajeTrebuh").hide();
-	$("#vajeRit").hide();
+
 	$("#vajeNoge").hide();
 	$("#humanBody").hide();
 }
@@ -505,7 +504,6 @@ function prikaziVajeTrebuh() {
 	$("#prikaziVajeDIV").show();
 	$("#vajeRoke").hide();
 	$("#vajeTrebuh").show();
-	$("#vajeRit").hide();
 	$("#vajeNoge").hide();
 	$("#humanBody").hide();
 }
@@ -513,7 +511,6 @@ function prikaziVajeRit() {
 	$("#prikaziVajeDIV").show();
 	$("#vajeRoke").hide();
 	$("#vajeTrebuh").hide();
-	$("#vajeRit").show();
 	$("#vajeNoge").hide();
 	$("#humanBody").hide();
 }
@@ -521,7 +518,6 @@ function prikaziVajeNoge() {
 	$("#prikaziVajeDIV").show();
 	$("#vajeRoke").hide();
 	$("#vajeTrebuh").hide();
-	$("#vajeRit").hide();
 	$("#vajeNoge").show();
 	$("#humanBody").hide();
 }
