@@ -497,7 +497,6 @@ function prikaziGraf() {
 		$("#diagram").hide();
     	$("#izpis").show();
     	index=0;
-    	d3.select("#diagram").style('top',ypos+"x").style('left',xpos+"py").style('display','block');
 	}
 }
 function prikaziVajeRoke() {
