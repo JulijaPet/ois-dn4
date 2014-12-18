@@ -331,10 +331,11 @@ function prikaaziPodatkeTabela() {
 function odjava() {
     $("#zacetnaStran").show();
     $("#prijavaZac").show();
-    $("#preberiPredlogoBolnika").show();
+    $("#uporabnikiIzberi").show();
     $("#home").hide();
     $("#uporabnikImeInPriimek").hide();
     $("#prikatiSkrij").hide();
+    $("#nazaj").hide();
     izbranaKategorija=0;
 }
 
@@ -348,6 +349,8 @@ function prikaziTeza() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=1;
 }
 function prikaziVis() {
@@ -361,6 +364,8 @@ function prikaziVis() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=2;
 }
 function prikaziTem() {
@@ -374,6 +379,8 @@ function prikaziTem() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=3;
 }
 function prikaziTlak() {
@@ -389,6 +396,8 @@ function prikaziTlak() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=4;
 }
 function prikaziKisik() {
@@ -402,6 +411,8 @@ function prikaziKisik() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=5;
 }
 function prikaziVoda() {
@@ -415,6 +426,8 @@ function prikaziVoda() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=6;
 }
 function prikaziDan() {
@@ -430,6 +443,8 @@ function prikaziDan() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=7;
 }
 function prikaziVaje() {
@@ -438,6 +453,8 @@ function prikaziVaje() {
     $("#map-canvas").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").show();
     izbranaKategorija=8;
 }
 function prikaziTel() {
@@ -446,6 +463,8 @@ function prikaziTel() {
     $("#map-canvas").show();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=9;
 }
 function domov() {
@@ -454,10 +473,13 @@ function domov() {
     $("#humanBody").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#prikaziVajeDIV").hide();
+    $("#nazaj").hide();
     izbranaKategorija=0;
 }
 function nazaj() {
-	
+	$("#prikaziVajeDIV").hide();
+	$("#humanBody").show();
 }
 function prikaziGraf() {
 	if(index === 0) {

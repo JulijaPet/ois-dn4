@@ -73,7 +73,7 @@ html, body{
     background-size: cover;
     overflow: auto;
 }
-#prikaziVaje {
+#prikaziVajeDIV {
     width:100%;
     height:100%;
     display:none;
