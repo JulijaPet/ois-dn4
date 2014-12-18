@@ -475,6 +475,7 @@ function domov() {
     $("#izpis").html("");
     $("#prikaziVajeDIV").hide();
     $("#nazaj").hide();
+    $("#domov").show();
     izbranaKategorija=0;
 }
 function nazaj() {
