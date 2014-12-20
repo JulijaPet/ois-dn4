@@ -667,5 +667,4 @@ function neki() {
 											  d.kolicina = +d.kolicina;
 											  return d;
 											}
-											alert(letters);
 }
