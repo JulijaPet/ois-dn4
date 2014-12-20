@@ -572,7 +572,7 @@ function neki() {
 																  {letter: "D", frequency: .30},
 																  {letter: "E", frequency: .40}
 																];*/
-								/*			
+											
 											var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
@@ -598,7 +598,7 @@ function neki() {
 											  .attr('class', 'd3-tip')
 											  .offset([-10, 0])
 											  .html(function(d) {
-											    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+											    return "<strong>Frequency:</strong> <span style='color:red'>" + d + "</span>";
 											  });
 											var div = d3.select("#diagram").append("div")   
 							                        .attr("class", "tooltip")               
@@ -614,9 +614,8 @@ function neki() {
 											
 											drawMainGraph();
 											function drawMainGraph() { 
-											  type(letters);
-											  x.domain(letters.map(function(d) { return d.letter; }));
-											  y.domain([0, d3.max(letters, function(d) { return d.frequency; })]);
+											  type(data);
+											  y.domain([0, d3.max(data, function(d) { return d; })]);
 											
 											  svg.append("g")
 											      .attr("class", "x axis")
@@ -634,27 +633,23 @@ function neki() {
 											      .text("Frequency");
 											
 											  svg.selectAll(".bar")
-											      .data(letters)
+											      .data(data)
 											    .enter().append("rect")
 											      .attr("class", "bar")
-											      .attr("x", function(d) { return x(d.letter); })
 											      .attr("width", x.rangeBand())
-											      .attr("y", function(d) { return y(d.frequency); })
-											      .attr("height", function(d) { return height - y(d.frequency); })
+											      .attr("y", function(d) { return y(d); })
+											      .attr("height", function(d) { return height - y(d); })
 											      .on('mouseover', tip.show)
 											      .on('mouseout', tip.hide);
 											
 											}
 											function type(d) {
-											  d.frequency = +d.frequency;
+											  d = +d;
 											  return d;
-											}*/
-	var m = [80, 80, 80, 80]; // margins
-		var w = 1000 - m[1] - m[3]; // width
-		var h = 400 - m[0] - m[2]; // height
-		
-
-		// X scale will fit all values from data[] within pixels 0-w
+											}
+/*	var m = [80, 80, 80, 80]; 
+		var w = 1000 - m[1] - m[3]; 
+		var h = 400 - m[0] - m[2]; 
 		var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
 		// Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
 		var y = d3.scale.linear().domain([0, 10]).range([h, 0]);
@@ -703,5 +698,5 @@ function neki() {
 			
   			// Add the line by appending an svg:path element with the data line we created above
 			// do this AFTER the axes above so that the line is above the tick-lines
-  			graph.append("svg:path").attr("d", line(data));
+  			graph.append("svg:path").attr("d", line(data));*/
 }
