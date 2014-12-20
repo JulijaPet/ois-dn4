@@ -283,7 +283,7 @@
 											      .text("Frequency");
 											
 											  svg.selectAll(".bar")
-											      .data(nestedData)
+											      .data(letters)
 											    .enter().append("rect")
 											      .attr("class", "bar")
 											      .attr("x", function(d) { return x(d.letter); })
