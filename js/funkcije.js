@@ -141,7 +141,7 @@ function shraniPodatke() {
 	var datumInUra = $("#datum").val();
 	$("#dodaj").val("");
 	$("#dodaj2").val("");
-	var parametriZahteve={};
+	var zahteva={};
 	var podatki = {};
 	if(polje1 !== "") {
 		$.ajaxSetup({
@@ -184,15 +184,14 @@ function shraniPodatke() {
 			    "ctx/time": datumInUra,
 			    "vital_signs/indirect_oximetry:0/spo2|numerator": polje1
 			};
-		}
-		
-		parametriZahteve = {
+		} 
+		zahteva = {
 		    "ehrId": ehrId,
 		    templateId: 'Vital Signs',
 		    format: 'FLAT'
 		};
 		$.ajax({
-		    url: baseUrl + "/composition?" + $.param(parametriZahteve),
+		    url: baseUrl + "/composition?" + $.param(zahteva),
 		    type: 'POST',
 		    contentType: 'application/json',
 		    data: JSON.stringify(podatki),
@@ -458,40 +457,6 @@ function prikaziKisik() {
     $("#prikaziVajeDIV").hide();
     $("#nazaj").hide();
     izbranaKategorija=5;
-}
-function prikaziVoda() {
-	$("#diagram").html("");
-    $("#polje2").hide();
-    $("#row2").show();
-    $("#vitalniZnakiPlosca").show();
-    $("#kajVnesujes").html("<span>voda</span>");
-    $("#mera1").html("<span>dl</span>");
-    $("#kategorija").html("<a>Voda</a>");
-    $("#humanBody").hide();
-    $("#map-canvas").hide();
-    $("#diagram").hide();
-    $("#izpis").html("");
-    $("#prikaziVajeDIV").hide();
-    $("#nazaj").hide();
-    izbranaKategorija=6;
-}
-function prikaziDan() {
-	$("#diagram").html("");
-    $("#vitalniZnakiPlosca").show();
-    $("#polje2").show();
-    $("#row2").show();
-    $("#kajVnesujes").html("<span>sadje/zelenjava</span>");
-    $("#mera1").hide();
-    $("#kajVnesujes2").html("<span>kolicina</span>");
-    $("#mera2").html("<span>kos-ov</span>");
-    $("#kategorija").html("<a>Sadje/zelenjava</a>");
-    $("#humanBody").hide();
-    $("#map-canvas").hide();
-    $("#diagram").hide();
-    $("#izpis").html("");
-    $("#prikaziVajeDIV").hide();
-    $("#nazaj").hide();
-    izbranaKategorija=7;
 }
 function prikaziVaje() {
 	$("#diagram").html("");

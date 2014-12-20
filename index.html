@@ -28,7 +28,17 @@
 							<p id="prijavaZac" class="navbar-text navbar-left"><b>PRIJAVA</b></p>
 							<p id="uporabnikImeInPriimek" class="navbar-text navbar-left">Prijavljen kot <span id="izpisUporabnika"></span></p>
 						</div>
-						<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4"><div id=nazaj onclick="nazaj()" style="margin:2% auto;display:none;text-align:center;"><li><a href="#">NAZAJ</a></li></div></div>
+						<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
+							<div id=nazaj onclick="nazaj()" style="margin:2% auto;display:none;text-align:center;"><li><a href="#">NAZAJ</a></li></div>
+							<a style="margin-left:2%;" class="twitter-hashtag-button"
+								  href="https://twitter.com/intent/tweet?button_hashtag=TwitterStories&text=My%20story%20is%20about%20what's%20happening%20today"
+								  data-related="twitter">
+									Tweet #TwitterZgodba:D
+								</a>
+								<script type="text/javascript">
+								window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+								</script>	
+						</div>
 						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 							<select class="form-control input-sm" id="uporabnikiIzberi" style="margin:2% auto;">
 								<option value="0c50e172-b324-49b7-8c02-36fbc5b6dbde">Jack Falahee</option>
@@ -52,8 +62,6 @@
 											<li onclick="prikaziKisik()"><a href="#">Nasičenost krvi s kisikom</a></li>
 							    		</ul>
 									</li>
-									<li onclick="prikaziVoda()"><a href="#">Ste spili dovolj vode?!</a></li>
-									<li onclick="prikaziDan()"><a href="#">5 na dan</a></li>
 									<li onclick="prikaziVaje()"><a href="#">Vaje</a></li>
 									<li onclick="prikaziTel();getLocation();"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
 									<li onclick="odjava()" ><a href="#">Odjavi se</a></li>
@@ -137,19 +145,9 @@
 											<li onclick="prikaziKisik()"><a href="#">Nasičenost krvi s kisikom</a></li>
 							    		</ul>
 									</li>
-					  				<li onclick="prikaziVoda()" role="presentation" class="#"><a href="#">Ste spili dovolj vode?!</a></li>
-					  				<li onclick="prikaziDan()" role="presentation" class="#"><a href="#">5 na dan</a></li>
 					  				<li onclick="prikaziVaje()" role="presentation" class="#"><a href="#">Vaje</a></li>
 									<li onclick="prikaziTel();getLocation();" role="presentation" class="#"><a id="neki" href="#">Telovadnice v vaši bližini</a></li>
 								</ul>
-								<a style="margin-left:2%;" class="twitter-hashtag-button"
-								  href="https://twitter.com/intent/tweet?button_hashtag=TwitterStories&text=My%20story%20is%20about%20what's%20happening%20today"
-								  data-related="twitter">
-									Tweet #TwitterZgodba:D
-								</a>
-								<script type="text/javascript">
-								window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-								</script>
 							</div>
 						</div>
 					</div>
@@ -189,7 +187,7 @@
 											</div>
 										</div>
 										<button  onclick="shraniPodatke()" class="btn btn-primary" type="button" style="margin-top:1%;">Shrani vnešene podatke</button>
-										<button  onclick="prikaziGraf()" class="btn btn-primary" type="button" style="margin-top:1%;">Prikazi graf</button>
+										<button  onclick="prikaziGraf()" class="btn btn-primary" type="button" style="margin-top:1%;">Prikazi podatke</button>
 									</div>				
 									<div class="panel-body">
 										<div id="izpis"></div>	
