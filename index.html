@@ -294,9 +294,8 @@
 												symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
 												      .entries(letters);
-												var parse = d3.time.format("%b %Y").parse;
 												symbols.forEach(function(s) {
-												    s.values.forEach(function(d) { d.date = parse(d.date); d.price = +d.price; });
+												    s.values.forEach(function(d) { d.date; d.price; });
 												    s.maxPrice = d3.max(s.values, function(d) { return d.price; });
 												    s.sumPrice = d3.sum(s.values, function(d) { return d.price; });
 												  });
