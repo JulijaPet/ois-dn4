@@ -545,14 +545,7 @@ function showPosition(position) {
 
 
 function neki() {
-	var tabela = function(kg, datum, kolicina) {
-	    return {
-	    	"oznaka" : kg,
-	        "datum" : datum,
-	        "kolicina" : kolicina
-	    };
-	};
-	var Main = [];
+	var data = [];
 	var sessionId = getSessionId();
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
@@ -560,20 +553,11 @@ function neki() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
-			        	var j = 0;
-			        	for (var i in res) {
-			        	Main[j] = [];
-			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
-			        		Main[j][i] = tabela(res[i].unit,res[i].time,res[i].weight);
+			       	for (var i in res) {
+			        	data[i] = res[i].weight;
 			        		
-			        	}
-			        
-			      //  results += "</table>";
-			      //  $("#izpis").append(results);
-		    	} else {
-		  			$("#izpis").html("Ni podatkov!");
-			  	}
+			        }
+		    	}
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -581,14 +565,14 @@ function neki() {
 		    }
 		});	
 
-											var letters = [
+										/*	var letters = [
 																  {letter: "A", frequency: .1},
 																  {letter: "B", frequency: .10},
 																  {letter: "C", frequency: .20},
 																  {letter: "D", frequency: .30},
 																  {letter: "E", frequency: .40}
-																];
-											
+																];*/
+								/*			
 											var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
@@ -664,5 +648,60 @@ function neki() {
 											function type(d) {
 											  d.frequency = +d.frequency;
 											  return d;
-											}
+											}*/
+	var m = [80, 80, 80, 80]; // margins
+		var w = 1000 - m[1] - m[3]; // width
+		var h = 400 - m[0] - m[2]; // height
+		
+
+		// X scale will fit all values from data[] within pixels 0-w
+		var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
+		// Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
+		var y = d3.scale.linear().domain([0, 10]).range([h, 0]);
+			// automatically determining max range can work something like this
+			// var y = d3.scale.linear().domain([0, d3.max(data)]).range([h, 0]);
+
+		// create a line function that can convert data[] into x and y points
+		var line = d3.svg.line()
+			// assign the X function to plot our line as we wish
+			.x(function(d,i) { 
+				// verbose logging to show what's actually being done
+				console.log('Plotting X value for data point: ' + d + ' using index: ' + i + ' to be at: ' + x(i) + ' using our xScale.');
+				// return the X coordinate where we want to plot this datapoint
+				return x(i); 
+			})
+			.y(function(d) { 
+				// verbose logging to show what's actually being done
+				console.log('Plotting Y value for data point: ' + d + ' to be at: ' + y(d) + " using our yScale.");
+				// return the Y coordinate where we want to plot this datapoint
+				return y(d); 
+			})
+
+			// Add an SVG element with the desired dimensions and margin.
+			var graph = d3.select("#graph").append("svg:svg")
+			      .attr("width", w + m[1] + m[3])
+			      .attr("height", h + m[0] + m[2])
+			    .append("svg:g")
+			      .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+
+			// create yAxis
+			var xAxis = d3.svg.axis().scale(x).tickSize(-h).tickSubdivide(true);
+			// Add the x-axis.
+			graph.append("svg:g")
+			      .attr("class", "x axis")
+			      .attr("transform", "translate(0," + h + ")")
+			      .call(xAxis);
+
+
+			// create left yAxis
+			var yAxisLeft = d3.svg.axis().scale(y).ticks(4).orient("left");
+			// Add the y-axis to the left
+			graph.append("svg:g")
+			      .attr("class", "y axis")
+			      .attr("transform", "translate(-25,0)")
+			      .call(yAxisLeft);
+			
+  			// Add the line by appending an svg:path element with the data line we created above
+			// do this AFTER the axes above so that the line is above the tick-lines
+  			graph.append("svg:path").attr("d", line(data));
 }

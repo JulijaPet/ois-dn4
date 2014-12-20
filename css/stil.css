@@ -150,3 +150,17 @@ html, body{
   top: 100%;
   left: 0;
 }
+
+
+
+
+
+svg {
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
