@@ -545,7 +545,7 @@ function showPosition(position) {
 
 
 function neki() {
-	var podatki = [];
+	var poodatki = [];
 	var sessionId = getSessionId();
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
@@ -554,7 +554,7 @@ function neki() {
 		    success: function (res) {
 			  	if (res.length > 0) {
 			       	for (var i in res) {
-			        	podatki[i] = res[i].weight;
+			        	poodatki[i] = res[i].weight;
 			        		
 			        }
 		    	}
@@ -573,7 +573,7 @@ function neki() {
 																  {letter: "E", frequency: .40}
 																];*/
 									
-											var margin = {top: 40, right: 20, bottom: 30, left: 40},
+										/*	var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
@@ -645,57 +645,17 @@ function neki() {
 											function type(d) {
 											  d = +d;
 											  return d;
-											}
-/*	var m = [80, 80, 80, 80]; // margins
-		var w = 1000 - m[1] - m[3]; 
-		var h = 400 - m[0] - m[2]; 
-		var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
-		// Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
-		var y = d3.scale.linear().domain([0, 10]).range([h, 0]);
-			// automatically determining max range can work something like this
-			// var y = d3.scale.linear().domain([0, d3.max(data)]).range([h, 0]);
+											}*/
+	var x = d3.scale.linear()
+    .domain([0, d3.max(poodatki)])
+    .range([0, 420]);
 
-		// create a line function that can convert data[] into x and y points
-		var line = d3.svg.line()
-			// assign the X function to plot our line as we wish
-			.x(function(d,i) { 
-				// verbose logging to show what's actually being done
-				console.log('Plotting X value for data point: ' + d + ' using index: ' + i + ' to be at: ' + x(i) + ' using our xScale.');
-				// return the X coordinate where we want to plot this datapoint
-				return x(i); 
-			})
-			.y(function(d) { 
-				// verbose logging to show what's actually being done
-				console.log('Plotting Y value for data point: ' + d + ' to be at: ' + y(d) + " using our yScale.");
-				// return the Y coordinate where we want to plot this datapoint
-				return y(d); 
-			})
-
-			// Add an SVG element with the desired dimensions and margin.
-			var graph = d3.select("#diagram").append("svg:svg")
-			      .attr("width", w + m[1] + m[3])
-			      .attr("height", h + m[0] + m[2])
-			    .append("svg:g")
-			      .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
-
-			// create yAxis
-			var xAxis = d3.svg.axis().scale(x).tickSize(-h).tickSubdivide(true);
-			// Add the x-axis.
-			graph.append("svg:g")
-			      .attr("class", "x axis")
-			      .attr("transform", "translate(0," + h + ")")
-			      .call(xAxis);
+d3.select("#diagram")
+  .selectAll("div")
+    .data(poodatki)
+  .enter().append("div")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; });
 
 
-			// create left yAxis
-			var yAxisLeft = d3.svg.axis().scale(y).ticks(4).orient("left");
-			// Add the y-axis to the left
-			graph.append("svg:g")
-			      .attr("class", "y axis")
-			      .attr("transform", "translate(-25,0)")
-			      .call(yAxisLeft);
-			
-  			// Add the line by appending an svg:path element with the data line we created above
-			// do this AFTER the axes above so that the line is above the tick-lines
-  			graph.append("svg:path").attr("d", line(data));*/
 }
