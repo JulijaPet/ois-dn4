@@ -649,8 +649,8 @@ function neki() {
 	var m = [80, 80, 80, 80]; 
 		var w = 1000 - m[1] - m[3]; 
 		var h = 400 - m[0] - m[2]; 
-		var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
-		var y = d3.scale.linear().domain([0, 10]).range([h, 0]);
+		var x;
+		var y;
 		var line = d3.svg.line()
 			.x(function(d,i) { 
 				return x(i); 
