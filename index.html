@@ -220,112 +220,27 @@ body { font: 10px sans-serif;}
 											<script src="http://d3js.org/d3.v3.min.js"></script>
 											<script>
 											
-											/*	var m = [20, 20, 30, 20],
+												var m = [20, 20, 30, 20],
 												    w = 960 - m[1] - m[3],
 												    h = 500 - m[0] - m[2];
 												
 												var x,
 												    y,
 												    duration = 1500,
-												    delay = 500;*/
+												    delay = 500;
 												
-																
-																
-												var letters = [{"id":110, "time":1360580745797, "userName":"pinky", "activity":"respawn"},
-               {"id":111, "time":1360580745798, "userName":"perky", "activity":"change direction"},
-               {"id":111, "time":1360580745799, "userName":"perky", "activity":"change direction"},
-               {"id":111, "time":1360580745797, "userName":"perky", "activity":"change direction"},
-               {"id":111, "time":1361580745797, "userName":"perky", "activity":"change direction"},
-               {"id":111, "time":1361580745798, "userName":"perky", "activity":"change direction"},
-               {"id":112, "time":1360580745797, "userName":"clyde", "activity":"caught pacman"},
-               {"id":113, "time":1360580745797, "userName":"perky", "activity":"respawn"},
-               {"id":114, "time":1360580745797, "userName":"perky", "activity":"caught pacman"},
-               {"id":114, "time":1361580745797, "userName":"perky", "activity":"caught pacman"},
-               {"id":114, "time":1362580745797, "userName":"perky", "activity":"caught pacman"},
-               {"id":114, "time":1363580745797, "userName":"perky", "activity":"caught pacman"},
-               {"id":110, "time":1361580745797, "userName":"pinky", "activity":"respawn"},
-               {"id":115, "time":1360580745797, "userName":"clyde", "activity":"respawn"}]				
-																
+												var letters = [
+																  {symbol: "A", date: 1, price: 3},
+																  {symbol: "B", date: 10, price: 7},
+																  {symbol: "C", date: 20, price: 9},
+																  {symbol: "D", date: 30, price: 11},
+																  {symbol: "E", date: 40, price: 22}
+																];
+															
 												
 												
-												var margin = {top: 20, right: 80, bottom: 30, left: 50},
-												    width = 960 - margin.left - margin.right,
-												    height = 500 - margin.top - margin.bottom;
-												
-												var x = d3.date.scale()
-												    .range([0, width]);
-												
-												var y = d3.scale.linear()
-												    .range( [height,0] );
-												
-												var xAxis = d3.svg.axis()
-												    .scale(x)
-												    .orient("bottom");
-												
-												var yAxis = d3.svg.axis()
-												    .scale(y)
-												    .orient("left");
 												
 												var color = d3.scale.category10();
-												
-												var svg = d3.select("body").append("svg")
-												    .attr("width", width + margin.left + margin.right)
-												    .attr("height", height + margin.top + margin.bottom)
-												    .append("g")
-												    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-												
-												var dateFormat = d3.date.format("%x");
-												
-												var nestedData = d3.nest()
-												    .key(function(d) { return d.price; })
-												    .key(function(d) {return dateFormat(new Date(d.date));})
-												    .entries(letters);
-												
-												drawMainGraph();
-												
-												function drawMainGraph() {
-												
-												    var line = d3.svg.line()
-												        .interpolate("linear")
-												        .x( function(d) {return x(dateFormat.parse(d.key)) } )
-												        .y( function(d) {return y(d.values.length) } );
-												
-												    x.domain( d3.extent( letters, function(d) { return new Date(d.date) } ) );
-												    y.domain( [ 0, d3.max( nestedData, function(d) { return d.values.length } ) ]);
-												
-												    svg.append("g")
-												        .attr("class", "x axis")
-												        .attr("transform", "translate(0," + height + ")")
-												        .call(xAxis);
-												
-												    svg.append("g")
-												        .attr("class", "y axis")
-												        .call(yAxis)
-												      .append("text")
-												        .attr("transform", "rotate(-90)")
-												        .attr("y", 6)
-												        .attr("dy", ".71em")
-												        .style("text-anchor", "end")
-												        .text("Count");
-												
-												
-												    var activityLine = svg.selectAll(".price")
-												      .data( nestedData )
-												      .enter()
-												        .append("g")
-												        .attr("class", "price")
-												        .attr("id", function(d) { return "price-" + d.key } );
-												
-												    activityLine.append("path")
-												      .attr("class", "line")
-												      .attr("d", function(d) { return line(d.values); } )
-												      .style("stroke", function(d) { return color(d.key); } );
-												}
-												
-												
-												
-												
-											/*	var color = d3.scale.category10();
 												
 												var div = d3.select("#diagram").append("div")   
 							                        .attr("class", "tooltip")               
@@ -363,7 +278,7 @@ body { font: 10px sans-serif;}
 												var area = d3.svg.area()
 												    .interpolate("basis")
 												    .x(function(d) { return x(d.date); })
-												    .y1(function(d) { return y(d.price); });*/
+												    .y1(function(d) { return y(d.price); });
 												
 											/*	d3.csv("stocks.csv", function(data) {
 												  var parse = d3.time.format("%b %Y").parse;
@@ -391,16 +306,17 @@ body { font: 10px sans-serif;}
 												
 												  setTimeout(lines, duration);
 												});*/
-											/*	d3.selectAll()
+												d3.selectAll()
 												symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
-												      .entries(stocks = nestedData);
+												      .entries(stocks = letters);
 												 
 												var g = svg.selectAll("g")
 												      .data(symbols)
 												    .enter().append("g")
 												      .attr("class", "symbol");
-												setTimeout(lines, duration);
+											//	setTimeout(lines, duration);
+												lines();
 												function lines() {
 												  x = d3.time.scale().range([0, w - 60]);
 												  y = d3.scale.linear().range([h / 4 - 20, 0]);
@@ -456,7 +372,7 @@ body { font: 10px sans-serif;}
 												    }
 												  });
 												}
-											*/	
+												
 											/*	function horizons() {
 												  svg.insert("defs", ".symbol")
 												    .append("clipPath")
