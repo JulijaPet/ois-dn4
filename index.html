@@ -207,11 +207,11 @@
 											<script>
 											
 											var letters = [
-																  {letter: "A", frequency: 1},
-																  {letter: "B", frequency: 10},
-																  {letter: "C", frequency: 20},
-																  {letter: "D", frequency: 30},
-																  {letter: "E", frequency: 40}
+																  {letter: "A", frequency: .1},
+																  {letter: "B", frequency: .10},
+																  {letter: "C", frequency: .20},
+																  {letter: "D", frequency: .30},
+																  {letter: "E", frequency: .40}
 																];
 											
 											
@@ -222,7 +222,7 @@
 											var formatPercent = d3.format(".0%");
 											
 											var x = d3.scale.ordinal()
-											    .rangeRoundBands([0, width], 1);
+											    .rangeRoundBands([0, width], .1);
 											
 											var y = d3.scale.linear()
 											    .range([height, 0]);
@@ -253,11 +253,6 @@
 											    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 											
 											svg.call(tip);
-											
-												var nestedData = d3.nest()
-    												.key(function(d) { return d.date; })
-   													.key(function(d) {return d.price})
-    												.entries(letters);
 											
 											drawMainGraph();
 											function drawMainGraph() { 
