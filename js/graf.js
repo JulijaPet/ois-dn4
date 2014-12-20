@@ -17,6 +17,9 @@ var letters = [
 
 
 var color = d3.scale.category10();
+var div = d3.select("#diagram").append("div")  
+	.attr("class", "tooltip")               
+	.style("opacity", 0);  
 
 var svg = d3.select("#diagram").append("svg")
     .attr("width", w + m[1] + m[3])
@@ -58,7 +61,7 @@ var nestedData = d3.nest()
   // Nest stock values by symbol.
   symbols = d3.nest()
       .key(function(d) { return d.symbol; })
-      .entries(stocks = letters);
+      .entries(letters);
 
   // Parse dates and numbers. We assume values are sorted by date.
   // Also compute the maximum price per symbol, needed for the y-domain.
