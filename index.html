@@ -261,6 +261,7 @@
 											
 											drawMainGraph();
 											function drawMainGraph() { 
+											  type(nestedData);
 											  x.domain(nestedData.map(function(d) { return d.letter; }));
 											  y.domain([0, d3.max(nestedData, function(d) { return d.frequency; })]);
 										/*	  x.domain( d3.extent( letters, function(d) { return d.letter; } ) );
@@ -292,6 +293,10 @@
 											      .on('mouseover', tip.show)
 											      .on('mouseout', tip.hide);
 											
+											}
+											function type(d) {
+											  d.frequency = +d.frequency;
+											  return d;
 											}
 											</script>
 										</div>
