@@ -290,15 +290,8 @@
 												});*/
 												symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
-												      .entriesnestedData);
-												 symbols.forEach(function(s) {
-												    s.values.forEach(function(d) { d.date = parse(d.date); d.price = +d.price; });
-												    s.maxPrice = d3.max(s.values, function(d) { return d.price; });
-												    s.sumPrice = d3.sum(s.values, function(d) { return d.price; });
-												  });
-												
-												  // Sort by maximum price, descending.
-												  symbols.sort(function(a, b) { return b.maxPrice - a.maxPrice; });
+												      .entries(stocks = nestedData);
+												 
 												var g = svg.selectAll("g")
 												      .data(symbols)
 												    .enter().append("g")
