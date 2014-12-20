@@ -577,7 +577,6 @@ function neki() {
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
-											var formatPercent = d3.format(".0%");
 											
 											var x = d3.scale.ordinal()
 											    .rangeRoundBands([0, width], .1);
@@ -592,7 +591,6 @@ function neki() {
 											var yAxis = d3.svg.axis()
 											    .scale(y)
 											    .orient("left")
-											    .tickFormat(formatPercent);
 											
 											var tip = d3.tip()
 											  .attr('class', 'd3-tip')
