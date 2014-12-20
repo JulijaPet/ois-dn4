@@ -564,99 +564,15 @@ function neki() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
+	 	poodatki = [4, 8, 15, 16, 23, 42];	
+		var x = d3.scale.linear()
+    	.domain([0, d3.max(poodatki)])
+    	.range([0, 420]);
 
-										/*	var letters = [
-																  {letter: "A", frequency: .1},
-																  {letter: "B", frequency: .10},
-																  {letter: "C", frequency: .20},
-																  {letter: "D", frequency: .30},
-																  {letter: "E", frequency: .40}
-																];*/
-									
-										/*	var margin = {top: 40, right: 20, bottom: 30, left: 40},
-											    width = 960 - margin.left - margin.right,
-											    height = 500 - margin.top - margin.bottom;
-											
-											var x = d3.scale.ordinal()
-											    .range([width, 0]);
-											
-											var y = d3.scale.linear()
-											    .range([height, 0]);
-											
-											var xAxis = d3.svg.axis()
-											    .scale(x)
-											    .orient("bottom");
-											
-											var yAxis = d3.svg.axis()
-											    .scale(y)
-											    .orient("left");
-											
-											var tip = d3.tip()
-											  .attr('class', 'd3-tip')
-											  .offset([-10, 0])
-											  .html(function(d) {
-											    return "<strong>BLA</strong> <span style='color:red'>" + d + "</span>";
-											  });
-											var div = d3.select("#diagram").append("div")   
-							                        .attr("class", "tooltip")               
-							                        .style("opacity", 0);  
-							                        
-											var svg = d3.select("#diagram").append("svg")
-											    .attr("width", width + margin.left + margin.right)
-											    .attr("height", height + margin.top + margin.bottom)
-											  .append("g")
-											    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-											
-											svg.call(tip);
-											
-											drawMainGraph();
-											function drawMainGraph() { 
-											  type(podatki);
-											  x.domain([0, width]);
-											  y.domain([0, d3.max(podatki, function(d) { return d; })]);
-											
-											  svg.append("g")
-											      .attr("class", "x axis")
-											      .attr("transform", "translate(0," + height + ")")
-											      .call(xAxis);
-											
-											  svg.append("g")
-											      .attr("class", "y axis")
-											      .call(yAxis)
-											    .append("text")
-											      .attr("transform", "rotate(-90)")
-											      .attr("y", 6)
-											      .attr("dy", ".71em")
-											      .style("text-anchor", "end")
-											      .text("Diagram");
-											
-											  svg.selectAll(".bar")
-											      .data(podatki)
-											    .enter().append("rect")
-											      .attr("class", "bar")
-											      .attr("x")
-											      .attr("width", x.rangeBand())
-											      .attr("y", function(d) { return y(d); })
-											      .attr("height", function(d) { return height - y(d); })
-											      .on('mouseover', tip.show)
-											      .on('mouseout', tip.hide);
-											
-											}
-											function type(d) {
-											  d = +d;
-											  return d;
-										}*/
-	 poodatki = [4, 8, 15, 16, 23, 42];	
-	var x = d3.scale.linear()
-    .domain([0, d3.max(poodatki)])
-    .range([0, 420]);
-
-d3.select("#diagram")
-  .selectAll("div")
-    .data(poodatki)
-  .enter().append("div")
-    .style("width", function(d) { return x(d) + "px"; })
-    .text(function(d) { return d; });
-
-
+		d3.select("#diagram")
+  			.selectAll("div")
+    		.data(poodatki)
+  			.enter().append("div")
+    		.style("width", function(d) { return x(d) + "px"; })
+    		.text(function(d) { return d; });
 }
