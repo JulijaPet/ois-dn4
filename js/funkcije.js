@@ -645,7 +645,7 @@ function neki() {
 											  d = +d;
 											  return d;
 											}*/
-	var d3;										
+									
 	var m = [80, 80, 80, 80]; 
 		var w = 1000 - m[1] - m[3]; 
 		var h = 400 - m[0] - m[2]; 
