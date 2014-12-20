@@ -584,21 +584,21 @@ function neki() {
 }
 
 function bla() {
-											var letters = [
+										/*	var letters = [
 																  {letter: "A", frequency: .1},
 																  {letter: "B", frequency: .10},
 																  {letter: "C", frequency: .20},
 																  {letter: "D", frequency: .30},
 																  {letter: "E", frequency: .40}
-																];
+																];*/
 											
-										//	var letters = neki();
+											var letters = neki();
 											
 											var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
-											var formatPercent = d3.format(".0%");
+											//var formatPercent = d3.format(".0%");
 											
 											var x = d3.scale.ordinal()
 											    .rangeRoundBands([0, width], .1);
@@ -613,13 +613,13 @@ function bla() {
 											var yAxis = d3.svg.axis()
 											    .scale(y)
 											    .orient("left")
-											    .tickFormat(formatPercent);
+											    .tickValues([10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]);
 											
 											var tip = d3.tip()
 											  .attr('class', 'd3-tip')
 											  .offset([-10, 0])
 											  .html(function(d) {
-											    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+											    return "<strong>Kolicina:</strong> <span style='color:red'>" + d.kolicina + "</span>";
 											  });
 											var div = d3.select("#diagram").append("div")   
 							                        .attr("class", "tooltip")               
@@ -636,8 +636,8 @@ function bla() {
 											drawMainGraph();
 											function drawMainGraph() { 
 											  type(letters);
-											  x.domain(letters.map(function(d) { return d.letter; }));
-											  y.domain([0, d3.max(letters, function(d) { return d.frequency; })]);
+											  x.domain(letters.map(function(d) { return d.datum; }));
+											  y.domain([0, d3.max(letters, function(d) { return d.kolicina; })]);
 											
 											  svg.append("g")
 											      .attr("class", "x axis")
@@ -652,22 +652,22 @@ function bla() {
 											      .attr("y", 6)
 											      .attr("dy", ".71em")
 											      .style("text-anchor", "end")
-											      .text("Frequency");
+											      .text(letters.oznaka);
 											
 											  svg.selectAll(".bar")
 											      .data(letters)
 											    .enter().append("rect")
 											      .attr("class", "bar")
-											      .attr("x", function(d) { return x(d.letter); })
+											      .attr("x", function(d) { return x(d.datum); })
 											      .attr("width", x.rangeBand())
-											      .attr("y", function(d) { return y(d.frequency); })
-											      .attr("height", function(d) { return height - y(d.frequency); })
+											      .attr("y", function(d) { return y(d.kolicina); })
+											      .attr("height", function(d) { return height - y(d.kolicina); })
 											      .on('mouseover', tip.show)
 											      .on('mouseout', tip.hide);
 											
 											}
 											function type(d) {
-											  d.frequency = +d.frequency;
+											  d.kolicina = +d.kolicina;
 											  return d;
 											}
 }
