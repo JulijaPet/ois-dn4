@@ -261,9 +261,9 @@
 											
 											drawMainGraph();
 											function drawMainGraph() { 
-											  type(nestedData);
-											  x.domain(nestedData.map(function(d) { return d.letter; }));
-											  y.domain([0, d3.max(nestedData, function(d) { return d.frequency; })]);
+											  type(letters);
+											  x.domain(letters.map(function(d) { return d.letter; }));
+											  y.domain([0, d3.max(letters, function(d) { return d.frequency; })]);
 										/*	  x.domain( d3.extent( letters, function(d) { return d.letter; } ) );
     										  y.domain( [ 0, d3.max( nestedData, function(d) { return d.frequency; } ) ]);*/
 											
