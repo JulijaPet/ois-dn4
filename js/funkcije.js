@@ -534,12 +534,13 @@ function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
     var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=12";
     document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:100%;height:100%;margin:auto;'></iframe>";
+    alert("jhahahha");
 }
 
 
 
 function neki() {
-	var poodatki = [];
+	var	poodatki = [4, 8, 15, 16, 23, 42];
 	var sessionId = getSessionId();
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
