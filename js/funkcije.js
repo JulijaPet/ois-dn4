@@ -598,13 +598,13 @@ function bla() {
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
-											//var formatPercent = d3.format(".0%");
-											
-											var x = d3.scale.ordinal()
-											    .range([width / 2, width  / 2]);
-											
+											var x = d3.scale.linear()
+												.domain([0, data.length])
+												.range([0, w]);
+												
 											var y = d3.scale.linear()
-											    .range([height, 0]);
+												.domain([0, 10])
+												.range([h, 0]);
 											
 											var xAxis = d3.svg.axis()
 											    .scale(x)
@@ -613,7 +613,6 @@ function bla() {
 											var yAxis = d3.svg.axis()
 											    .scale(y)
 											    .orient("left")
-											    .tickValues([10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]);
 											
 											var tip = d3.tip()
 											  .attr('class', 'd3-tip')
