@@ -545,8 +545,14 @@ function showPosition(position) {
 
 
 function neki() {
-
-	var letters = [];
+	var tabela = function(kg, datum, kolicina) {
+	    return {
+	    	"oznaka" : kg,
+	        "datum" : datum,
+	        "kolicina" : kolicina
+	    };
+	};
+	var Main = [];
 	var sessionId = getSessionId();
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
@@ -554,9 +560,12 @@ function neki() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
+				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
+			        	var j = 0;
 			        	for (var i in res) {
+			        	Main[j] = [];
 			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
-			        		letters[i] = res[i].weight;
+			        		Main[j][i] = tabela(res[i].unit,res[i].time,res[i].weight);
 			        		
 			        	}
 			        
@@ -572,27 +581,25 @@ function neki() {
 		    }
 		});	
 
-										/*	var letters = [
+											var letters = [
 																  {letter: "A", frequency: .1},
 																  {letter: "B", frequency: .10},
 																  {letter: "C", frequency: .20},
 																  {letter: "D", frequency: .30},
 																  {letter: "E", frequency: .40}
-																];*/
-											
-										
+																];
 											
 											var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
-											var x = d3.scale.linear()
-												.domain([0, letters.length])
-												.range([0, width]);
-												
+											var formatPercent = d3.format(".0%");
+											
+											var x = d3.scale.ordinal()
+											    .rangeRoundBands([0, width], .1);
+											
 											var y = d3.scale.linear()
-												.domain([0, 10])
-												.range([height, 0]);
+											    .range([height, 0]);
 											
 											var xAxis = d3.svg.axis()
 											    .scale(x)
@@ -600,13 +607,14 @@ function neki() {
 											
 											var yAxis = d3.svg.axis()
 											    .scale(y)
-											    .orient("left");
+											    .orient("left")
+											    .tickFormat(formatPercent);
 											
 											var tip = d3.tip()
 											  .attr('class', 'd3-tip')
 											  .offset([-10, 0])
 											  .html(function(d) {
-											    return "<strong>Kolicina:</strong> <span style='color:red'>" + d.letters + "</span>";
+											    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
 											  });
 											var div = d3.select("#diagram").append("div")   
 							                        .attr("class", "tooltip")               
@@ -622,8 +630,9 @@ function neki() {
 											
 											drawMainGraph();
 											function drawMainGraph() { 
-											  x.domain(letters.map(function(d) { return d.letters; }));
-											  y.domain([0, d3.max(letters, function(d) { return d.letters; })]);
+											  type(letters);
+											  x.domain(letters.map(function(d) { return d.letter; }));
+											  y.domain([0, d3.max(letters, function(d) { return d.frequency; })]);
 											
 											  svg.append("g")
 											      .attr("class", "x axis")
@@ -638,17 +647,22 @@ function neki() {
 											      .attr("y", 6)
 											      .attr("dy", ".71em")
 											      .style("text-anchor", "end")
-											      .text(letters.oznaka);
+											      .text("Frequency");
 											
 											  svg.selectAll(".bar")
 											      .data(letters)
 											    .enter().append("rect")
 											      .attr("class", "bar")
+											      .attr("x", function(d) { return x(d.letter); })
 											      .attr("width", x.rangeBand())
-											      .attr("y", function(d) { return y(d.letters); })
-											      .attr("height", function(d) { return height - y(d.letters); })
+											      .attr("y", function(d) { return y(d.frequency); })
+											      .attr("height", function(d) { return height - y(d.frequency); })
 											      .on('mouseover', tip.show)
 											      .on('mouseout', tip.hide);
 											
+											}
+											function type(d) {
+											  d.frequency = +d.frequency;
+											  return d;
 											}
 }
