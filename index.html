@@ -262,7 +262,7 @@
 												    .x(function(d) { return x(d.date); })
 												    .y1(function(d) { return y(d.price); });
 												
-											/*	d3.csv("stocks.csv", function(data) {
+												function(data) {
 												  var parse = d3.time.format("%b %Y").parse;
 												
 												  // Nest stock values by symbol.
@@ -287,8 +287,7 @@
 												      .attr("class", "symbol");
 												
 												  setTimeout(lines, duration);
-												});*/
-												setTimeout(lines, duration);
+												};
 												function lines() {
 												  x = d3.time.scale().range([0, w - 60]);
 												  y = d3.scale.linear().range([h / 4 - 20, 0]);
@@ -339,13 +338,13 @@
 												    draw(k);
 												    if ((k += 2) >= n - 1) {
 												      draw(n - 1);
-												      setTimeout(horizons, 500);
+												    //  setTimeout(horizons, 500);
 												      return true;
 												    }
 												  });
 												}
 												
-												function horizons() {
+											/*	function horizons() {
 												  svg.insert("defs", ".symbol")
 												    .append("clipPath")
 												      .attr("id", "clip")
@@ -781,7 +780,7 @@
 												    svg.selectAll("g").data(symbols).enter().append("g").attr("class", "symbol");
 												    lines();
 												  }, duration);
-												}
+												}*/
 												
 											</script>
 										</div>
