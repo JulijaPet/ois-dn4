@@ -645,7 +645,8 @@ function neki() {
 											function type(d) {
 											  d = +d;
 											  return d;
-											}*/
+										}*/
+	 poodatki = [4, 8, 15, 16, 23, 42];	
 	var x = d3.scale.linear()
     .domain([0, d3.max(poodatki)])
     .range([0, 420]);

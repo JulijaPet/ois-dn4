@@ -97,7 +97,7 @@ html, body{
 #Jesse {
     display:none;
 }
-#diagram  {
+#diagram  div {
   font: 10px sans-serif;
   background-color: steelblue;
   text-align: right;
