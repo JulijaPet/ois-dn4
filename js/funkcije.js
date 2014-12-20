@@ -628,7 +628,7 @@ function neki() {
 											      .attr("y", 6)
 											      .attr("dy", ".71em")
 											      .style("text-anchor", "end")
-											      .text("Frequency");
+											      .text("Diagram");
 											
 											  svg.selectAll(".bar")
 											      .data(podatki)
