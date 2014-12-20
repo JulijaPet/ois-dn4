@@ -545,13 +545,7 @@ function showPosition(position) {
 
 
 function neki() {
-	var tabela = function(kg, datum, kolicina) {
-	    return {
-	    	"oznaka" : kg,
-	        "datum" : datum,
-	        "kolicina" : kolicina
-	    };
-	};
+
 	var letters = [];
 	var sessionId = getSessionId();
 		$.ajax({
@@ -560,13 +554,9 @@ function neki() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
-			        	var j = 0;
 			        	for (var i in res) {
-			        	letters[j] = [];
 			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
-			        		letters[j][i] = tabela(res[i].unit,res[i].time,res[i].weight);
-			        		j++;
+			        		letters[i] = res[i].weight;
 			        		
 			        	}
 			        
@@ -616,7 +606,7 @@ function neki() {
 											  .attr('class', 'd3-tip')
 											  .offset([-10, 0])
 											  .html(function(d) {
-											    return "<strong>Kolicina:</strong> <span style='color:red'>" + d.kolicina + "</span>";
+											    return "<strong>Kolicina:</strong> <span style='color:red'>" + d.letters + "</span>";
 											  });
 											var div = d3.select("#diagram").append("div")   
 							                        .attr("class", "tooltip")               
@@ -632,9 +622,8 @@ function neki() {
 											
 											drawMainGraph();
 											function drawMainGraph() { 
-											  type(letters);
-											  x.domain(letters.map(function(d) { return d.datum; }));
-											  y.domain([0, d3.max(letters, function(d) { return d.kolicina; })]);
+											  x.domain(letters.map(function(d) { return d.letters; }));
+											  y.domain([0, d3.max(letters, function(d) { return d.letters; })]);
 											
 											  svg.append("g")
 											      .attr("class", "x axis")
@@ -655,16 +644,11 @@ function neki() {
 											      .data(letters)
 											    .enter().append("rect")
 											      .attr("class", "bar")
-											      .attr("x", function(d) { return x(d.datum); })
 											      .attr("width", x.rangeBand())
-											      .attr("y", function(d) { return y(d.kolicina); })
-											      .attr("height", function(d) { return height - y(d.kolicina); })
+											      .attr("y", function(d) { return y(d.letters); })
+											      .attr("height", function(d) { return height - y(d.letters); })
 											      .on('mouseover', tip.show)
 											      .on('mouseout', tip.hide);
 											
-											}
-											function type(d) {
-											  d.kolicina = +d.kolicina;
-											  return d;
 											}
 }
