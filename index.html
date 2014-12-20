@@ -18,21 +18,6 @@
 	 	<link rel="stylesheet" type="text/css" href="css/podatki.css" />
 	 	<script src="js/funkcije.js"></script>
 	 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	 	<style type="text/css">
-
-body { font: 10px sans-serif;}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.line {
-  fill: none;  stroke-width: 1.5px;
-}
-</style>
     </head>
 	<body>
 		<div id="roww" class="row">
@@ -306,11 +291,18 @@ body { font: 10px sans-serif;}
 												
 												  setTimeout(lines, duration);
 												});*/
-												d3.selectAll()
 												symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
-												      .entries(stocks = letters);
-												 
+												      .entries(letters);
+												var parse = d3.time.format("%b %Y").parse;
+												symbols.forEach(function(s) {
+												    s.values.forEach(function(d) { d.date = parse(d.date); d.price = +d.price; });
+												    s.maxPrice = d3.max(s.values, function(d) { return d.price; });
+												    s.sumPrice = d3.sum(s.values, function(d) { return d.price; });
+												  });
+												
+												  // Sort by maximum price, descending.
+												  symbols.sort(function(a, b) { return b.maxPrice - a.maxPrice; });
 												var g = svg.selectAll("g")
 												      .data(symbols)
 												    .enter().append("g")
