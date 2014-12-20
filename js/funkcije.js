@@ -3,10 +3,10 @@ var queryUrl = baseUrl + '/query';
 
 var username = "ois.seminar";
 var password = "ois4fri";
-var ehrId = "";
+var ehrId = "";/*
 var ehrPrveOsebe="0c50e172-b324-49b7-8c02-36fbc5b6dbde"; //Jack Falahee
 var ehrDrugeOsebe="10135f74-aead-42e1-b739-05d330c7a95a"; // Jensen Ackles
-var ehrTretjeOsebe="d4494b2-5234-41b4-b90f-95bab401155"; //Jesse Eisenberg
+var ehrTretjeOsebe="d4494b2-5234-41b4-b90f-95bab401155"; //Jesse Eisenberg*/
 var izbranaKategorija = 0;
 var ime = "";
 var priimek = "";
@@ -109,8 +109,6 @@ $(document).ready(function() {
 				$("#kreirajDatumRojstva").val(party.dateOfBirth);
 				$("#kreirajKljuc").val(ehrId);
 				if(ehrId == "0c50e172-b324-49b7-8c02-36fbc5b6dbde") {
-					document.getElementById("slikaUporabnik").style.display = "none";
-					document.getElementById("slikaUporabnik2").style.display = "none";
 					$("#Jack").show();
 					$("#Jesse").hide();
 					$("#Jensen").hide();
