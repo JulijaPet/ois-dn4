@@ -295,7 +295,7 @@
 												      .key(function(d) { return d.symbol; })
 												      .entries(letters);
 												symbols.forEach(function(s) {
-												    s.values.forEach(function(d) { d.date; d.price; });
+												    s.values.forEach(function(d) { d.date; d.price = +d.price; });
 												    s.maxPrice = d3.max(s.values, function(d) { return d.price; });
 												    s.sumPrice = d3.sum(s.values, function(d) { return d.price; });
 												  });
