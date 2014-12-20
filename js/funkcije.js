@@ -116,8 +116,6 @@ $(document).ready(function() {
 					$("#Jesse2").hide();
 					$("#Jensen2").hide();
 				} else if(ehrId == "10135f74-aead-42e1-b739-05d330c7a95a") {
-					document.getElementById("slikaUporabnik").style.display = "none";
-					document.getElementById("slikaUporabnik2").style.display = "none";
 					$("#Jensen").show();
 					$("#Jesse").hide();
 					$("#Jack").hide();
@@ -125,8 +123,6 @@ $(document).ready(function() {
 					$("#Jesse2").hide();
 					$("#Jack2").hide();
 				} else if(ehrId == "bbc7659c-43ca-4482-8f08-1fd0568f515a") {
-					document.getElementById("slikaUporabnik").style.display = "none";
-					document.getElementById("slikaUporabnik2").style.display = "none";
 					$("#Jesse").show();
 					$("#Jensen").hide();
 					$("#Jack").hide();
