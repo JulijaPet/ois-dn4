@@ -198,7 +198,6 @@ function shraniPodatke() {
 		    data: JSON.stringify(podatki),
 		    success: function (res) {
 		    	console.log(res.meta.href);
-		    	prikaaziPodatkeTabela();
 		    	$("#izpis").show();
 		    },
 		    error: function(err) {
@@ -211,8 +210,9 @@ function shraniPodatke() {
 	}
 }
 
-function prikaaziPodatkeTabela() {
-
+function prikaziGraf() {
+	var	poodatki = [];
+	$("#diagram").show();
 	var sessionId = getSessionId();
 	if(izbranaKategorija == 1) {
 		$.ajax({
@@ -221,16 +221,25 @@ function prikaaziPodatkeTabela() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
-			        for (var i in res) {
-			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
-			      	
+			        var j = 0;
+			       	for (var i in res) {
+			        	poodatki[j] = res[i].weight;
+			        	j++;	
 			        }
-			      //  results += "</table>";
-			      //  $("#izpis").append(results);
-		    	} else {
-		  			$("#izpis").html("Ni podatkov!");
-			  	}
+			     
+			        var x = d3.scale.linear()
+    					.domain([0, d3.max(poodatki)])
+    					.range([0, 420]);
+
+					d3.select("#diagram")
+			  			.selectAll("div")
+			    		.data(poodatki)
+			  			.enter().append("div")
+			    		.style("width", function(d) { return x(d) + "px"; })
+			    		.text(function(d) { return d; });
+		    	}
+		    	else
+			     	alert("napaka");
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -244,15 +253,25 @@ function prikaaziPodatkeTabela() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna višina</th></tr>";
-			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].height + " " 	+ res[i].unit + "</td>";
+				   	var j = 0;
+			       	for (var i in res) {
+			        	poodatki[j] = res[i].height;
+			        	j++;	
 			        }
-			        results += "</table>";
-			        $("#izpis").append(results);
-		    	} else {
-		  			$("#izpis").html("Ni podatkov!");
-			  	}
+			     
+			        var x = d3.scale.linear()
+    					.domain([0, d3.max(poodatki)])
+    					.range([0, 420]);
+
+					d3.select("#diagram")
+			  			.selectAll("div")
+			    		.data(poodatki)
+			  			.enter().append("div")
+			    		.style("width", function(d) { return x(d) + "px"; })
+			    		.text(function(d) { return d; });
+		    	}
+		    	else
+			     	alert("napaka");
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -266,15 +285,25 @@ function prikaaziPodatkeTabela() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna temperatura</th></tr>";
-			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].temperature + " %"+ "</td>";
+				   	var j = 0;
+			       	for (var i in res) {
+			        	poodatki[j] = res[i].tempetaure;
+			        	j++;	
 			        }
-			        results += "</table>";
-			        $("#izpis").append(results);
-		    	} else {
-		  			$("#izpis").html("Ni podatkov!");
-			  	}
+			     
+			        var x = d3.scale.linear()
+    					.domain([0, d3.max(poodatki)])
+    					.range([0, 420]);
+
+					d3.select("#diagram")
+			  			.selectAll("div")
+			    		.data(poodatki)
+			  			.enter().append("div")
+			    		.style("width", function(d) { return x(d) + "px"; })
+			    		.text(function(d) { return d; });
+		    	}
+		    	else
+			     	alert("napaka");
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -288,12 +317,12 @@ function prikaaziPodatkeTabela() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Krvni tlak</th></tr>";
+				   	var podatki = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th>Sistolični krvni tlak ["+ res.unit +"]</th><th>Distolični krvni tlak ["+ res.unit +"]</th></tr>";
 			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + "sistolicni: " + res[i].systolic + " distolicni: " + res[i].diastolic  + " " 	+ res[i].unit + "</td>";
+			            podatki += "<tr><td>" + res[i].time + "</td><td>" +  res[i].systolic + "</td><td>" + res[i].diastolic + "</td>";
 			        }
-			        results += "</table>";
-			        $("#izpis").append(results);
+			        podatki += "</table>";
+			        $("#izpis").append(podatki);
 		    	} else {
 		  			$("#izpis").html("Ni podatkov!");
 			  	}
@@ -310,15 +339,25 @@ function prikaaziPodatkeTabela() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Nasičenost krvi s kisikom</th></tr>";
-			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].spO2 + " " 	+ res[i].unit + "</td>";
+				   	var j = 0;
+			       	for (var i in res) {
+			        	poodatki[j] = res[i].spO2;
+			        	j++;	
 			        }
-			        results += "</table>";
-			        $("#izpis").append(results);
-		    	} else {
-		  			$("#izpis").html("Ni podatkov!");
-			  	}
+			     
+			        var x = d3.scale.linear()
+    					.domain([0, d3.max(poodatki)])
+    					.range([0, 420]);
+
+					d3.select("#diagram")
+			  			.selectAll("div")
+			    		.data(poodatki)
+			  			.enter().append("div")
+			    		.style("width", function(d) { return x(d) + "px"; })
+			    		.text(function(d) { return d; });
+		    	}
+		    	else
+			     	alert("napaka");
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -485,18 +524,7 @@ function nazaj() {
 	$("#prikaziVajeDIV").hide();
 	$("#humanBody").show();
 }
-function prikaziGraf() {
-	if(index === 0) {
-		neki();
-		$("#diagram").show();
- 		$("#izpis").hide();
- 		index=1;
-	} else {
-		$("#diagram").hide();
-    	$("#izpis").show();
-    	index=0;
-	}
-}
+
 function prikaziVajeRoke() {
 	$("#prikaziVajeDIV").show();
 	$("#vajeRoke").show();
@@ -572,15 +600,29 @@ function neki() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
-	 //	poodatki = [4, 8, 15, 16, 23, 42];	
-	/*	var x = d3.scale.linear()
-    	.domain([0, d3.max(poodatki)])
-    	.range([0, 420]);
-
-		d3.select("#diagram")
-  			.selectAll("div")
-    		.data(poodatki)
-  			.enter().append("div")
-    		.style("width", function(d) { return x(d) + "px"; })
-    		.text(function(d) { return d; });*/
 }
+/*
+else if(izbranaKategorija == 5) {
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "spO2",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Nasičenost krvi s kisikom</th></tr>";
+			        for (var i in res) {
+			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].spO2 + " " 	+ res[i].unit + "</td>";
+			        }
+			        results += "</table>";
+			        $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("Ni podatkov!");
+			  	}
+		    },
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	}
+}*/
