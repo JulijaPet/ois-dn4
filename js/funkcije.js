@@ -573,11 +573,10 @@ function neki() {
 																  {letter: "E", frequency: .40}
 																];*/
 											
-											var margin = {top: 40, right: 20, bottom: 30, left: 40},
+										/*	var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
-											 data = [3, 6, 2, 7, 5, 2, 0, 3, 8, 9, 2, 5, 9, 3, 6, 3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 9, 2, 7];
 											var x = d3.scale.ordinal()
 											    .rangeRoundBands([0, width], .1);
 											
@@ -644,8 +643,9 @@ function neki() {
 											function type(d) {
 											  d = +d;
 											  return d;
-											}
-/*	var m = [80, 80, 80, 80]; 
+											}*/
+											var data = [3, 6, 2, 7, 5, 2, 0, 3, 8, 9, 2, 5, 9, 3, 6, 3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 9, 2, 7];
+	var m = [80, 80, 80, 80]; 
 		var w = 1000 - m[1] - m[3]; 
 		var h = 400 - m[0] - m[2]; 
 		var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
@@ -696,5 +696,5 @@ function neki() {
 			
   			// Add the line by appending an svg:path element with the data line we created above
 			// do this AFTER the axes above so that the line is above the tick-lines
-  			graph.append("svg:path").attr("d", line(data));*/
+  			graph.append("svg:path").attr("d", line(data));
 }
