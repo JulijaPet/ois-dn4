@@ -547,9 +547,10 @@ function neki() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
+			  		var j = 0;
 			       	for (var i in res) {
-			        	poodatki[i] = res[i].weight;
-			        		
+			        	poodatki[j] = res[i].weight;
+			        	j++;	
 			        }
 		    	}
 		    },
@@ -558,7 +559,7 @@ function neki() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
-	 	poodatki = [4, 8, 15, 16, 23, 42];	
+	 //	poodatki = [4, 8, 15, 16, 23, 42];	
 		var x = d3.scale.linear()
     	.domain([0, d3.max(poodatki)])
     	.range([0, 420]);
