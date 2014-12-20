@@ -678,7 +678,7 @@ function neki() {
 			})
 
 			// Add an SVG element with the desired dimensions and margin.
-			var graph = d3.select("#graph").append("svg:svg")
+			var graph = d3.select("#diagram").append("svg:svg")
 			      .attr("width", w + m[1] + m[3])
 			      .attr("height", h + m[0] + m[2])
 			    .append("svg:g")
