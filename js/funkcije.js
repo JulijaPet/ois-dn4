@@ -311,13 +311,14 @@ function prikaziGraf() {
 		    }
 		});	
 	} else if(izbranaKategorija == 4) {
+		$("#diagram").hide();
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "blood_pressure",
 		    type: 'GET',
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var podatki = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th>Sistolični krvni tlak ["+ res.unit +"]</th><th>Distolični krvni tlak ["+ res.unit +"]</th></tr>";
+				   	var podatki = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th>Sistolični krvni tlak ["+ res[0].unit +"]</th><th>Distolični krvni tlak ["+ res[0].unit +"]</th></tr>";
 			        for (var i in res) {
 			            podatki += "<tr><td>" + res[i].time + "</td><td>" +  res[i].systolic + "</td><td>" + res[i].diastolic + "</td>";
 			        }
@@ -378,6 +379,7 @@ function odjava() {
 }
 
 function prikaziTeza() {
+	$("#diagram").html("");
     $("#polje2").hide();
     $("#row2").show();
     $("#kajVnesujes").html("<span>telesna masa</span>");
@@ -392,6 +394,7 @@ function prikaziTeza() {
     izbranaKategorija=1;
 }
 function prikaziVis() {
+	$("#diagram").html("");
     $("#polje2").hide();
     $("#row2").show();
     $("#vitalniZnakiPlosca").show();
@@ -407,6 +410,7 @@ function prikaziVis() {
     izbranaKategorija=2;
 }
 function prikaziTem() {
+	$("#diagram").html("");
     $("#polje2").hide();
     $("#row2").show();
     $("#vitalniZnakiPlosca").show();
@@ -422,6 +426,7 @@ function prikaziTem() {
     izbranaKategorija=3;
 }
 function prikaziTlak() {
+	$("#diagram").html("");
     $("#polje2").show();
     $("#row2").show();
     $("#vitalniZnakiPlosca").show();
@@ -439,6 +444,7 @@ function prikaziTlak() {
     izbranaKategorija=4;
 }
 function prikaziKisik() {
+	$("#diagram").html("");
     $("#polje2").hide();
     $("#row2").show();
     $("#vitalniZnakiPlosca").show();
@@ -454,6 +460,7 @@ function prikaziKisik() {
     izbranaKategorija=5;
 }
 function prikaziVoda() {
+	$("#diagram").html("");
     $("#polje2").hide();
     $("#row2").show();
     $("#vitalniZnakiPlosca").show();
@@ -469,6 +476,7 @@ function prikaziVoda() {
     izbranaKategorija=6;
 }
 function prikaziDan() {
+	$("#diagram").html("");
     $("#vitalniZnakiPlosca").show();
     $("#polje2").show();
     $("#row2").show();
@@ -486,6 +494,7 @@ function prikaziDan() {
     izbranaKategorija=7;
 }
 function prikaziVaje() {
+	$("#diagram").html("");
     $("#row2").hide();
     $("#humanBody").show();
     $("#map-canvas").hide();
@@ -496,6 +505,7 @@ function prikaziVaje() {
     izbranaKategorija=8;
 }
 function prikaziTel() {
+	$("#diagram").html("");
     $("#row2").hide();
     $("#humanBody").hide();
     $("#map-canvas").show();
@@ -511,6 +521,7 @@ function domov() {
     $("#humanBody").hide();
     $("#diagram").hide();
     $("#izpis").html("");
+    $("#diagram").html("");
     $("#prikaziVajeDIV").show();
     $("#nazaj").hide();
     $("#domov").show();
