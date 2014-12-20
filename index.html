@@ -226,6 +226,14 @@
 												    duration = 1500,
 												    delay = 500;
 												
+												var letters = [
+																  {symbol: "A", frequency: .08167, price: 3},
+																  {symbol: "B", frequency: .01492, price: 4},
+																  {symbol: "C", frequency: .02780, price: 5},
+																  {symbol: "D", frequency: .04253, price: 6},
+																  {symbol: "E", frequency: .12702, price: 7}
+																];
+												
 												var color = d3.scale.category10();
 												
 												var div = d3.select("#diagram").append("div")   
@@ -244,24 +252,24 @@
 												// A line generator, for the dark stroke.
 												var line = d3.svg.line()
 												    .interpolate("basis")
-												    .x(function(d) { return x(d.date); })
+												    .x(function(d) { return x(d.frequency); })
 												    .y(function(d) { return y(d.price); });
 												
 												// A line generator, for the dark stroke.
 												var axis = d3.svg.line()
 												    .interpolate("basis")
-												    .x(function(d) { return x(d.date); })
+												    .x(function(d) { return x(d.frequency); })
 												    .y(h);
 												
 												// A area generator, for the dark stroke.
 												var area = d3.svg.area()
 												    .interpolate("basis")
-												    .x(function(d) { return x(d.date); })
+												    .x(function(d) { return x(d.frequency); })
 												    .y1(function(d) { return y(d.price); });
-												
-												d3.csv("stocks.csv", function(data) {
-												  var parse = d3.time.format("%b %Y").parse;
-												
+												d3.selectAll("div").data(letters);
+												function(data){
+										//		d3.csv("stocks.csv", function(data) {
+										//		  var parse = d3.time.format("%b %Y").parse;
 												  // Nest stock values by symbol.
 												  symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
@@ -270,7 +278,7 @@
 												  // Parse dates and numbers. We assume values are sorted by date.
 												  // Also compute the maximum price per symbol, needed for the y-domain.
 												  symbols.forEach(function(s) {
-												    s.values.forEach(function(d) { d.date = parse(d.date); d.price = +d.price; });
+												    s.values.forEach(function(d) { d.frequency = parse(d.frequency); d.price = +d.price; });
 												    s.maxPrice = d3.max(s.values, function(d) { return d.price; });
 												    s.sumPrice = d3.sum(s.values, function(d) { return d.price; });
 												  });
@@ -292,8 +300,8 @@
 												
 												  // Compute the minimum and maximum date across symbols.
 												  x.domain([
-												    d3.min(symbols, function(d) { return d.values[0].date; }),
-												    d3.max(symbols, function(d) { return d.values[d.values.length - 1].date; })
+												    d3.min(symbols, function(d) { return d.values[0].frequency; }),
+												    d3.max(symbols, function(d) { return d.values[d.values.length - 1].frequency; })
 												  ]);
 												
 												  var g = svg.selectAll(".symbol")
@@ -327,7 +335,7 @@
 												
 												      e.selectAll("circle, text")
 												          .data(function(d) { return [d.values[k], d.values[k]]; })
-												          .attr("transform", function(d) { return "translate(" + x(d.date) + "," + y(d.price) + ")"; });
+												          .attr("transform", function(d) { return "translate(" + x(d.frequency) + "," + y(d.price) + ")"; });
 												    });
 												  }
 												
@@ -445,7 +453,7 @@
 												function stackedArea() {
 												  var stack = d3.layout.stack()
 												      .values(function(d) { return d.values; })
-												      .x(function(d) { return d.date; })
+												      .x(function(d) { return d.frequency; })
 												      .y(function(d) { return d.price; })
 												      .out(function(d, y0, y) { d.price0 = y0; })
 												      .order("reverse");
@@ -484,7 +492,7 @@
 												function streamgraph() {
 												  var stack = d3.layout.stack()
 												      .values(function(d) { return d.values; })
-												      .x(function(d) { return d.date; })
+												      .x(function(d) { return d.frequency; })
 												      .y(function(d) { return d.price; })
 												      .out(function(d, y0, y) { d.price0 = y0; })
 												      .order("reverse")
@@ -562,7 +570,7 @@
 												
 												function groupedBar() {
 												  x = d3.scale.ordinal()
-												      .domain(symbols[0].values.map(function(d) { return d.date; }))
+												      .domain(symbols[0].values.map(function(d) { return d.frequency; }))
 												      .rangeBands([0, w - 60], .1);
 												
 												  var x1 = d3.scale.ordinal()
@@ -586,7 +594,7 @@
 												    d3.select(this).selectAll("rect")
 												        .data(function(d) { return d.values; })
 												      .enter().append("rect")
-												        .attr("x", function(d) { return x(d.date) + x1(p.key); })
+												        .attr("x", function(d) { return x(d.frequency) + x1(p.key); })
 												        .attr("y", function(d) { return y(d.price); })
 												        .attr("width", x1.rangeBand())
 												        .attr("height", function(d) { return h - y(d.price); })
@@ -605,7 +613,7 @@
 												
 												  var stack = d3.layout.stack()
 												      .values(function(d) { return d.values; })
-												      .x(function(d) { return d.date; })
+												      .x(function(d) { return d.frequency; })
 												      .y(function(d) { return d.price; })
 												      .out(function(d, y0, y) { d.price0 = y0; })
 												      .order("reverse");
@@ -635,7 +643,7 @@
 												            .style("stroke-opacity", 1e-6)
 												          .transition()
 												            .duration(duration / 2)
-												            .attr("x", function(d) { return x(d.date); })
+												            .attr("x", function(d) { return x(d.frequency); })
 												            .attr("width", x.rangeBand())
 												            .style("stroke-opacity", 1);
 												      });
