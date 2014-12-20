@@ -290,14 +290,11 @@
 											      .attr("y", function(d) { return y(d.frequency); })
 											      .attr("height", function(d) { return height - y(d.frequency); })
 											      .on('mouseover', tip.show)
-											      .on('mouseout', tip.hide)
+											      .on('mouseout', tip.hide);
 											
-											});
-											
-											function type(d) {
-											  d.frequency = +d.frequency;
-											  return d;
 											}
+											
+											
 											
 											</script>
 											
