@@ -577,7 +577,7 @@ function neki() {
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
-											
+											 data = [3, 6, 2, 7, 5, 2, 0, 3, 8, 9, 2, 5, 9, 3, 6, 3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 9, 2, 7];
 											var x = d3.scale.ordinal()
 											    .rangeRoundBands([0, width], .1);
 											
