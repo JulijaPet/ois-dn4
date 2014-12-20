@@ -493,7 +493,7 @@ function nazaj() {
 }
 function prikaziGraf() {
 	if(index === 0) {
-		bla();
+		neki();
 		$("#diagram").show();
  		$("#izpis").hide();
  		index=1;
@@ -552,7 +552,7 @@ function neki() {
 	        "kolicina" : kolicina
 	    };
 	};
-	var Main = [];
+	var letters = [];
 	var sessionId = getSessionId();
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
@@ -563,9 +563,10 @@ function neki() {
 				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
 			        	var j = 0;
 			        	for (var i in res) {
-			        	Main[j] = [];
+			        	letters[j] = [];
 			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
-			        		Main[j][i] = tabela(res[i].unit,res[i].time,res[i].weight);
+			        		letters[j][i] = tabela(res[i].unit,res[i].time,res[i].weight);
+			        		j++;
 			        		
 			        	}
 			        
@@ -580,10 +581,7 @@ function neki() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
-	return Main;
-}
 
-function bla() {
 										/*	var letters = [
 																  {letter: "A", frequency: .1},
 																  {letter: "B", frequency: .10},
@@ -592,19 +590,19 @@ function bla() {
 																  {letter: "E", frequency: .40}
 																];*/
 											
-											var letters = neki();
+										
 											
 											var margin = {top: 40, right: 20, bottom: 30, left: 40},
 											    width = 960 - margin.left - margin.right,
 											    height = 500 - margin.top - margin.bottom;
 											
 											var x = d3.scale.linear()
-												.domain([0, data.length])
-												.range([0, w]);
+												.domain([0, letters.length])
+												.range([0, width]);
 												
 											var y = d3.scale.linear()
 												.domain([0, 10])
-												.range([h, 0]);
+												.range([height, 0]);
 											
 											var xAxis = d3.svg.axis()
 											    .scale(x)
@@ -612,7 +610,7 @@ function bla() {
 											
 											var yAxis = d3.svg.axis()
 											    .scale(y)
-											    .orient("left")
+											    .orient("left");
 											
 											var tip = d3.tip()
 											  .attr('class', 'd3-tip')
@@ -669,4 +667,5 @@ function bla() {
 											  d.kolicina = +d.kolicina;
 											  return d;
 											}
+											alert(letters);
 }
