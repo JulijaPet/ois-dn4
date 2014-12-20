@@ -534,7 +534,6 @@ function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
     var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=12";
     document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:100%;height:100%;margin:auto;'></iframe>";
-    alert("jhahahha");
 }
 
 
@@ -553,7 +552,20 @@ function neki() {
 			        	poodatki[j] = res[i].weight;
 			        	j++;	
 			        }
+			     
+			        var x = d3.scale.linear()
+    					.domain([0, d3.max(poodatki)])
+    					.range([0, 420]);
+
+					d3.select("#diagram")
+			  			.selectAll("div")
+			    		.data(poodatki)
+			  			.enter().append("div")
+			    		.style("width", function(d) { return x(d) + "px"; })
+			    		.text(function(d) { return d; });
 		    	}
+		    	else
+			     	alert("napaka");
 		    },
 		    error: function(err) {
 		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -561,7 +573,7 @@ function neki() {
 		    }
 		});	
 	 //	poodatki = [4, 8, 15, 16, 23, 42];	
-		var x = d3.scale.linear()
+	/*	var x = d3.scale.linear()
     	.domain([0, d3.max(poodatki)])
     	.range([0, 420]);
 
@@ -570,5 +582,5 @@ function neki() {
     		.data(poodatki)
   			.enter().append("div")
     		.style("width", function(d) { return x(d) + "px"; })
-    		.text(function(d) { return d; });
+    		.text(function(d) { return d; });*/
 }
