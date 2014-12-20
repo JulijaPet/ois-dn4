@@ -267,13 +267,13 @@
 												    .x(function(d) { return x(d.frequency); })
 												    .y1(function(d) { return y(d.price); });
 												d3.selectAll("div").data(letters);
-												function(data){
+								
 										//		d3.csv("stocks.csv", function(data) {
 										//		  var parse = d3.time.format("%b %Y").parse;
 												  // Nest stock values by symbol.
 												  symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
-												      .entries(stocks = data);
+												      .entries(letters);
 												
 												  // Parse dates and numbers. We assume values are sorted by date.
 												  // Also compute the maximum price per symbol, needed for the y-domain.
@@ -292,8 +292,8 @@
 												      .attr("class", "symbol");
 												
 												  setTimeout(lines, duration);
-												};
 												
+											
 												function lines() {
 												  x = d3.time.scale().range([0, w - 60]);
 												  y = d3.scale.linear().range([h / 4 - 20, 0]);
