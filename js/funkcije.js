@@ -216,7 +216,9 @@ function shraniPodatke() {
 		alert("Vnesi podatke!" + polje1);
 	}
 }
+
 function prikaaziPodatkeTabela() {
+
 	var sessionId = getSessionId();
 	if(izbranaKategorija == 1) {
 		$.ajax({
@@ -225,12 +227,13 @@ function prikaaziPodatkeTabela() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
+				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
 			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
+			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
+			      	
 			        }
-			        results += "</table>";
-			        $("#izpis").append(results);
+			      //  results += "</table>";
+			      //  $("#izpis").append(results);
 		    	} else {
 		  			$("#izpis").html("Ni podatkov!");
 			  	}
@@ -490,6 +493,7 @@ function nazaj() {
 }
 function prikaziGraf() {
 	if(index === 0) {
+		bla();
 		$("#diagram").show();
  		$("#izpis").hide();
  		index=1;
@@ -536,4 +540,134 @@ function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
     var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=12";
     document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:100%;height:100%;margin:auto;'></iframe>";
+}
+
+
+
+function neki() {
+	var tabela = function(kg, datum, kolicina) {
+	    return {
+	    	"oznaka" : kg,
+	        "datum" : datum,
+	        "kolicina" : kolicina
+	    };
+	};
+	var Main = [];
+	var sessionId = getSessionId();
+		$.ajax({
+		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
+		    type: 'GET',
+		    headers: {"Ehr-Session": sessionId},
+		    success: function (res) {
+			  	if (res.length > 0) {
+				   //	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Telesna teža</th></tr>";
+			        	var j = 0;
+			        	for (var i in res) {
+			        	Main[j] = [];
+			            //results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].weight + " " 	+ res[i].unit + "</td>";
+			        		Main[j][i] = tabela(res[i].unit,res[i].time,res[i].weight);
+			        		
+			        	}
+			        
+			      //  results += "</table>";
+			      //  $("#izpis").append(results);
+		    	} else {
+		  			$("#izpis").html("Ni podatkov!");
+			  	}
+		    },
+		    error: function(err) {
+		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+		    }
+		});	
+	return Main;
+}
+
+function bla() {
+											var letters = [
+																  {letter: "A", frequency: .1},
+																  {letter: "B", frequency: .10},
+																  {letter: "C", frequency: .20},
+																  {letter: "D", frequency: .30},
+																  {letter: "E", frequency: .40}
+																];
+											
+										//	var letters = neki();
+											
+											var margin = {top: 40, right: 20, bottom: 30, left: 40},
+											    width = 960 - margin.left - margin.right,
+											    height = 500 - margin.top - margin.bottom;
+											
+											var formatPercent = d3.format(".0%");
+											
+											var x = d3.scale.ordinal()
+											    .rangeRoundBands([0, width], .1);
+											
+											var y = d3.scale.linear()
+											    .range([height, 0]);
+											
+											var xAxis = d3.svg.axis()
+											    .scale(x)
+											    .orient("bottom");
+											
+											var yAxis = d3.svg.axis()
+											    .scale(y)
+											    .orient("left")
+											    .tickFormat(formatPercent);
+											
+											var tip = d3.tip()
+											  .attr('class', 'd3-tip')
+											  .offset([-10, 0])
+											  .html(function(d) {
+											    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+											  });
+											var div = d3.select("#diagram").append("div")   
+							                        .attr("class", "tooltip")               
+							                        .style("opacity", 0);  
+							                        
+											var svg = d3.select("#diagram").append("svg")
+											    .attr("width", width + margin.left + margin.right)
+											    .attr("height", height + margin.top + margin.bottom)
+											  .append("g")
+											    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+											
+											svg.call(tip);
+											
+											drawMainGraph();
+											function drawMainGraph() { 
+											  type(letters);
+											  x.domain(letters.map(function(d) { return d.letter; }));
+											  y.domain([0, d3.max(letters, function(d) { return d.frequency; })]);
+											
+											  svg.append("g")
+											      .attr("class", "x axis")
+											      .attr("transform", "translate(0," + height + ")")
+											      .call(xAxis);
+											
+											  svg.append("g")
+											      .attr("class", "y axis")
+											      .call(yAxis)
+											    .append("text")
+											      .attr("transform", "rotate(-90)")
+											      .attr("y", 6)
+											      .attr("dy", ".71em")
+											      .style("text-anchor", "end")
+											      .text("Frequency");
+											
+											  svg.selectAll(".bar")
+											      .data(letters)
+											    .enter().append("rect")
+											      .attr("class", "bar")
+											      .attr("x", function(d) { return x(d.letter); })
+											      .attr("width", x.rangeBand())
+											      .attr("y", function(d) { return y(d.frequency); })
+											      .attr("height", function(d) { return height - y(d.frequency); })
+											      .on('mouseover', tip.show)
+											      .on('mouseout', tip.hide);
+											
+											}
+											function type(d) {
+											  d.frequency = +d.frequency;
+											  return d;
+											}
 }
