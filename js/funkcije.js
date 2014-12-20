@@ -601,7 +601,7 @@ function bla() {
 											//var formatPercent = d3.format(".0%");
 											
 											var x = d3.scale.ordinal()
-											    .rangeRoundBands([0, width], .1);
+											    .range([width / 2, width  / 2]);
 											
 											var y = d3.scale.linear()
 											    .range([height, 0]);
