@@ -262,7 +262,7 @@
 												    .x(function(d) { return x(d.date); })
 												    .y1(function(d) { return y(d.price); });
 												
-												function(data) {
+											/*	d3.csv("stocks.csv", function(data) {
 												  var parse = d3.time.format("%b %Y").parse;
 												
 												  // Nest stock values by symbol.
@@ -287,7 +287,15 @@
 												      .attr("class", "symbol");
 												
 												  setTimeout(lines, duration);
-												};
+												});*/
+												symbols = d3.nest()
+												      .key(function(d) { return d.symbol; })
+												      .entries(nestedData;
+												     var g = svg.selectAll("g")
+												      .data(symbols)
+												    .enter().append("g")
+												      .attr("class", "symbol");
+												setTimeout(lines, duration);
 												function lines() {
 												  x = d3.time.scale().range([0, w - 60]);
 												  y = d3.scale.linear().range([h / 4 - 20, 0]);
