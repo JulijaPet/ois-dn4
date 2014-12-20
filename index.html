@@ -222,7 +222,7 @@
 											var formatPercent = d3.format(".0%");
 											
 											var x = d3.scale.ordinal()
-											    .rangeRoundBands([0, width], .1);
+											    .rangeRoundBands([0, width], 1);
 											
 											var y = d3.scale.linear()
 											    .range([height, 0]);
@@ -241,7 +241,7 @@
 											  .offset([-10, 0])
 											  .html(function(d) {
 											    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
-											  })
+											  });
 											var div = d3.select("#diagram").append("div")   
 							                        .attr("class", "tooltip")               
 							                        .style("opacity", 0);  
@@ -259,8 +259,8 @@
    													.key(function(d) {return d.price})
     												.entries(letters);
 											
-											drawMainGraph()
-											function drawMainGraph() { {
+											drawMainGraph();
+											function drawMainGraph() { 
 											  x.domain(nestedData.map(function(d) { return d.letter; }));
 											  y.domain([0, d3.max(nestedData, function(d) { return d.frequency; })]);
 										/*	  x.domain( d3.extent( letters, function(d) { return d.letter; } ) );
@@ -282,7 +282,7 @@
 											      .text("Frequency");
 											
 											  svg.selectAll(".bar")
-											      .data(data)
+											      .data(nestedData)
 											    .enter().append("rect")
 											      .attr("class", "bar")
 											      .attr("x", function(d) { return x(d.letter); })
