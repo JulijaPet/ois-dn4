@@ -290,7 +290,7 @@
 												});*/
 												symbols = d3.nest()
 												      .key(function(d) { return d.symbol; })
-												      .entries(stocks = nestedData);
+												      .entriesnestedData);
 												 symbols.forEach(function(s) {
 												    s.values.forEach(function(d) { d.date = parse(d.date); d.price = +d.price; });
 												    s.maxPrice = d3.max(s.values, function(d) { return d.price; });
