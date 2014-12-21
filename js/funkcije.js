@@ -11,7 +11,6 @@ var izbranaKategorija = 0;
 var ime = "";
 var priimek = "";
 var datumRojstva = "";
-var index=0;
 
 function getSessionId() {
     var response = $.ajax({
@@ -247,6 +246,35 @@ function prikaziGraf() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
+		$("#izpis").show();
+		var AQL = 
+				"select"+
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as Body_weight_magnitude"+
+				"from EHR [e/ehr_id/value='" + ehrId + "']"+
+				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1]"+
+				"where"+
+					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<60 and"+
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50"+
+				"order by"+
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc";
+				$.ajax({
+				    url: baseUrl + "/query?" + $.param({"aql": AQL}),
+				    type: 'GET',
+			 		headers: {"Ehr-Session": sessionId},
+				    success: function (res) {
+				    	if (res) {
+			    			var rows = res.resultSet;
+					        for (var i in rows) {
+					        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+					        }
+				    	} else
+				    		$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
+				    },
+				    error: function(err) {
+				    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+						console.log(JSON.parse(err.responseText).userMessage);
+					}
+				});
 	} else if(izbranaKategorija == 2) {
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "height",
@@ -541,66 +569,3 @@ function showPosition(position) {
     var urlMap = "https://www.google.com/maps/embed/v1/search?key=AIzaSyD8umGxn8T3ZdVh5OY6w75p5g7EPw7qic0&q=fitness&center=" + latlon + "&zoom=12";
     document.getElementById("map-canvas").innerHTML = "<iframe src='"+ urlMap +"' style='width:100%;height:100%;margin:auto;'></iframe>";
 }
-
-
-
-function neki() {
-	var	poodatki = [4, 8, 15, 16, 23, 42];
-	var sessionId = getSessionId();
-		$.ajax({
-		    url: baseUrl + "/view/" + ehrId + "/" + "weight",
-		    type: 'GET',
-		    headers: {"Ehr-Session": sessionId},
-		    success: function (res) {
-			  	if (res.length > 0) {
-			  		var j = 0;
-			       	for (var i in res) {
-			        	poodatki[j] = res[i].weight;
-			        	j++;	
-			        }
-			     
-			        var x = d3.scale.linear()
-    					.domain([0, d3.max(poodatki)])
-    					.range([0, 420]);
-
-					d3.select("#diagram")
-			  			.selectAll("div")
-			    		.data(poodatki)
-			  			.enter().append("div")
-			    		.style("width", function(d) { return x(d) + "px"; })
-			    		.text(function(d) { return d; });
-		    	}
-		    	else
-			     	alert("napaka");
-		    },
-		    error: function(err) {
-		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
-				console.log(JSON.parse(err.responseText).userMessage);
-		    }
-		});	
-}
-/*
-else if(izbranaKategorija == 5) {
-		$.ajax({
-		    url: baseUrl + "/view/" + ehrId + "/" + "spO2",
-		    type: 'GET',
-		    headers: {"Ehr-Session": sessionId},
-		    success: function (res) {
-			  	if (res.length > 0) {
-				   	var results = "<table class='table table-striped table-hover'><tr><th>Datum in ura</th><th class='text-right'>Nasičenost krvi s kisikom</th></tr>";
-			        for (var i in res) {
-			            results += "<tr><td>" + res[i].time + "</td><td class='text-right'>" + res[i].spO2 + " " 	+ res[i].unit + "</td>";
-			        }
-			        results += "</table>";
-			        $("#izpis").append(results);
-		    	} else {
-		  			$("#izpis").html("Ni podatkov!");
-			  	}
-		    },
-		    error: function(err) {
-		    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
-				console.log(JSON.parse(err.responseText).userMessage);
-		    }
-		});	
-	}
-}*/
