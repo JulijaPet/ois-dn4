@@ -247,10 +247,10 @@ function prikaziGraf() {
 		    }
 		});	
 		$("#izpis").show();
-		var AQL = 
+		var AQL2 = 
 				"select " +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
-				"from EHR e " +
+				"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
 				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1] " +
 				"where" +
 					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<60 and " +
@@ -258,6 +258,16 @@ function prikaziGraf() {
 				"order by" +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc " +
     			"limit 10";
+    			var AQL = 
+						"select " +
+    						"t/data[at0002]/events[at0003]/time/value as cas, " +
+    						"t/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude as temperatura_vrednost, " +
+    						"t/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/units as temperatura_enota " +
+						"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
+						"contains OBSERVATION t[openEHR-EHR-OBSERVATION.body_temperature.v1] " +
+						"where t/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude<35 " +
+						"order by t/data[at0002]/events[at0003]/time/value desc " +
+						"limit 10";
 				$.ajax({
 				    url: baseUrl + "/query?" + $.param({"aql": AQL}),
 				    type: 'GET',
@@ -272,7 +282,7 @@ function prikaziGraf() {
 				    //	} else
 				    	//	$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
 				    },
-				    error: function(err) {
+				    error: function() {
 				    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
 						console.log(JSON.parse(err.responseText).userMessage);
 					}
