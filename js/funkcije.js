@@ -247,7 +247,12 @@ function prikaziGraf() {
 		    }
 		});	
 		$("#izpis").show();
-		var AQL2 = 
+			$.ajax({
+			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
+	    	type: 'GET',
+	    	headers: {"Ehr-Session": sessionId},
+	    	success: function (data) {
+		var AQL = 
 				"select " +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
 				"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
@@ -258,16 +263,6 @@ function prikaziGraf() {
 				"order by" +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc " +
     			"limit 10";
-    			var AQL = 
-						"select " +
-    						"t/data[at0002]/events[at0003]/time/value as cas, " +
-    						"t/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude as temperatura_vrednost, " +
-    						"t/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/units as temperatura_enota " +
-						"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
-						"contains OBSERVATION t[openEHR-EHR-OBSERVATION.body_temperature.v1] " +
-						"where t/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value/magnitude<35 " +
-						"order by t/data[at0002]/events[at0003]/time/value desc " +
-						"limit 10";
 				$.ajax({
 				    url: baseUrl + "/query?" + $.param({"aql": AQL}),
 				    type: 'GET',
@@ -287,6 +282,13 @@ function prikaziGraf() {
 						console.log(JSON.parse(err.responseText).userMessage);
 					}
 				});
+	    	},
+
+	    	error: function(err) {
+	    		$("#preberiMeritveVitalnihZnakovSporocilo").html("<span class='obvestilo label label-danger fade-in'>Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+				console.log(JSON.parse(err.responseText).userMessage);
+	    	}
+		});
 	} else if(izbranaKategorija == 2) {
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "height",
