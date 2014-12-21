@@ -94,7 +94,7 @@ html, body{
         width:100%;
     }
     #nazaj {
-        width:10%;
+        margin:10% auto;
     }
     .desno {
         margin-top:10%;
