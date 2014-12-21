@@ -247,43 +247,32 @@ function prikaziGraf() {
 		    }
 		});	
 		$("#izpis").show();
-		$.ajax({
-			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
-	    	type: 'GET',
-	    	headers: {"Ehr-Session": sessionId},
-	    	success: function (data) {
-				var AQL = 
-					"select " +
-    					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
-					"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
-					"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1] " +
-					"where " +
-						"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<90 and " +
-    					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50 " +
-					"order by " +
-    					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc " +
-    				"limit 10";
-					$.ajax({
-					    url: baseUrl + "/query?" + $.param({"aql": AQL}),
-					    type: 'GET',
-				 		headers: {"Ehr-Session": sessionId},
-					    success: function (res) {
-					    	if (res) {
-					        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
-					    	} else
-				    			$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
-						 },
-					    error: function(err) {
-				    		alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
-							console.log(JSON.parse(err.responseText).userMessage);
-						}
-					});
-	    		},
-	    	error: function(err) {
-	    		$("#preberiMeritveVitalnihZnakovSporocilo").html("<span class='obvestilo label label-danger fade-in'>Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
-				console.log(JSON.parse(err.responseText).userMessage);
-	    	}
-		});
+		var AQL = 
+				"select " +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
+				"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
+				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1] " +
+				"where " +
+					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<60 and " +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50 " +
+				"order by " +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc " +
+    			"limit 10";
+				$.ajax({
+				    url: baseUrl + "/query?" + $.param({"aql": AQL}),
+				    type: 'GET',
+					headers: {"Ehr-Session": sessionId},
+				    success: function (res) {
+				    	if (res) {
+				        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+				    	} else
+			    			$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
+					 },
+				    error: function(err) {
+			    		alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
+						console.log(JSON.parse(err.responseText).userMessage);
+					}
+				});
 	} else if(izbranaKategorija == 2) {
 		$.ajax({
 		    url: baseUrl + "/view/" + ehrId + "/" + "height",
