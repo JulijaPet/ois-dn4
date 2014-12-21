@@ -21,12 +21,6 @@
     </head>
 	<body>
 		<div id="roww" class="row">
-			<script>
-				$("#kreirajIme").val("Jack");
-				$("#kreirajPriimek").val("Falahee");
-				$("#kreirajDatumRojstva").val("1989-02-20T08:05:00.000Z");
-				$("#kreirajKljuc").val("0c50e172-b324-49b7-8c02-36fbc5b6dbde");
-			</script>
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -98,9 +92,9 @@
 										<img id="Jesse" alt="" src="http://upload.wikimedia.org/wikipedia/commons/0/04/Jesse_Eisenberg_-_La_red_social_-_Madrid_-_2.jpg" style="height:30%;width:30%;">
 									</div>
 									<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-										<input id="kreirajIme" type="text" class="form-control input-mini" placeholder="IME">
-										<input id="kreirajPriimek" type="text" class="form-control" placeholder="PRIIMEK">
-										<input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="DATUM ROJSTVA">
+										<input id="kreirajIme" type="text" class="form-control input-mini" placeholder="IME" value="Jack">
+										<input id="kreirajPriimek" type="text" class="form-control" placeholder="PRIIMEK" value="Falahee">
+										<input id="kreirajDatumRojstva" type="text" class="form-control" placeholder="DATUM ROJSTVA" value="0c50e172-b324-49b7-8c02-36fbc5b6dbde">
 										<button type="button" class="btn btn-default navbar-btn" onclick="uporabnik()">Pridobi ključ</button>
 									</div>
 						 		</div>
@@ -116,7 +110,7 @@
 								<div class="panel-body">
 									<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 										<span class="label label-default"></span>
-										<input id="kreirajKljuc" type="text" class="form-control input-mini" placeholder="EHR KLJUČ" style="margin-top:2%;">
+										<input id="kreirajKljuc" type="text" class="form-control input-mini" placeholder="EHR KLJUČ" style="margin-top:2%;" value="Falahee">
 									</div>
 									<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><button type="button" class="btn btn-default navbar-btn" onclick="naprej()">Naprej</button></div>
 						 		</div>
