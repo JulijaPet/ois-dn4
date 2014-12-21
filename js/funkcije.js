@@ -278,6 +278,7 @@ function prikaziGraf() {
 				    			alert("ahhahah jebi se");
 						 },
 					    error: function() {
+					    	alert("ahha se");
 				    		alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
 							console.log(JSON.parse(err.responseText).userMessage);
 						}
