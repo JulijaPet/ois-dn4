@@ -248,15 +248,15 @@ function prikaziGraf() {
 		});	
 		$("#izpis").show();
 		var AQL = 
-				"select "+
-    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as Body_weight_magnitude "+
-				"from EHR e "+
-				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1] "+
-				"where"+
-					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<90 and "+
-    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50 "+
-				"order by"+
-    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc "+
+				"select " +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
+				"from EHR e " +
+				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1] " +
+				"where" +
+					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<60 and " +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50 " +
+				"order by" +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc " +
     			"limit 10";
 				$.ajax({
 				    url: baseUrl + "/query?" + $.param({"aql": AQL}),
