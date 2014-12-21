@@ -248,8 +248,8 @@ function prikaziGraf() {
 		});	
 		$("#izpis").show();
 		var visina=1.8;
-		var min = 20/visina * visina;
-		var max = 24.9/visina * visina;
+		var min = 20 * visina * visina;
+		var max = 24.9 * visina * visina;
 		var AQL = 
 				"select " +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
