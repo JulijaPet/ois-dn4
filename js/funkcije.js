@@ -271,11 +271,11 @@ function prikaziGraf() {
 				    	if (res) {
 		//	    			var rows = res.resultSet;
 					       // for (var i in rows) {
-					        	//$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
-					        	alert("blaaa");
-					       }
-				    //	} else
-				    	//	$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
+					        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+					        
+					     
+				    	} else
+				    		$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
 				    },
 				    error: function() {
 				    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
