@@ -265,9 +265,9 @@ function prikaziGraf() {
 					headers: {"Ehr-Session": sessionId},
 				    success: function (res) {
 				    	if (res) {
-				        	$("#izpis").html("<h1>Ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+				        	$("#izpis").html("<h>Ste v meji normalne telesne teže, glede na vašo višino.</h>");
 				    	} else
-			    			$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
+			    			$("#izpis").html("<h>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h>");
 					 },
 				    error: function(err) {
 			    		alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
@@ -313,9 +313,11 @@ function prikaziGraf() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
+			  		var podatki = "<h>IZPIS TEMPERATUR:</h>";
 			       	for (var i in res) {
-			        	$("#izpis").html("<h>Vaša tempetaruta dne: " + res[i].time + " je bila: " + res[i].temperature + " " + res[i].unit + "<br></h>");
+			        	podatki += "<h>Vaša tempetaruta dne: " + res[i].time + " je bila: " + res[i].temperature + " " + res[i].unit + "<br></h>";
 			       	}
+			       	$("#izpis").append(podatki);
 		    	}
 		    	else
 			     	alert("napaka");
