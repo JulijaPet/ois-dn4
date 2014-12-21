@@ -247,14 +247,17 @@ function prikaziGraf() {
 		    }
 		});	
 		$("#izpis").show();
+		var visina=1.8;
+		var min = 20/visina * visina;
+		var max = 24.9/visina * visina;
 		var AQL = 
 				"select " +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as teza " +
 				"from EHR e[e/ehr_id/value='" + ehrId + "'] " +
 				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1] " +
 				"where " +
-					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<60 and " +
-    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50 " +
+					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<"+max+" and " +
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>"+min+" " +
 				"order by " +
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc " +
     			"limit 10";
