@@ -271,6 +271,7 @@ function prikaziGraf() {
 					    success: function (res) {
 					    	if (res) {
 					        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+					        	alert("ahhahah jebi se");
 					    	} else
 				    			$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
 				    			alert("ahhahah jebi se");
