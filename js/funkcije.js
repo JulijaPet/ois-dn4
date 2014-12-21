@@ -247,7 +247,7 @@ function prikaziGraf() {
 		    }
 		});	
 		$("#izpis").show();
-		$("#hide").show();
+		$("#diagram").hide();
 		$.ajax({
 			url: baseUrl + "/demographics/ehr/" + ehrId + "/party",
 	    	type: 'GET',
@@ -275,7 +275,7 @@ function prikaziGraf() {
 				    			$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
 				    			alert("ahhahah jebi se");
 						 },
-					    error: function(err) {
+					    error: function() {
 				    		alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
 							console.log(JSON.parse(err.responseText).userMessage);
 						}
