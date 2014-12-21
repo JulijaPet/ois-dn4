@@ -213,6 +213,7 @@ function shraniPodatke() {
 function prikaziGraf() {
 	var	poodatki = [];
 	$("#diagram").show();
+	$("#izpis").show();
 	var sessionId = getSessionId();
 	if(izbranaKategorija == 1) {
 		$.ajax({
@@ -246,8 +247,7 @@ function prikaziGraf() {
 				console.log(JSON.parse(err.responseText).userMessage);
 		    }
 		});	
-		$("#izpis").show();
-		var visina=1.0;
+		var visina=1.8;
 		var min = 20 * visina * visina;
 		var max = 24.9 * visina * visina;
 		var AQL = 
@@ -315,22 +315,9 @@ function prikaziGraf() {
 		    headers: {"Ehr-Session": sessionId},
 		    success: function (res) {
 			  	if (res.length > 0) {
-				   	var j = 0;
 			       	for (var i in res) {
-			        	poodatki[j] = res[i].tempetaure;
-			        	j++;	
+			        	$("#izpis").html("<h1>Vaša tempetaruta dne: " + res[i].time + " je bila: " + res[i].temperature + " " + res[i].unit + "</h1>");
 			        }
-			     
-			        var x = d3.scale.linear()
-    					.domain([0, d3.max(poodatki)])
-    					.range([0, 420]);
-
-					d3.select("#diagram")
-			  			.selectAll("div")
-			    		.data(poodatki)
-			  			.enter().append("div")
-			    		.style("width", function(d) { return x(d) + "px"; })
-			    		.text(function(d) { return d; });
 		    	}
 		    	else
 			     	alert("napaka");
