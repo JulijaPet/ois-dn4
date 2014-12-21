@@ -250,13 +250,14 @@ function prikaziGraf() {
 		var AQL = 
 				"select"+
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude as Body_weight_magnitude"+
-				"from EHR [e/ehr_id/value='" + ehrId + "']"+
+				"from EHR e[e/ehr_id/value='" + ehrId + "']"+
 				"contains OBSERVATION w[openEHR-EHR-OBSERVATION.body_weight.v1]"+
 				"where"+
 					"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude<60 and"+
     				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude>50"+
 				"order by"+
-    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc";
+    				"w/data[at0002]/events[at0003]/data[at0001]/items[at0004, 'Body weight']/value/magnitude desc"+
+    			"limit 10";
 				$.ajax({
 				    url: baseUrl + "/query?" + $.param({"aql": AQL}),
 				    type: 'GET',
@@ -264,11 +265,12 @@ function prikaziGraf() {
 				    success: function (res) {
 				    	if (res) {
 			    			var rows = res.resultSet;
-					        for (var i in rows) {
-					        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
-					        }
-				    	} else
-				    		$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
+					       // for (var i in rows) {
+					        	//$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+					        	alert("blaaa");
+					      // }
+				    //	} else
+				    	//	$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
 				    },
 				    error: function(err) {
 				    	alert("Napaka '" + JSON.parse(err.responseText).userMessage + "'!");
