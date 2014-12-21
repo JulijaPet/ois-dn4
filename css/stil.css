@@ -84,20 +84,20 @@ html, body{
 		width:100%;
         height:65%;
 	}
-	#domov {
-	    margin-top:5%;
-	}
 	#prikatiSkrij {
-        margin:5% auto;
+        margin:10% auto;
     }
     #kreirajKljuc {
-        margin-top:4%;
-    }
-    #humanBody {
-        margin-top:5%;
+        margin-top:10%;
     }
     #diagram {
         width:100%;
+    }
+    #nazaj {
+        width:10%;
+    }
+    .desno {
+        margin-top:10%;
     }
 }
 
