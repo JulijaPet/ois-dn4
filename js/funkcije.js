@@ -247,7 +247,7 @@ function prikaziGraf() {
 		    }
 		});	
 		$("#izpis").show();
-		var visina=1.8;
+		var visina=1.0;
 		var min = 20 * visina * visina;
 		var max = 24.9 * visina * visina;
 		var AQL = 
@@ -267,7 +267,7 @@ function prikaziGraf() {
 					headers: {"Ehr-Session": sessionId},
 				    success: function (res) {
 				    	if (res) {
-				        	$("#izpis").html("<h1>ste v meji normalne telesne teže, glede na vašo višino.</h1>");
+				        	$("#izpis").html("<h1>Ste v meji normalne telesne teže, glede na vašo višino.</h1>");
 				    	} else
 			    			$("#izpis").html("<h1>Vaša telesna teža ni v mejah normalne. Več o tem si lahko preberete na <a href='http://www.smsdieta.si/indeks-telesne-mase/'>ITM</a>.</h1>");
 					 },
