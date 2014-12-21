@@ -314,8 +314,8 @@ function prikaziGraf() {
 		    success: function (res) {
 			  	if (res.length > 0) {
 			       	for (var i in res) {
-			        	$("#izpis").html("<h1>Vaša tempetaruta dne: " + res[i].time + " je bila: " + res[i].temperature + " " + res[i].unit + "</h1>");
-			        }
+			        	$("#izpis").html("<h>Vaša tempetaruta dne: " + res[i].time + " je bila: " + res[i].temperature + " " + res[i].unit + "<br></h>");
+			       	}
 		    	}
 		    	else
 			     	alert("napaka");
